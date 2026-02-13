@@ -17,9 +17,9 @@ const features = [
 
 export default function About() {
   return (
-    <section id="sobre" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="sobre" className="py-16 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -27,10 +27,10 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-[#3B82F6] text-sm font-semibold tracking-widest uppercase">
+            <span className="text-[#5B9BD5] text-sm font-semibold tracking-widest uppercase">
               Quem Somos
             </span>
-            <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3 mb-6">
               Porque Somos{" "}
               <span className="gradient-text">Diferentes</span>
             </h2>
@@ -62,7 +62,7 @@ export default function About() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#3B82F6] to-[#06D6A0] text-white font-semibold px-8 py-3.5 rounded-full hover:shadow-lg hover:shadow-[#3B82F6]/25 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#5B9BD5] to-[#06D6A0] text-white font-semibold px-6 sm:px-8 py-3 sm:py-3.5 rounded-full hover:shadow-lg hover:shadow-[#5B9BD5]/25 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
             >
               Fale Connosco
             </a>
@@ -76,9 +76,9 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
+            <div className="relative w-full aspect-square max-w-xs sm:max-w-md mx-auto">
               {/* Main gradient card */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#1E56A0] to-[#3B82F6] overflow-hidden">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#1E56A0] to-[#5B9BD5] overflow-hidden">
                 {/* Sparkles icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Sparkles size={120} className="text-white/20" />
@@ -102,7 +102,7 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-gray-100"
+                className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 bg-white rounded-2xl p-4 sm:p-5 shadow-xl border border-gray-100"
               >
                 <div className="text-3xl font-[family-name:var(--font-heading)] font-bold gradient-text">
                   8+

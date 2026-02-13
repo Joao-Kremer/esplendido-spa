@@ -13,17 +13,17 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#F7F9FC]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-16 sm:py-24 bg-[#F7F9FC]">
+      <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-[#3B82F6] text-sm font-semibold tracking-widest uppercase">
+        <div className="text-center mb-10 sm:mb-16">
+          <span className="text-[#5B9BD5] text-sm font-semibold tracking-widest uppercase">
             Dúvidas Frequentes
           </span>
-          <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3">
             Perguntas <span className="gradient-text">Frequentes</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3B82F6] to-[#06D6A0] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#5B9BD5] to-[#06D6A0] mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Accordion */}
@@ -40,13 +40,13 @@ export default function FAQ() {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className={`bg-white rounded-2xl border transition-colors duration-300 ${
                   isOpen
-                    ? "border-[#3B82F6]/30 shadow-lg"
+                    ? "border-[#5B9BD5]/30 shadow-lg"
                     : "border-gray-100"
                 }`}
               >
                 <button
                   onClick={() => toggle(i)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
+                  className="w-full flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left gap-4"
                 >
                   <span className="text-[#0A1628] font-[family-name:var(--font-heading)] font-semibold text-base">
                     {faq.question}
@@ -54,7 +54,7 @@ export default function FAQ() {
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isOpen
-                        ? "bg-[#3B82F6] text-white rotate-180"
+                        ? "bg-[#5B9BD5] text-white rotate-180"
                         : "bg-gray-100 text-gray-text"
                     }`}
                   >
@@ -71,7 +71,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-5">
+                      <div className="px-4 sm:px-6 pb-4 sm:pb-5">
                         <div className="h-px bg-gray-100 mb-4" />
                         <p className="text-gray-text text-sm leading-relaxed">
                           {faq.answer}

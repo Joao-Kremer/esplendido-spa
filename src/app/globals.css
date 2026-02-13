@@ -3,7 +3,7 @@
 @theme inline {
   --color-deep-ocean: #0A1628;
   --color-royal-blue: #1E56A0;
-  --color-electric-blue: #3B82F6;
+  --color-electric-blue: #5B9BD5;
   --color-cyan-glow: #06D6A0;
   --color-ice-white: #F0F7FF;
   --color-pure-white: #FFFFFF;
@@ -103,7 +103,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-royal-blue) 0%, var(--color-electric-blue) 40%, var(--color-cyan-glow) 100%);
+  background: linear-gradient(135deg, #4A8BC5 0%, #5B9BD5 40%, #6BB3E0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -28,24 +28,24 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="depoimentos" className="py-24 bg-[#0A1628] text-white relative overflow-hidden">
+    <section id="depoimentos" className="py-16 sm:py-24 bg-[#0A1628] text-white relative overflow-hidden">
       {/* Decorative sparkle dots */}
-      <div className="absolute top-12 left-12 w-2 h-2 rounded-full bg-[#3B82F6]/40 animate-pulse" />
+      <div className="absolute top-12 left-12 w-2 h-2 rounded-full bg-[#5B9BD5]/40 animate-pulse" />
       <div className="absolute top-24 right-20 w-1.5 h-1.5 rounded-full bg-[#06D6A0]/40 animate-pulse" style={{ animationDelay: "1s" }} />
-      <div className="absolute bottom-16 left-1/4 w-2 h-2 rounded-full bg-[#3B82F6]/30 animate-pulse" style={{ animationDelay: "2s" }} />
+      <div className="absolute bottom-16 left-1/4 w-2 h-2 rounded-full bg-[#5B9BD5]/30 animate-pulse" style={{ animationDelay: "2s" }} />
       <div className="absolute bottom-24 right-1/3 w-1.5 h-1.5 rounded-full bg-[#06D6A0]/30 animate-pulse" style={{ animationDelay: "0.5s" }} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-[#06D6A0] text-sm font-semibold tracking-widest uppercase">
             Testemunhos
           </span>
-          <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3">
             O Que Dizem os Nossos{" "}
             <span className="gradient-text">Clientes</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3B82F6] to-[#06D6A0] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#5B9BD5] to-[#06D6A0] mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Carousel */}
@@ -62,10 +62,10 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="min-w-[320px] max-w-[340px] snap-center flex-shrink-0 bg-white/5 backdrop-blur rounded-3xl p-8 border border-white/10 hover:border-white/20 transition-colors"
+              className="min-w-[280px] sm:min-w-[320px] max-w-[340px] snap-center flex-shrink-0 bg-white/5 backdrop-blur rounded-3xl p-5 sm:p-8 border border-white/10 hover:border-white/20 transition-colors"
             >
               {/* Quote mark */}
-              <Quote size={32} className="text-[#3B82F6]/30 mb-4" />
+              <Quote size={32} className="text-[#5B9BD5]/30 mb-4" />
 
               {/* Text */}
               <p className="text-white/80 text-sm leading-relaxed mb-6">
@@ -77,7 +77,7 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#06D6A0] flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#5B9BD5] to-[#06D6A0] flex items-center justify-center text-white font-bold text-sm">
                   {testimonial.avatarInitials}
                 </div>
                 <div className="flex-1">

@@ -12,9 +12,7 @@ export const EMAIL = "info@esplendido.pt";
 export const NAV_LINKS: NavLink[] = [
   { label: "Início", href: "#inicio" },
   { label: "Serviços", href: "#servicos" },
-  { label: "Como Funciona", href: "#como-funciona" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Preços", href: "#precos" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Testemunhos", href: "#depoimentos" },
   { label: "Contacto", href: "#contacto" },
 ];

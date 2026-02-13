@@ -18,8 +18,8 @@ const reasons: Reason[] = [
     title: "Garantia Total",
     description:
       "Se não ficar 100% satisfeito, refazemos o serviço sem custos adicionais. A sua satisfação é a nossa prioridade.",
-    color: "text-[#3B82F6]",
-    bgColor: "bg-[#3B82F6]/10",
+    color: "text-[#5B9BD5]",
+    bgColor: "bg-[#5B9BD5]/10",
   },
   {
     icon: Award,
@@ -41,17 +41,17 @@ const reasons: Reason[] = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="razoes" className="py-24 bg-[#F7F9FC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="razoes" className="py-16 sm:py-24 bg-[#F7F9FC]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-[#3B82F6] text-sm font-semibold tracking-widest uppercase">
+        <div className="text-center mb-10 sm:mb-16">
+          <span className="text-[#5B9BD5] text-sm font-semibold tracking-widest uppercase">
             Porquê Nós
           </span>
-          <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3">
             Razões para <span className="gradient-text">Escolher-nos</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3B82F6] to-[#06D6A0] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#5B9BD5] to-[#06D6A0] mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Cards */}
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="bg-white rounded-3xl p-10 text-center shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+                className="bg-white rounded-3xl p-6 sm:p-10 text-center shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
               >
                 <div
                   className={`w-16 h-16 rounded-2xl ${reason.bgColor} ${reason.color} flex items-center justify-center mx-auto mb-6`}

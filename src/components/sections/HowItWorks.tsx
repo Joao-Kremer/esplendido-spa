@@ -44,23 +44,23 @@ const steps: Step[] = [
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="como-funciona" className="py-16 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-[#3B82F6] text-sm font-semibold tracking-widest uppercase">
+        <div className="text-center mb-10 sm:mb-16">
+          <span className="text-[#5B9BD5] text-sm font-semibold tracking-widest uppercase">
             Processo Simples
           </span>
-          <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold mt-3">
             Como <span className="gradient-text">Funciona</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3B82F6] to-[#06D6A0] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#5B9BD5] to-[#06D6A0] mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Desktop Horizontal Layout */}
         <div className="hidden lg:flex items-start justify-between relative">
           {/* Connecting Line */}
-          <div className="absolute top-8 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06D6A0] opacity-30" />
+          <div className="absolute top-8 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-[#5B9BD5] to-[#06D6A0] opacity-30" />
 
           {steps.map((step, i) => {
             const Icon = step.icon;
@@ -76,7 +76,7 @@ export default function HowItWorks() {
                 <span className="text-5xl font-[family-name:var(--font-heading)] font-bold text-[#0A1628]/10 mb-2">
                   {step.number}
                 </span>
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#06D6A0] flex items-center justify-center mb-5 shadow-lg shadow-[#3B82F6]/20">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#5B9BD5] to-[#06D6A0] flex items-center justify-center mb-5 shadow-lg shadow-[#5B9BD5]/20">
                   <Icon size={28} className="text-white" />
                 </div>
                 <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[#0A1628] mb-2">
@@ -91,9 +91,9 @@ export default function HowItWorks() {
         </div>
 
         {/* Mobile Vertical Layout */}
-        <div className="lg:hidden relative pl-12">
+        <div className="lg:hidden relative pl-10 sm:pl-12">
           {/* Vertical Line */}
-          <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#3B82F6] to-[#06D6A0] opacity-30" />
+          <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#5B9BD5] to-[#06D6A0] opacity-30" />
 
           {steps.map((step, i) => {
             const Icon = step.icon;
@@ -106,7 +106,7 @@ export default function HowItWorks() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="relative mb-12 last:mb-0"
               >
-                <div className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#06D6A0] flex items-center justify-center shadow-md">
+                <div className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#5B9BD5] to-[#06D6A0] flex items-center justify-center shadow-md">
                   <Icon size={18} className="text-white" />
                 </div>
                 <span className="text-5xl font-[family-name:var(--font-heading)] font-bold text-[#0A1628]/10 absolute -left-2 -top-6">

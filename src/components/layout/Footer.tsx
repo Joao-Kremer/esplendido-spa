@@ -19,8 +19,8 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Col 1 - Brand */}
           <div>
             <div className="flex items-center gap-1 mb-4">
@@ -34,10 +34,10 @@ export default function Footer() {
               Serviço de limpeza profissional com garantia de satisfação. Transformamos espaços com excelência.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#3B82F6] transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#5B9BD5] transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#3B82F6] transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#5B9BD5] transition-colors">
                 <Facebook size={18} />
               </a>
             </div>
@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
 
         {/* Separator */}
-        <div className="h-px bg-gradient-to-r from-transparent via-[#3B82F6]/40 to-transparent my-12" />
+        <div className="h-px bg-gradient-to-r from-transparent via-[#5B9BD5]/40 to-transparent my-12" />
 
         {/* Bottom */}
         <div className="text-center text-white/40 text-sm">

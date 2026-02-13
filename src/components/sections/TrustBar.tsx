@@ -86,17 +86,17 @@ export default function TrustBar() {
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section className="py-16 bg-white border-y border-gray-100">
+    <section className="py-12 sm:py-16 bg-white border-y border-gray-100">
       <div
         ref={ref}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-8"
+        className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8"
       >
         {stats.map((stat, i) => (
           <div key={i} className="flex flex-col items-center text-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-[#3B82F6]/10 text-[#3B82F6] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-[#5B9BD5]/10 text-[#5B9BD5] flex items-center justify-center">
               {stat.icon}
             </div>
-            <div className="text-4xl font-[family-name:var(--font-heading)] font-bold text-[#0A1628]">
+            <div className="text-3xl sm:text-4xl font-[family-name:var(--font-heading)] font-bold text-[#0A1628]">
               <AnimatedCounter
                 target={stat.target}
                 suffix={stat.suffix}
