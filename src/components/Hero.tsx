@@ -13,7 +13,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenWizard }: HeroProps) {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-dark">
+    <section className="relative min-h-screen overflow-hidden bg-primary">
       {/* Three.js background */}
       <BubbleScene />
 
@@ -25,10 +25,10 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5"
+            className="mb-6 flex w-fit items-center gap-2 rounded-full border border-dark/15 bg-dark/10 px-4 py-1.5"
           >
-            <span className="h-2 w-2 animate-pulse-glow rounded-full bg-primary" />
-            <span className="text-xs font-medium tracking-widest text-primary uppercase">
+            <span className="h-2 w-2 rounded-full bg-cta animate-pulse" />
+            <span className="text-xs font-medium tracking-widest text-dark/80 uppercase">
               Disponível hoje
             </span>
           </motion.div>
@@ -38,11 +38,11 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-heading text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl"
+            className="font-heading text-4xl font-bold leading-tight text-dark md:text-5xl lg:text-6xl"
           >
             Sua casa merece
             <br />
-            ser <span className="gradient-text">esplêndida</span>
+            ser <span className="text-white">esplêndida</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -50,7 +50,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 max-w-md text-base leading-relaxed text-white/50 md:text-lg"
+            className="mt-4 max-w-md text-base leading-relaxed text-dark/60 md:text-lg"
           >
             Equipa fixa e treinada ao seu serviço.
             <br />
@@ -63,7 +63,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             onClick={onOpenWizard}
-            className="mt-8 flex w-fit items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-dark glow-cyan transition-transform hover:scale-105"
+            className="mt-8 flex w-fit items-center gap-2 rounded-lg bg-cta px-6 py-3 text-sm font-bold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
           >
             <MessageCircle size={18} />
             Agendar pelo WhatsApp
@@ -82,12 +82,12 @@ export default function Hero({ onOpenWizard }: HeroProps) {
                   <Star key={i} size={14} className="fill-golden text-golden" />
                 ))}
               </div>
-              <span className="text-white/40">300+ clientes</span>
+              <span className="text-dark/50">300+ clientes</span>
             </div>
-            <span className="text-white/15">|</span>
+            <span className="text-dark/20">|</span>
             <div className="flex items-center gap-1.5">
-              <Shield size={14} className="text-primary" />
-              <span className="text-white/40">100% garantia</span>
+              <Shield size={14} className="text-cta" />
+              <span className="text-dark/50">100% garantia</span>
             </div>
           </motion.div>
         </div>
@@ -104,23 +104,26 @@ export default function Hero({ onOpenWizard }: HeroProps) {
               src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=1000&fit=crop"
               alt="Serviço de limpeza profissional"
               fill
-              className="rounded-2xl object-cover opacity-85"
+              className="rounded-2xl object-cover"
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             {/* Fade gradient left */}
-            <div className="absolute inset-0 bg-gradient-to-r from-dark via-transparent to-transparent" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary via-transparent to-transparent" />
             {/* Fade gradient bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-primary via-transparent to-transparent" />
 
             {/* Floating card */}
-            <div className="glass animate-float absolute bottom-6 right-6 rounded-xl px-4 py-3">
-              <p className="text-xs font-semibold text-primary">PRÓXIMO HORÁRIO</p>
-              <p className="text-lg font-bold text-white">Amanhã, 9h</p>
+            <div className="absolute bottom-6 right-6 animate-float rounded-xl border border-dark/10 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-sm">
+              <p className="text-xs font-semibold text-cta">PRÓXIMO HORÁRIO</p>
+              <p className="text-lg font-bold text-dark">Amanhã, 9h</p>
             </div>
           </div>
         </motion.div>
       </div>
+
+      {/* Bottom fade to neutral */}
+      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-neutral to-transparent" />
     </section>
   );
 }
