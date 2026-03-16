@@ -14,12 +14,24 @@ interface HeroProps {
 export default function Hero({ onOpenWizard }: HeroProps) {
   return (
     <section className="relative min-h-screen overflow-hidden bg-cta">
+      {/* Background image */}
+      <Image
+        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&h=1080&fit=crop"
+        alt=""
+        fill
+        className="object-cover opacity-20"
+        priority
+        sizes="100vw"
+      />
+      {/* Overlay to blend image with brand blue */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cta via-cta/80 to-cta/40" />
+
       {/* Three.js bubbles */}
       <BubbleScene />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center px-6 pt-24 md:flex-row md:gap-12 md:pt-0">
-        {/* Left content */}
-        <div className="flex flex-1 flex-col justify-center py-12 md:py-0">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pt-24 md:pt-0">
+        {/* Content */}
+        <div className="max-w-2xl">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,32 +104,15 @@ export default function Hero({ onOpenWizard }: HeroProps) {
           </motion.div>
         </div>
 
-        {/* Right image */}
+        {/* Floating card — bottom right */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative order-first flex-1 md:order-last"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="absolute bottom-32 right-8 hidden animate-float rounded-xl border border-white/15 bg-white/10 px-5 py-3.5 backdrop-blur-md md:block"
         >
-          <div className="relative h-[300px] w-full md:h-[500px]">
-            <Image
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=1000&fit=crop"
-              alt="Serviço de limpeza profissional"
-              fill
-              className="rounded-2xl object-cover"
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            {/* Subtle edge blends */}
-            <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10" />
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cta/60 via-transparent to-transparent" />
-
-            {/* Floating card */}
-            <div className="absolute bottom-6 right-6 animate-float rounded-xl border border-white/15 bg-cta/80 px-4 py-3 backdrop-blur-md">
-              <p className="text-xs font-semibold text-primary">PRÓXIMO HORÁRIO</p>
-              <p className="text-lg font-bold text-white">Amanhã, 9h</p>
-            </div>
-          </div>
+          <p className="text-xs font-semibold text-primary">PRÓXIMO HORÁRIO</p>
+          <p className="text-lg font-bold text-white">Amanhã, 9h</p>
         </motion.div>
       </div>
 
