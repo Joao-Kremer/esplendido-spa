@@ -21,12 +21,15 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
   useEffect(() => {
     if (!lineRef.current) return;
 
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const scaleAxis = isMobile ? "scaleY" : "scaleX";
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
         lineRef.current,
-        { scaleX: 0 },
+        { [scaleAxis]: 0 },
         {
-          scaleX: 1,
+          [scaleAxis]: 1,
           duration: 1.2,
           ease: "power2.out",
           scrollTrigger: {

@@ -54,6 +54,11 @@ export default function WizardDrawer({ open, onClose, preselectedService }: Wiza
     handleClose();
   }
 
+  function onSubmitError(fieldErrors: Record<string, unknown>) {
+    if ("service" in fieldErrors) setStep(1);
+    else if ("area" in fieldErrors) setStep(3);
+  }
+
   function handleClose() {
     setStep(1);
     reset();
@@ -119,7 +124,7 @@ export default function WizardDrawer({ open, onClose, preselectedService }: Wiza
 
               {/* Content */}
               <div className="flex-1 overflow-y-auto px-6 py-6">
-                <form id="wizard-form" onSubmit={handleSubmit(onSubmit)}>
+                <form id="wizard-form" onSubmit={handleSubmit(onSubmit, onSubmitError)}>
                   {/* Step 1: Service */}
                   {step === 1 && (
                     <div>
