@@ -20,19 +20,6 @@ export default function Hero({ onOpenWizard }: HeroProps) {
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center px-6 pt-24 md:flex-row md:gap-12 md:pt-0">
         {/* Left content */}
         <div className="flex flex-1 flex-col justify-center py-12 md:py-0">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6 flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5"
-          >
-            <span className="h-2 w-2 animate-pulse-glow rounded-full bg-primary" />
-            <span className="text-xs font-medium tracking-widest text-primary uppercase">
-              Disponível hoje
-            </span>
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -113,11 +100,6 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             {/* Fade gradient bottom */}
             <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
 
-            {/* Floating card */}
-            <div className="glass animate-float absolute bottom-6 right-6 rounded-xl px-4 py-3">
-              <p className="text-xs font-semibold text-primary">PRÓXIMO HORÁRIO</p>
-              <p className="text-lg font-bold text-white">Amanhã, 9h</p>
-            </div>
           </div>
         </motion.div>
       </div>

@@ -279,7 +279,7 @@ export default function StorySection() {
   }, [broomPosRef]);
 
   return (
-    <section ref={sectionRef} className="relative bg-neutral py-20 md:py-32">
+    <section id="sobre" ref={sectionRef} className="relative bg-neutral py-20 md:py-32">
       <div className="mx-auto max-w-5xl px-6">
         {/* Header */}
         <div className="mb-20 text-center">

@@ -16,7 +16,7 @@ const zones = [
 
 export default function CoverageMap() {
   return (
-    <section className="bg-neutral py-20 md:py-28">
+    <section id="cobertura" className="bg-neutral py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16 text-center">
