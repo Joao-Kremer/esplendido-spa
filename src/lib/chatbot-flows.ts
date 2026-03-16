@@ -7,6 +7,7 @@ export type ChatAction =
   | { type: "goto"; flow: string; step: string }
   | { type: "goto_menu" }
   | { type: "whatsapp"; message: string }
+  | { type: "phone" }
   | { type: "set_field"; field: string; value: string | number; nextStep: string }
   | { type: "show_area_input"; nextStep: string }
   | { type: "show_notes_input"; nextStep: string }
@@ -106,7 +107,7 @@ const bookingFlow: ChatFlow = {
       id: "summary",
       messages: [], // summary is dynamically generated in ChatBot.tsx
       buttons: [
-        { label: "📱 Enviar pelo WhatsApp", action: { type: "submit_booking" } },
+        { label: "📧 Enviar pedido", action: { type: "submit_booking" } },
         { label: "🔄 Recomeçar", action: { type: "restart" } },
       ],
     },
@@ -118,9 +119,10 @@ const supportFlow: ChatFlow = {
   nodes: [
     {
       id: "main",
-      messages: ["Vou direcionar você para o nosso suporte via WhatsApp."],
+      messages: ["Como prefere entrar em contacto com o nosso suporte?"],
       buttons: [
-        { label: "Abrir WhatsApp", action: { type: "whatsapp", message: "Olá, preciso de suporte." } },
+        { label: "💬 WhatsApp", action: { type: "whatsapp", message: "Olá, preciso de suporte." } },
+        { label: "📞 Ligar agora", action: { type: "phone" } },
         { label: "Voltar ao menu", action: { type: "goto_menu" } },
       ],
     },

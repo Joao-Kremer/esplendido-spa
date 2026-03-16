@@ -4,7 +4,8 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, MessageSquare, Send, ArrowRight } from "lucide-react";
 import { getFlowNode, WHATSAPP_BASE, type ChatButton as FlowButton } from "@/lib/chatbot-flows";
-import { buildWhatsAppUrl, type WizardFormData } from "@/lib/wizard-schema";
+import { type WizardFormData } from "@/lib/wizard-schema";
+import { contacts } from "@/lib/data";
 
 interface DisplayMessage {
   id: number;
@@ -172,6 +173,10 @@ export default function ChatBot({
             break;
           }
 
+          case "phone":
+            window.open(`tel:${contacts.phone.replace(/\s/g, "")}`, "_self");
+            break;
+
           case "set_field":
             setFormData((prev) => ({ ...prev, [action.field]: action.value }));
             await navigateToNode("booking", action.nextStep);
@@ -190,15 +195,57 @@ export default function ChatBot({
             break;
 
           case "submit_booking": {
-            const data: WizardFormData = {
+            const data = {
               service: formData.service ?? "",
-              frequency: formData.frequency,
+              frequency: formData.frequency ?? "",
               area: formData.area ?? 0,
-              zone: formData.zone,
-              notes: formData.notes,
+              zone: formData.zone ?? "",
+              notes: formData.notes ?? "",
             };
-            const url = buildWhatsAppUrl(data);
-            window.open(url, "_blank");
+
+            addMessage("bot", "A enviar o seu pedido...");
+            scrollToBottom();
+
+            try {
+              const res = await fetch("/api/booking", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+              });
+
+              if (res.ok) {
+                await addBotMessages(
+                  [
+                    "✅ Pedido enviado com sucesso!",
+                    "A nossa equipa vai analisar o seu pedido e entrar em contacto brevemente.",
+                    "Pode também contactar-nos diretamente:",
+                  ],
+                  [
+                    { label: "💬 WhatsApp", action: { type: "whatsapp", message: `Olá, enviei um pedido de agendamento para ${data.service}.` } },
+                    { label: "📞 Ligar", action: { type: "phone" } },
+                    { label: "Voltar ao menu", action: { type: "goto_menu" } },
+                  ]
+                );
+              } else {
+                await addBotMessages(
+                  ["Ocorreu um erro ao enviar. Pode tentar novamente ou contactar-nos diretamente:"],
+                  [
+                    { label: "🔄 Tentar novamente", action: { type: "submit_booking" } },
+                    { label: "💬 WhatsApp", action: { type: "whatsapp", message: `Olá, gostaria de agendar ${data.service}, ${data.area}m², ${data.zone}.` } },
+                    { label: "📞 Ligar", action: { type: "phone" } },
+                  ]
+                );
+              }
+            } catch {
+              await addBotMessages(
+                ["Ocorreu um erro de conexão. Pode contactar-nos diretamente:"],
+                [
+                  { label: "💬 WhatsApp", action: { type: "whatsapp", message: `Olá, gostaria de agendar ${data.service}.` } },
+                  { label: "📞 Ligar", action: { type: "phone" } },
+                  { label: "Voltar ao menu", action: { type: "goto_menu" } },
+                ]
+              );
+            }
             break;
           }
         }
