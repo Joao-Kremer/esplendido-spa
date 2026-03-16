@@ -8,6 +8,7 @@ export type ChatAction =
   | { type: "goto_menu" }
   | { type: "whatsapp"; message: string }
   | { type: "set_field"; field: string; value: string | number; nextStep: string }
+  | { type: "show_area_input"; nextStep: string }
   | { type: "show_notes_input"; nextStep: string }
   | { type: "submit_booking" }
   | { type: "restart" };
@@ -80,12 +81,7 @@ const bookingFlow: ChatFlow = {
       id: "area",
       messages: ["Qual a área do espaço em m²?"],
       buttons: [
-        { label: "30 m²", action: { type: "set_field", field: "area", value: 30, nextStep: "zone" } },
-        { label: "50 m²", action: { type: "set_field", field: "area", value: 50, nextStep: "zone" } },
-        { label: "80 m²", action: { type: "set_field", field: "area", value: 80, nextStep: "zone" } },
-        { label: "100 m²", action: { type: "set_field", field: "area", value: 100, nextStep: "zone" } },
-        { label: "150 m²", action: { type: "set_field", field: "area", value: 150, nextStep: "zone" } },
-        { label: "200+ m²", action: { type: "set_field", field: "area", value: 200, nextStep: "zone" } },
+        { label: "Inserir área", action: { type: "show_area_input", nextStep: "zone" } },
       ],
     },
     {
