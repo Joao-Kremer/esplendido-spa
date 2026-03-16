@@ -1,35 +1,43 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import Hero from "@/components/sections/Hero";
-import Services from "@/components/sections/Services";
-import HowItWorks from "@/components/sections/HowItWorks";
-import About from "@/components/sections/About";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import Pricing from "@/components/sections/Pricing";
-import Testimonials from "@/components/sections/Testimonials";
-import FAQ from "@/components/sections/FAQ";
-import Contact from "@/components/sections/Contact";
-import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
-import ScrollToTop from "@/components/ui/ScrollToTop";
+"use client";
+
+import { useState, useCallback } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import HowItWorks from "@/components/HowItWorks";
+import SocialProof from "@/components/SocialProof";
+import Footer from "@/components/Footer";
+import WizardDrawer from "@/components/WizardDrawer";
 
 export default function Home() {
+  const [wizardOpen, setWizardOpen] = useState(false);
+  const [preselectedService, setPreselectedService] = useState<string | undefined>();
+
+  const openWizard = useCallback((service?: string) => {
+    setPreselectedService(service);
+    setWizardOpen(true);
+  }, []);
+
+  const closeWizard = useCallback(() => {
+    setWizardOpen(false);
+    setPreselectedService(undefined);
+  }, []);
+
   return (
     <>
-      <Navbar />
+      <Navbar onOpenWizard={() => openWizard()} />
       <main>
-        <Hero />
-        <Services />
-        <HowItWorks />
-        <About />
-        <WhyChooseUs />
-        <Pricing />
-        <Testimonials />
-        <FAQ />
-        <Contact />
+        <Hero onOpenWizard={() => openWizard()} />
+        <Services onOpenWizard={openWizard} />
+        <HowItWorks onOpenWizard={() => openWizard()} />
+        <SocialProof />
+        <Footer onOpenWizard={() => openWizard()} />
       </main>
-      <Footer />
-      <WhatsAppFloat />
-      <ScrollToTop />
+      <WizardDrawer
+        open={wizardOpen}
+        onClose={closeWizard}
+        preselectedService={preselectedService}
+      />
     </>
   );
 }
