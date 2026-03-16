@@ -22,7 +22,7 @@ export default function Navbar({ onOpenWizard }: NavbarProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass bg-cta/90" : "bg-transparent"
+        isScrolled ? "glass bg-dark/80" : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -70,7 +70,7 @@ export default function Navbar({ onOpenWizard }: NavbarProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="glass fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-cta/95 md:hidden"
+            className="glass fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-dark/95 md:hidden"
           >
             {navLinks.map((link) => (
               <a
