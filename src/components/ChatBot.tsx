@@ -244,38 +244,38 @@ export default function ChatBot({
             exit={{ x: "100%", opacity: 0.8 }}
             transition={{ type: "spring", damping: 28, stiffness: 220 }}
             className="fixed inset-y-0 right-0 z-50 flex w-full flex-col overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] sm:inset-y-4 sm:right-4 sm:w-[400px] sm:rounded-2xl"
-            style={{ background: "linear-gradient(180deg, #0d1e36 0%, #0A1628 40%, #080f1e 100%)" }}
+            style={{ background: "linear-gradient(180deg, #1ae5ff 0%, #00DAFF 40%, #00c4e6 100%)" }}
           >
             {/* Header */}
             <div className="relative flex items-center gap-3 px-5 py-4">
               {/* Subtle top glow */}
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-dark/15 to-transparent" />
 
-              <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.07] ring-1 ring-white/[0.08]">
-                <MessageSquare size={18} className="text-primary" />
+              <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-dark/10 ring-1 ring-dark/10">
+                <MessageSquare size={18} className="text-dark" />
               </div>
               <div className="flex-1">
-                <h3 className="font-heading text-[15px] font-bold text-white">
+                <h3 className="font-heading text-[15px] font-bold text-dark">
                   Esplêndido
                 </h3>
                 <div className="flex items-center gap-1.5">
                   <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-50" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-dark/40" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-dark" />
                   </span>
-                  <span className="text-[11px] font-medium text-green-400/80">Online</span>
+                  <span className="text-[11px] font-medium text-dark/60">Online</span>
                 </div>
               </div>
               <button
                 onClick={onClose}
-                className="flex h-8 w-8 items-center justify-center rounded-lg text-white/30 transition-all hover:bg-white/[0.06] hover:text-white/60"
+                className="flex h-8 w-8 items-center justify-center rounded-lg text-dark/30 transition-all hover:bg-dark/10 hover:text-dark/60"
               >
                 <X size={16} />
               </button>
             </div>
 
             {/* Divider */}
-            <div className="h-px bg-white/[0.06]" />
+            <div className="h-px bg-dark/10" />
 
             {/* Messages */}
             <div
@@ -295,8 +295,8 @@ export default function ChatBot({
                     <div
                       className={`max-w-[85%] whitespace-pre-line text-[13.5px] leading-[1.6] ${
                         msg.sender === "user"
-                          ? "rounded-2xl rounded-br-md bg-primary px-4 py-2.5 font-medium text-dark"
-                          : "rounded-2xl rounded-bl-md border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white/80"
+                          ? "rounded-2xl rounded-br-md bg-dark px-4 py-2.5 font-medium text-primary"
+                          : "rounded-2xl rounded-bl-md border border-dark/10 bg-white/30 px-4 py-3 text-dark/80"
                       }`}
                     >
                       {msg.text}
@@ -311,11 +311,11 @@ export default function ChatBot({
                     animate={{ opacity: 1 }}
                     className="flex justify-start"
                   >
-                    <div className="rounded-2xl rounded-bl-md border border-white/[0.06] bg-white/[0.04] px-5 py-3.5">
+                    <div className="rounded-2xl rounded-bl-md border border-dark/10 bg-white/30 px-5 py-3.5">
                       <span className="inline-flex items-center gap-1">
-                        <span className="h-[6px] w-[6px] animate-bounce rounded-full bg-primary/60" style={{ animationDelay: "0ms" }} />
-                        <span className="h-[6px] w-[6px] animate-bounce rounded-full bg-primary/60" style={{ animationDelay: "150ms" }} />
-                        <span className="h-[6px] w-[6px] animate-bounce rounded-full bg-primary/60" style={{ animationDelay: "300ms" }} />
+                        <span className="h-[6px] w-[6px] animate-bounce rounded-full bg-dark/40" style={{ animationDelay: "0ms" }} />
+                        <span className="h-[6px] w-[6px] animate-bounce rounded-full bg-dark/40" style={{ animationDelay: "150ms" }} />
+                        <span className="h-[6px] w-[6px] animate-bounce rounded-full bg-dark/40" style={{ animationDelay: "300ms" }} />
                       </span>
                     </div>
                   </motion.div>
@@ -336,7 +336,7 @@ export default function ChatBot({
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.2, delay: idx * 0.04 }}
                         onClick={() => handleButtonClick(btn)}
-                        className="group relative overflow-hidden rounded-full border border-primary/20 bg-primary/[0.06] px-4 py-2.5 text-[13px] font-medium text-primary transition-all duration-200 hover:border-primary/40 hover:bg-primary/[0.12] active:scale-[0.97]"
+                        className="group relative overflow-hidden rounded-full border border-dark/15 bg-white/30 px-4 py-2.5 text-[13px] font-medium text-dark transition-all duration-200 hover:border-dark/30 hover:bg-white/50 active:scale-[0.97]"
                       >
                         <span className="relative z-10 flex items-center gap-1.5">
                           {btn.label}
@@ -363,17 +363,17 @@ export default function ChatBot({
                         value={areaValue}
                         onChange={(e) => setAreaValue(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && handleAreaConfirm()}
-                        className="w-full rounded-xl border border-white/[0.08] bg-white/[0.04] px-4 py-3 pr-12 text-sm text-white placeholder:text-white/20 outline-none transition-all focus:border-primary/40 focus:bg-white/[0.06] focus:ring-1 focus:ring-primary/20"
+                        className="w-full rounded-xl border border-dark/15 bg-white/40 px-4 py-3 pr-12 text-sm text-dark placeholder:text-dark/30 outline-none transition-all focus:border-dark/30 focus:bg-white/60 focus:ring-1 focus:ring-dark/10"
                         autoFocus
                       />
-                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-medium text-white/25">
+                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-medium text-dark/30">
                         m²
                       </span>
                     </div>
                     <button
                       onClick={handleAreaConfirm}
                       disabled={!areaValue || parseInt(areaValue, 10) <= 0}
-                      className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-xl bg-primary text-dark transition-all hover:shadow-[0_0_16px_rgba(0,218,255,0.3)] disabled:opacity-20 disabled:hover:shadow-none"
+                      className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-xl bg-dark text-primary transition-all hover:shadow-lg disabled:opacity-20 disabled:hover:shadow-none"
                     >
                       <Send size={16} />
                     </button>
@@ -392,12 +392,12 @@ export default function ChatBot({
                       onChange={(e) => setNotesValue(e.target.value)}
                       placeholder="Escreva aqui as suas observações..."
                       rows={3}
-                      className="w-full resize-none rounded-xl border border-white/[0.08] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all focus:border-primary/40 focus:bg-white/[0.06] focus:ring-1 focus:ring-primary/20"
+                      className="w-full resize-none rounded-xl border border-dark/15 bg-white/40 px-4 py-3 text-sm text-dark placeholder:text-dark/30 outline-none transition-all focus:border-dark/30 focus:bg-white/60 focus:ring-1 focus:ring-dark/10"
                       autoFocus
                     />
                     <button
                       onClick={handleNotesConfirm}
-                      className="flex items-center gap-2 self-end rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-dark transition-all hover:shadow-[0_0_16px_rgba(0,218,255,0.3)]"
+                      className="flex items-center gap-2 self-end rounded-full bg-dark px-5 py-2.5 text-sm font-semibold text-primary transition-all hover:shadow-lg"
                     >
                       <Send size={14} />
                       Confirmar
@@ -409,8 +409,8 @@ export default function ChatBot({
 
             {/* Footer */}
             <div className="relative px-5 py-3">
-              <div className="absolute inset-x-0 top-0 h-px bg-white/[0.04]" />
-              <p className="text-center text-[10px] tracking-wide text-white/15">
+              <div className="absolute inset-x-0 top-0 h-px bg-dark/10" />
+              <p className="text-center text-[10px] tracking-wide text-dark/25">
                 Assistente Esplêndido
               </p>
             </div>
