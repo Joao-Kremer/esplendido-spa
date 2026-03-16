@@ -1,0 +1,64 @@
+<h2>Qual layout de Hero funciona melhor?</h2>
+<p class="subtitle">Considere o impacto visual e a clareza da proposta de valor</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); padding: 24px; border-radius: 8px; min-height: 280px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 20px; right: 20px; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, rgba(78,190,219,0.15) 0%, transparent 70%);"></div>
+        <div style="position: absolute; bottom: 30px; left: 30px; width: 80px; height: 80px; border-radius: 50%; background: radial-gradient(circle, rgba(55,114,196,0.1) 0%, transparent 70%);"></div>
+        <p style="color: #4ebedb; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px;">Serviços de limpeza profissional</p>
+        <h3 style="color: #fff; font-size: 28px; font-weight: 700; line-height: 1.1; margin-bottom: 12px;">Sua casa.<br>Esplêndida.</h3>
+        <p style="color: #888; font-size: 12px; margin-bottom: 16px;">Equipa fixa e treinada. Lisboa & Margem Sul.</p>
+        <div style="display: flex; gap: 8px;">
+          <div style="background: linear-gradient(135deg, #4ebedb, #3772c4); color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 11px; font-weight: 600;">Agendar agora</div>
+          <div style="border: 1px solid #333; color: #aaa; padding: 8px 16px; border-radius: 6px; font-size: 11px;">Ver serviços</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Centrado, Dark Minimal</h3>
+      <p>Texto à esquerda com fundo escuro, gradientes sutis e partículas/orbs decorativas. CTA duplo. Sensação de produto tech/SaaS.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: linear-gradient(135deg, #0d0d0d 0%, #111827 100%); padding: 24px; border-radius: 8px; min-height: 280px; display: flex; align-items: center; position: relative; overflow: hidden;">
+        <div style="flex: 1;">
+          <p style="color: #4ebedb; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px;">Esplêndido</p>
+          <h3 style="color: #fff; font-size: 24px; font-weight: 700; line-height: 1.15; margin-bottom: 10px;">Limpeza profissional<br>que transforma<br>o seu espaço</h3>
+          <p style="color: #666; font-size: 11px; margin-bottom: 14px;">300+ clientes satisfeitos em Lisboa</p>
+          <div style="background: linear-gradient(135deg, #4ebedb, #3772c4); color: #fff; padding: 8px 20px; border-radius: 6px; font-size: 11px; font-weight: 600; display: inline-block;">Começar →</div>
+        </div>
+        <div style="flex: 0 0 140px; height: 200px; background: linear-gradient(180deg, #1a1a2e 0%, #0d0d0d 100%); border-radius: 12px; border: 1px solid #222; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 16px;">
+          <div style="width: 100%; padding: 6px 0; background: #161622; border-radius: 4px; text-align: center; color: #4ebedb; font-size: 9px;">🏠 Doméstica</div>
+          <div style="width: 100%; padding: 6px 0; background: #161622; border-radius: 4px; text-align: center; color: #888; font-size: 9px;">🏢 Comercial</div>
+          <div style="width: 100%; padding: 6px 0; background: #161622; border-radius: 4px; text-align: center; color: #888; font-size: 9px;">🛋️ Sofás</div>
+          <div style="width: 100%; padding: 6px 0; background: #161622; border-radius: 4px; text-align: center; color: #888; font-size: 9px;">🪟 Vidros</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Split com Preview do Wizard</h3>
+      <p>Texto à esquerda + preview do wizard de serviços à direita. O visitante já vê as opções antes de clicar. Integra conteúdo e interação.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: #0a0a0a; padding: 24px; border-radius: 8px; min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(78,190,219,0.08) 0%, transparent 60%);"></div>
+        <p style="color: #4ebedb; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px;">Esplêndido</p>
+        <h3 style="color: #fff; font-size: 32px; font-weight: 800; line-height: 1.05; margin-bottom: 6px;">Limpeza.</h3>
+        <h3 style="color: #fff; font-size: 32px; font-weight: 800; line-height: 1.05; margin-bottom: 6px;">Reinventada.</h3>
+        <p style="color: #555; font-size: 11px; margin: 12px 0 18px;">Equipa fixa • Produtos eco-friendly • 100% garantia</p>
+        <div style="background: #fff; color: #000; padding: 10px 28px; border-radius: 8px; font-size: 12px; font-weight: 700;">Agendar pelo WhatsApp</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Centrado, Impacto Máximo</h3>
+      <p>Totalmente centrado, tipografia gigante, fundo ultra-dark com glow sutil. Uma palavra por linha. Estilo Apple/startup. Máximo impacto visual.</p>
+    </div>
+  </div>
+</div>

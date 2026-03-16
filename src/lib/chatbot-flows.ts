@@ -199,7 +199,7 @@ const faqFlow: ChatFlow = {
     },
     {
       id: "guarantee",
-      messages: ["Oferecemos 100% garantia de satisfação. Se não ficar satisfeito, voltamos sem custo adicional."],
+      messages: ["Oferecemos 100% garantia de satisfação. A nossa equipa é treinada para entregar sempre o melhor resultado, com total compromisso e profissionalismo."],
       buttons: [
         { label: "Outra pergunta", action: { type: "goto", flow: "faq", step: "menu" } },
         { label: "Voltar ao menu", action: { type: "goto_menu" } },

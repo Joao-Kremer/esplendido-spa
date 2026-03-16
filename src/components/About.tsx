@@ -41,7 +41,7 @@ export default function About() {
             </p>
             <p className="mt-4 text-base leading-relaxed text-dark/60">
               A nossa equipa de limpeza conta com formação profissional e, caso não
-              fique satisfeito, refazemos o trabalho gratuitamente. Estamos
+              fique satisfeito, trabalhamos até garantir a excelência. Estamos
               totalmente vinculados e segurados para garantir a sua segurança.
             </p>
           </motion.div>

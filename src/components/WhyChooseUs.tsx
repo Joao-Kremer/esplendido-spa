@@ -8,7 +8,7 @@ const reasons = [
     icon: ShieldCheck,
     title: "Garantia de Satisfação",
     description:
-      "Se o serviço não for aprovado, este será refeito sem custo adicional. A sua satisfação é a nossa prioridade.",
+      "A nossa equipa é treinada para entregar sempre o melhor resultado, com total compromisso e profissionalismo. A sua satisfação é a nossa prioridade.",
     color: "text-primary",
     bgColor: "bg-primary/10",
   },

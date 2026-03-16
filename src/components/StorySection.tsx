@@ -28,10 +28,10 @@ const storySteps = [
   },
   {
     title: "Satisfação Garantida",
-    text: "Estamos totalmente vinculados e segurados. Se ficar insatisfeito, limpamos de novo no dia seguinte sem custo.",
+    text: "Na Esplêndido, estamos totalmente vinculados e segurados, o que significa que pode ter paz de espírito quando entramos em sua casa. A qualidade do nosso serviço é a nossa maior prioridade.",
     highlights: [
-      { icon: Sparkles, label: "Refazemos sem custo adicional" },
-      { icon: ShieldCheck, label: "Vinculados e segurados" },
+      { icon: ShieldCheck, label: "Totalmente vinculados e segurados" },
+      { icon: Sparkles, label: "Compromisso com a excelência" },
     ],
   },
   {
