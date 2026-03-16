@@ -45,6 +45,7 @@ const menuFlow: ChatFlow = {
       messages: ["Olá! Sou o assistente da Esplêndido. Como posso ajudar?"],
       buttons: [
         { label: "📋 Agendar Serviço", action: { type: "goto", flow: "booking", step: "service" } },
+        { label: "🔍 Conhecer Serviços", action: { type: "goto", flow: "services_info", step: "menu" } },
         { label: "💬 Falar com Suporte", action: { type: "goto", flow: "support", step: "main" } },
         { label: "🏢 Sobre a Esplêndido", action: { type: "goto", flow: "about", step: "main" } },
         { label: "📍 Locais de Atendimento", action: { type: "goto", flow: "locations", step: "main" } },
@@ -240,11 +241,39 @@ const faqFlow: ChatFlow = {
   ],
 };
 
+const servicesInfoFlow: ChatFlow = {
+  id: "services_info",
+  nodes: [
+    {
+      id: "menu",
+      messages: ["Sobre qual serviço gostaria de saber mais?"],
+      buttons: services.map((s) => ({
+        label: s.name,
+        action: { type: "goto" as const, flow: "services_info", step: s.name.toLowerCase().replace(/[\s\/]/g, "-") },
+      })),
+    },
+    ...services.map((s): ChatNode => ({
+      id: s.name.toLowerCase().replace(/[\s\/]/g, "-"),
+      messages: [
+        `✨ ${s.name}`,
+        ...s.details,
+        `O que inclui:\n${s.includes.map((item) => `• ${item}`).join("\n")}`,
+      ],
+      buttons: [
+        { label: "📋 Agendar este serviço", action: { type: "set_field", field: "service", value: s.name, nextStep: "frequency" } },
+        { label: "Outro serviço", action: { type: "goto", flow: "services_info", step: "menu" } },
+        { label: "Voltar ao menu", action: { type: "goto_menu" } },
+      ],
+    })),
+  ],
+};
+
 // --- Exports ---
 
 export const flows: Record<string, ChatFlow> = {
   menu: menuFlow,
   booking: bookingFlow,
+  services_info: servicesInfoFlow,
   support: supportFlow,
   about: aboutFlow,
   locations: locationsFlow,

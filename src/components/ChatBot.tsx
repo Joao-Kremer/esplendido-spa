@@ -293,7 +293,7 @@ export default function ChatBot({
                     className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}
                   >
                     <div
-                      className={`max-w-[85%] text-[13.5px] leading-[1.6] ${
+                      className={`max-w-[85%] whitespace-pre-line text-[13.5px] leading-[1.6] ${
                         msg.sender === "user"
                           ? "rounded-2xl rounded-br-md bg-primary px-4 py-2.5 font-medium text-dark"
                           : "rounded-2xl rounded-bl-md border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white/80"
