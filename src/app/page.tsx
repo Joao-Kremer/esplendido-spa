@@ -6,6 +6,8 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import SocialProof from "@/components/SocialProof";
+import CoverageMap from "@/components/CoverageMap";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
 import ChatBotBubble from "@/components/ChatBotBubble";
@@ -45,6 +47,8 @@ export default function Home() {
         <Services onOpenWizard={openChat} />
         <HowItWorks onOpenWizard={() => openChat()} />
         <SocialProof />
+        <CoverageMap />
+        <FinalCTA onOpenWizard={() => openChat()} />
         <Footer onOpenWizard={() => openChat()} />
       </main>
       <ChatBotBubble visible={!chatOpen} onClick={openChatMenu} />
