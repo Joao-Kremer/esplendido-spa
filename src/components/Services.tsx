@@ -1,13 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { services } from "@/lib/data";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, ArrowRight, CheckCircle2 } from "lucide-react";
+import { services, type Service } from "@/lib/data";
 
 interface ServicesProps {
   onOpenWizard: (preselectedService?: string) => void;
 }
 
 export default function Services({ onOpenWizard }: ServicesProps) {
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
   return (
     <section id="servicos" className="bg-neutral py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
@@ -26,27 +30,137 @@ export default function Services({ onOpenWizard }: ServicesProps) {
           {services.map((service, i) => {
             const Icon = service.icon;
             return (
-              <motion.button
+              <motion.div
                 key={service.name}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                onClick={() => onOpenWizard(service.name)}
-                className="group cursor-pointer rounded-xl border border-transparent bg-white p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg"
+                className="group flex flex-col rounded-xl border border-transparent bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg"
               >
                 <Icon size={32} className="mb-4 text-primary" />
                 <h3 className="font-heading text-lg font-bold text-dark">
                   {service.name}
                 </h3>
-                <p className="mt-1 text-sm text-dark/50">
+                <p className="mt-1 flex-1 text-sm text-dark/50">
                   {service.description}
                 </p>
-              </motion.button>
+                <div className="mt-4 flex gap-2">
+                  <button
+                    onClick={() => setSelectedService(service)}
+                    className="text-xs font-medium text-primary transition-colors hover:text-cta"
+                  >
+                    Ver mais
+                  </button>
+                  <span className="text-dark/15">|</span>
+                  <button
+                    onClick={() => onOpenWizard(service.name)}
+                    className="flex items-center gap-1 text-xs font-medium text-dark/40 transition-colors hover:text-dark"
+                  >
+                    Agendar
+                    <ArrowRight size={10} />
+                  </button>
+                </div>
+              </motion.div>
             );
           })}
         </div>
       </div>
+
+      {/* Service Detail Modal */}
+      <AnimatePresence>
+        {selectedService && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedService(null)}
+              className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+            />
+
+            {/* Modal */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 250 }}
+              className="fixed inset-4 z-50 m-auto flex max-h-[85vh] max-w-lg flex-col overflow-hidden rounded-2xl shadow-2xl sm:inset-auto sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2"
+              style={{ background: "linear-gradient(180deg, #0d1e36 0%, #0A1628 100%)" }}
+            >
+              {/* Modal Header */}
+              <div className="relative flex items-center gap-4 px-6 pt-6 pb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
+                  <selectedService.icon size={24} className="text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-heading text-lg font-bold text-white">
+                    {selectedService.name}
+                  </h3>
+                  <p className="text-sm text-white/40">{selectedService.description}</p>
+                </div>
+                <button
+                  onClick={() => setSelectedService(null)}
+                  className="flex h-8 w-8 items-center justify-center rounded-lg text-white/30 transition-all hover:bg-white/[0.06] hover:text-white/60"
+                >
+                  <X size={16} />
+                </button>
+              </div>
+
+              {/* Divider */}
+              <div className="mx-6 h-px bg-white/[0.06]" />
+
+              {/* Modal Content */}
+              <div className="flex-1 overflow-y-auto px-6 py-5" style={{ scrollbarWidth: "none" }}>
+                {/* Details */}
+                <div className="space-y-3">
+                  {selectedService.details.map((detail, i) => (
+                    <p key={i} className="text-sm leading-relaxed text-white/70">
+                      {detail}
+                    </p>
+                  ))}
+                </div>
+
+                {/* Includes */}
+                <div className="mt-6">
+                  <h4 className="mb-3 text-xs font-bold uppercase tracking-wider text-primary/70">
+                    O que inclui
+                  </h4>
+                  <ul className="space-y-2.5">
+                    {selectedService.includes.map((item, i) => (
+                      <motion.li
+                        key={i}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: i * 0.05 }}
+                        className="flex items-start gap-2.5"
+                      >
+                        <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-primary/60" />
+                        <span className="text-sm leading-relaxed text-white/60">{item}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Modal Footer */}
+              <div className="border-t border-white/[0.06] px-6 py-4">
+                <button
+                  onClick={() => {
+                    setSelectedService(null);
+                    onOpenWizard(selectedService.name);
+                  }}
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-bold text-dark transition-all hover:shadow-[0_0_24px_rgba(0,218,255,0.3)]"
+                >
+                  Agendar {selectedService.name}
+                  <ArrowRight size={16} />
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
