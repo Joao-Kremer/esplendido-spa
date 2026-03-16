@@ -45,11 +45,11 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
   }, []);
 
   return (
-    <section id="como-funciona" className="bg-primary py-20 md:py-28">
+    <section id="como-funciona" className="bg-dark py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
             Como funciona
           </h2>
         </div>
@@ -59,7 +59,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
           {/* Connecting line (desktop: horizontal, mobile: vertical) */}
           <div
             ref={lineRef}
-            className="absolute left-1/2 top-[10%] bottom-[10%] w-px origin-top border-l-2 border-dashed border-dark/20 md:left-[15%] md:right-[15%] md:top-1/2 md:bottom-auto md:h-px md:w-auto md:origin-left md:border-l-0 md:border-t-2"
+            className="absolute left-1/2 top-[10%] bottom-[10%] w-px origin-top border-l-2 border-dashed border-primary/20 md:left-[15%] md:right-[15%] md:top-1/2 md:bottom-auto md:h-px md:w-auto md:origin-left md:border-l-0 md:border-t-2"
           />
 
           {steps.map((step, i) => {
@@ -76,13 +76,13 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
                 <span className="font-heading text-4xl font-extrabold text-golden">
                   {step.number}
                 </span>
-                <div className={`mt-4 rounded-xl bg-dark/10 p-4 ${step.iconColor}`}>
+                <div className={`mt-4 rounded-xl bg-white/5 p-4 ${step.iconColor}`}>
                   <Icon size={28} />
                 </div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-dark">
+                <h3 className="mt-4 font-heading text-lg font-bold text-white">
                   {step.title}
                 </h3>
-                <p className="mt-2 max-w-[240px] text-sm text-dark/50">
+                <p className="mt-2 max-w-[240px] text-sm text-white/50">
                   {step.description}
                 </p>
               </motion.div>
@@ -94,7 +94,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
         <div className="mt-16 text-center">
           <button
             onClick={onOpenWizard}
-            className="rounded-lg bg-dark px-8 py-3 text-sm font-bold text-primary transition-transform hover:scale-105"
+            className="rounded-lg bg-gradient-to-r from-primary to-cta px-8 py-3 text-sm font-bold text-white transition-transform hover:scale-105"
           >
             Agendar agora
           </button>
