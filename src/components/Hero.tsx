@@ -13,7 +13,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenWizard }: HeroProps) {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-dark">
+    <section className="relative min-h-screen overflow-hidden bg-cta">
       {/* Ambient glow — primary color presence */}
       <div className="pointer-events-none absolute inset-0">
         {/* Top-right large glow */}
@@ -125,14 +125,14 @@ export default function Hero({ onOpenWizard }: HeroProps) {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             {/* Fade gradient left */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-dark via-dark/30 to-transparent" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cta via-cta/40 to-transparent" />
             {/* Fade gradient bottom */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-dark via-transparent to-transparent" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-cta via-transparent to-transparent" />
             {/* Primary tint overlay */}
             <div className="absolute inset-0 rounded-2xl bg-primary/[0.05]" />
 
             {/* Floating card */}
-            <div className="absolute bottom-6 right-6 animate-float rounded-xl border border-white/10 bg-dark/70 px-4 py-3 backdrop-blur-xl shadow-[0_0_20px_rgba(0,218,255,0.1)]">
+            <div className="absolute bottom-6 right-6 animate-float rounded-xl border border-white/15 bg-cta/80 px-4 py-3 backdrop-blur-xl shadow-[0_0_20px_rgba(0,218,255,0.15)]">
               <p className="text-xs font-semibold text-primary">PRÓXIMO HORÁRIO</p>
               <p className="text-lg font-bold text-white">Amanhã, 9h</p>
             </div>
@@ -145,7 +145,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
       </div>
 
       {/* Bottom gradient fade to next section */}
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-neutral to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-neutral to-transparent" />
     </section>
   );
 }

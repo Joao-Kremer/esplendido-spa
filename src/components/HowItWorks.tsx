@@ -45,7 +45,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
   }, []);
 
   return (
-    <section id="como-funciona" className="bg-dark py-20 md:py-28">
+    <section id="como-funciona" className="bg-cta py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16 text-center">

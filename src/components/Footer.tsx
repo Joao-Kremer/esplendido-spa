@@ -9,7 +9,7 @@ export default function Footer({ onOpenWizard }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark py-16">
+    <footer className="bg-cta py-16">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Brand */}
