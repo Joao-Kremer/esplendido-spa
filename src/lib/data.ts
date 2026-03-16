@@ -192,9 +192,9 @@ export const contacts = {
   hours: "Seg-Sex 08:00-17:00",
   area: "Lisboa & Margem Sul",
   social: {
-    facebook: "https://facebook.com/esplendido",
-    instagram: "https://instagram.com/esplendido",
-    tiktok: "https://tiktok.com/@esplendido",
+    facebook: "https://www.facebook.com/esplendidoapp",
+    instagram: "https://www.instagram.com/esplendido_app/",
+    tiktok: "https://www.tiktok.com/@esplendido_app",
   },
 };
 
