@@ -3,9 +3,8 @@
 import { useState, useCallback } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import StorySection from "@/components/StorySection";
 import Services from "@/components/Services";
-import WhyChooseUs from "@/components/WhyChooseUs";
 import HowItWorks from "@/components/HowItWorks";
 import SocialProof from "@/components/SocialProof";
 import CoverageMap from "@/components/CoverageMap";
@@ -46,9 +45,8 @@ export default function Home() {
       <Navbar onOpenWizard={() => openChat()} />
       <main>
         <Hero onOpenWizard={() => openChat()} />
-        <About />
+        <StorySection />
         <Services onOpenWizard={openChat} />
-        <WhyChooseUs />
         <HowItWorks onOpenWizard={() => openChat()} />
         <SocialProof />
         <CoverageMap />
