@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Phone, Mail, Clock, MapPin, Facebook, Instagram } from "lucide-react";
 import { contacts } from "@/lib/data";
+import Image from "next/image";
 
 interface FooterProps {
   onOpenWizard: () => void;
@@ -18,9 +19,13 @@ export default function Footer({ onOpenWizard }: FooterProps) {
         <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <h3 className="font-heading text-xl font-bold text-white">
-              {t("brand")}
-            </h3>
+            <Image
+              src="/images/esplendido-logo.png"
+              alt="Esplêndido"
+              width={150}
+              height={50}
+              className="h-8 w-auto"
+            />
             <p className="mt-3 text-sm leading-relaxed text-white/40">
               {t("description")}
             </p>

@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { useTranslations } from "next-intl";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 import LanguageSelector from "./LanguageSelector";
 
 interface NavbarProps {
@@ -36,8 +37,15 @@ export default function Navbar({ onOpenWizard }: NavbarProps) {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
           {/* Logo */}
-          <a href="#" className="font-heading text-xl font-bold text-white">
-            esplêndido
+          <a href="#">
+            <Image
+              src="/images/esplendido-logo.png"
+              alt="Esplêndido"
+              width={150}
+              height={50}
+              className="h-8 w-auto sm:h-10"
+              priority
+            />
           </a>
 
           {/* Desktop links */}
