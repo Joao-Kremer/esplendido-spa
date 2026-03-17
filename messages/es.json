@@ -2,5 +2,390 @@
   "metadata": {
     "title": "Esplêndido | Servicios de Limpieza Profesional en Portugal",
     "description": "Limpieza doméstica, comercial e higienización profesional. Equipo capacitado, productos eco-friendly y 100% garantía de satisfacción. ¡Presupuesto gratis!"
+  },
+  "navbar": {
+    "about": "Nosotros",
+    "services": "Servicios",
+    "howItWorks": "Cómo Funciona",
+    "testimonials": "Testimonios",
+    "coverage": "Cobertura",
+    "cta": "Reservar"
+  },
+  "hero": {
+    "headlineTop": "Tu casa merece",
+    "headlineBottom": "ser",
+    "headlineHighlight": "esplêndida",
+    "subtitle1": "Equipo fijo y capacitado a tu servicio.",
+    "subtitle2": "Lisboa & Margem Sul.",
+    "cta": "Reservar por WhatsApp",
+    "clients": "300+ clientes",
+    "guarantee": "100% garantía",
+    "imageAlt": "Servicio de limpieza profesional"
+  },
+  "story": {
+    "title": "Conoce a Esplêndido",
+    "subtitle": "Nuestra historia contada paso a paso",
+    "steps": [
+      {
+        "title": "Nuestro Compromiso",
+        "text": "Estamos constantemente mejorando nuestros ya elevados estándares para que nos vea como la mejor empresa del sector.",
+        "highlights": [
+          "Limpiezas diarias, semanales o mensuales",
+          "Equipo fijo y capacitado",
+          "Mejor relación calidad-precio"
+        ]
+      },
+      {
+        "title": "Cómo Funcionamos",
+        "text": "Nuestra especialidad es eliminar el estrés de cualquier aspecto de la limpieza. Reserve en línea en 60 segundos.",
+        "highlights": [
+          "Reserva en 60 segundos",
+          "Equipo verificado — 5 estrellas",
+          "Gestione todo en línea"
+        ]
+      },
+      {
+        "title": "Satisfacción Garantizada",
+        "text": "En Esplêndido, estamos totalmente asegurados y respaldados, lo que significa que puede tener tranquilidad cuando entramos en su hogar. La calidad de nuestro servicio es nuestra mayor prioridad.",
+        "highlights": [
+          "Totalmente asegurados y respaldados",
+          "Compromiso con la excelencia"
+        ]
+      },
+      {
+        "title": "Productos Eco-Friendly",
+        "text": "Productos biodegradables que no perjudican el medio ambiente, las mascotas ni los seres humanos.",
+        "highlights": [
+          "100% biodegradables y seguros",
+          "Red extensa en Lisboa y Margem Sul"
+        ]
+      }
+    ]
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones de limpieza para cada necesidad",
+    "viewMore": "Ver más",
+    "book": "Reservar",
+    "bookService": "Reservar {serviceName}",
+    "includes": "Qué incluye",
+    "items": [
+      {
+        "name": "Limpieza Doméstica",
+        "description": "Limpieza de polvo, desinfección y aspiración",
+        "details": [
+          "Nuestro equipo limpia minuciosamente todos los rincones de cada habitación, ¡del techo al suelo!",
+          "Utilizamos productos específicos para cada superficie, garantizando una limpieza profunda y segura."
+        ],
+        "includes": [
+          "Limpieza de polvo en todas las habitaciones",
+          "Desinfección de superficies con productos específicos",
+          "Aspiración profesional y limpieza con fregona",
+          "Limpieza y desinfección de muebles (interior y exterior)",
+          "Desinfección completa de artículos sanitarios",
+          "Cambio de ropa de cama y sustitución de bolsas de basura",
+          "Lavado y secado de vajilla",
+          "Limpieza de cristales, ventanas, azulejos, puertas y zócalos"
+        ]
+      },
+      {
+        "name": "Limpieza Comercial",
+        "description": "Espacios comerciales y empresariales",
+        "details": [
+          "Garantizamos un ambiente saludable y productivo para empleados y clientes, mejorando la imagen corporativa.",
+          "Comenzamos con una evaluación inicial donde visitamos el local para entender las necesidades específicas y creamos un plan personalizado."
+        ],
+        "includes": [
+          "Entradas y recepción: aspiración, limpieza de pisos, alfombras, puertas y manijas",
+          "Oficinas: limpieza de escritorios, sillas, desinfección de teclados, ratones y teléfonos",
+          "Baños: desinfección completa de pisos, sanitarios, lavabos y espejos",
+          "Salas de descanso: limpieza de muebles y desinfección de áreas de alto contacto",
+          "Vaciado de papeleras y reposición de consumibles"
+        ]
+      },
+      {
+        "name": "Higienización de Sofás",
+        "description": "Pulverización, cepillado y lavado",
+        "details": [
+          "Servicio fundamental para mantener un ambiente limpio y saludable, eliminando suciedad, ácaros, olores y manchas de los tapizados.",
+          "Utilizamos metodologías avanzadas y productos adaptados al tipo de tela de su sofá."
+        ],
+        "includes": [
+          "Inspección inicial para identificar áreas de suciedad y manchas",
+          "Aspiración profunda con aspiradoras de alta potencia",
+          "Aplicación de productos específicos que eliminan ácaros y bacterias",
+          "Eliminación de olores indeseados y desodorización completa",
+          "Extracción para secado rápido"
+        ]
+      },
+      {
+        "name": "Limpieza Post-obra",
+        "description": "Recogida de escombros y limpieza profunda",
+        "details": [
+          "Servicio esencial para preparar un inmueble recién construido o renovado para su uso.",
+          "Eliminamos residuos de construcción, polvo, manchas de pintura, cemento y otros materiales, higienizando todas las superficies de forma profunda."
+        ],
+        "includes": [
+          "Eliminación de residuos: restos de madera, cemento y escombros",
+          "Aspiración e higienización de pisos, paredes, techos, puertas y ventanas",
+          "Limpieza de cristales, zócalos, enchufes e interruptores",
+          "Higienización completa de cocinas y baños",
+          "Desinfección de manijas, pasamanos y luminarias",
+          "Inspección final de calidad antes de la entrega"
+        ]
+      },
+      {
+        "name": "Cristales/Ventanas/Persianas",
+        "description": "Limpieza interior y exterior con productos específicos",
+        "details": [
+          "Servicio esencial para mantener la luminosidad y la estética de cualquier espacio.",
+          "Combinamos técnicas profesionales con productos adecuados para eliminar acumulaciones de polvo, manchas y suciedad."
+        ],
+        "includes": [
+          "Cristales: eliminación interna y externa de polvo, manchas y huellas dactilares",
+          "Ventanas: limpieza de marcos, bastidores y carpintería",
+          "Verificación y limpieza de rieles y canales de drenaje",
+          "Persianas: eliminación de polvo, telarañas y suciedad",
+          "Verificación y lubricación de los mecanismos de funcionamiento"
+        ]
+      },
+      {
+        "name": "Moho y Humedad",
+        "description": "Eliminación de hongos en paredes y techos",
+        "details": [
+          "Servicio que busca garantizar la salud y la integridad de ambientes interiores mediante la eliminación eficaz de hongos y moho.",
+          "Seguimos un enfoque sistemático: evaluación, eliminación, tratamiento preventivo y secado completo."
+        ],
+        "includes": [
+          "Inspección detallada para identificar áreas afectadas y origen de la humedad",
+          "Eliminación de moho con productos especializados",
+          "Tratamiento de superficies variadas: paredes, techos, pisos y muebles",
+          "Aplicación de soluciones antifúngicas preventivas",
+          "Secado completo de las áreas tratadas"
+        ]
+      },
+      {
+        "name": "Higiene de Colchones",
+        "description": "Pulverización, cepillado y lavado",
+        "details": [
+          "Servicio esencial para mantener un ambiente de sueño saludable y libre de ácaros, bacterias y alérgenos.",
+          "Especialmente importante para personas con sensibilidades alérgicas o problemas respiratorios."
+        ],
+        "includes": [
+          "Inspección inicial para identificar áreas de suciedad y manchas",
+          "Aspiración profunda con aspiradoras de alta potencia",
+          "Aplicación de productos de limpieza y desinfectantes específicos para el tejido",
+          "Eliminación de ácaros, bacterias y microorganismos nocivos",
+          "Eliminación de manchas y olores indeseados"
+        ]
+      },
+      {
+        "name": "Higiene de Alfombras",
+        "description": "Aspiración profunda y champú",
+        "details": [
+          "Proceso completo de limpieza profunda para mantener la limpieza y la durabilidad de sus alfombras.",
+          "Trabajamos con productos específicos y adecuados al tipo de fibra de cada alfombra."
+        ],
+        "includes": [
+          "Inspección inicial para determinar tipo de tejido e identificar manchas",
+          "Aspiración profunda con aspiradoras de alta potencia",
+          "Lavado especializado con productos adecuados al tipo de fibra",
+          "Eliminación de manchas, olores y microorganismos",
+          "Restauración de la apariencia original de la alfombra"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "cta": "Reservar ahora",
+    "steps": [
+      {
+        "title": "Elija el servicio",
+        "description": "Seleccione el tipo de limpieza que necesita en nuestro menú de servicios."
+      },
+      {
+        "title": "Reserve por WhatsApp",
+        "description": "Complete los detalles y envíe directamente a nuestro WhatsApp."
+      },
+      {
+        "title": "Reciba al equipo",
+        "description": "Nuestro equipo capacitado llega en la fecha acordada, listo para transformar su espacio."
+      }
+    ]
+  },
+  "socialProof": {
+    "title": "Lo que dicen nuestros clientes",
+    "stats": [
+      { "label": "Clientes felices" },
+      { "label": "Valoración media" },
+      { "label": "Profesionales" }
+    ],
+    "testimonials": [
+      { "name": "Marta Pereira", "text": "Mi casa parece nueva después de la limpieza. Equipo muy amable." },
+      { "name": "Manuel Oliveira", "text": "Servicio de limpieza de ventanas impecable." },
+      { "name": "João Santos", "text": "Atención de primera, servicio de alta calidad." },
+      { "name": "Ana Silveira", "text": "Limpieza post-obra increíble." }
+    ]
+  },
+  "coverage": {
+    "title": "Dónde actuamos",
+    "subtitle": "Cobertura en Lisboa y Margem Sul",
+    "notFound": "¿No encontró su zona? Contáctenos — puede que tengamos cobertura en su área.",
+    "zones": [
+      {
+        "name": "Lisboa Centro",
+        "areas": "Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique"
+      },
+      {
+        "name": "Margem Sul",
+        "areas": "Almada, Seixal, Barreiro, Montijo, Setúbal"
+      }
+    ],
+    "mapLabels": {
+      "lisboaCentro": "Lisboa Centro",
+      "margemSul": "Margem Sul",
+      "rioTejo": "Rio Tejo"
+    }
+  },
+  "finalCta": {
+    "badge": "Reserve en 60 segundos",
+    "headlineTop": "¿Listo para tener su",
+    "headlineBottom": "casa",
+    "headlineHighlight": "esplêndida",
+    "subtitle": "Elija el servicio, díganos lo que necesita y reciba a nuestro equipo capacitado en su puerta. Sin compromiso.",
+    "cta": "Reservar por WhatsApp",
+    "phone": "o llame al 910 725 044"
+  },
+  "footer": {
+    "brand": "esplêndido",
+    "description": "Servicios de limpieza profesional en Lisboa y Margem Sul. Equipo capacitado, productos eco-friendly y 100% garantía de satisfacción.",
+    "contacts": "Contactos",
+    "quickLinks": "Enlaces rápidos",
+    "copyright": "© {year} Esplêndido. Todos los derechos reservados.",
+    "bookCta": "Reservar por WhatsApp"
+  },
+  "chatbot": {
+    "openChat": "Abrir chat",
+    "confirm": "Confirmar",
+    "assistantLabel": "Asistente Esplêndido",
+    "online": "En línea",
+    "notesPlaceholder": "Escriba aquí sus observaciones...",
+    "areaPlaceholder": "Ej: 80",
+    "noNotes": "(sin observaciones)",
+    "sendingRequest": "Enviando su solicitud...",
+    "requestSuccess": "✅ ¡Solicitud enviada con éxito!",
+    "requestSuccessFollowup": "Nuestro equipo analizará su solicitud y se pondrá en contacto en breve.",
+    "requestSuccessContact": "También puede contactarnos directamente:",
+    "requestError": "Ocurrió un error al enviar. Puede intentar de nuevo o contactarnos directamente:",
+    "connectionError": "Ocurrió un error de conexión. Puede contactarnos directamente:",
+    "retryButton": "🔄 Intentar de nuevo",
+    "whatsappButton": "💬 WhatsApp",
+    "phoneButton": "📞 Llamar",
+    "backToMenu": "Volver al menú",
+    "summaryIntro": "¡Perfecto! Aquí está el resumen:",
+    "summaryService": "📋 Servicio: {value}",
+    "summaryFrequency": "🔄 Frecuencia: {value}",
+    "summaryArea": "📐 Área: {value} m²",
+    "summaryZone": "📍 Zona: {value}",
+    "summaryNotes": "📝 Observaciones: {value}",
+    "menu": {
+      "greeting": "¡Hola! Soy el asistente de Esplêndido. ¿Cómo puedo ayudarle?",
+      "bookService": "📋 Reservar Servicio",
+      "knowServices": "🔍 Conocer Servicios",
+      "talkSupport": "💬 Hablar con Soporte",
+      "aboutCompany": "🏢 Sobre Esplêndido",
+      "locations": "📍 Ubicaciones de Atención",
+      "products": "🧴 Productos Utilizados",
+      "faq": "❓ Preguntas Frecuentes"
+    },
+    "booking": {
+      "whichService": "¿Qué servicio necesita?",
+      "whichFrequency": "¿Con qué frecuencia?",
+      "pontual": "Puntual",
+      "semanal": "Semanal",
+      "quinzenal": "Quincenal",
+      "mensal": "Mensual",
+      "skip": "Omitir",
+      "whichArea": "¿Cuál es el área del espacio en m²?",
+      "enterArea": "Ingresar área",
+      "whichZone": "¿Cuál es la zona?",
+      "lisboaCentro": "Lisboa Centro",
+      "margemSul": "Margem Sul",
+      "outra": "Otra",
+      "anyNotes": "¿Tiene alguna observación?",
+      "yesWrite": "Sí, quiero escribir",
+      "noSendNow": "No, enviar ahora",
+      "submitBooking": "📧 Enviar solicitud",
+      "restart": "🔄 Comenzar de nuevo"
+    },
+    "support": {
+      "message": "¿Cómo prefiere contactar con nuestro soporte?",
+      "whatsapp": "💬 WhatsApp",
+      "call": "📞 Llamar ahora",
+      "backToMenu": "Volver al menú",
+      "whatsappMessage": "Hola, necesito soporte."
+    },
+    "about": {
+      "message1": "Esplêndido es una empresa de servicios de limpieza profesional en Lisboa y Margem Sul.",
+      "message2": "Con más de 300 clientes satisfechos, ofrecemos equipo fijo y capacitado, productos eco-friendly y 100% garantía de satisfacción.",
+      "message3": "Nuestra misión es transformar espacios con calidad, confianza y una atención esplêndida.",
+      "backToMenu": "Volver al menú"
+    },
+    "locations": {
+      "message1": "Actualmente atendemos en las siguientes zonas:",
+      "message2": "📍 Lisboa Centro — Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique",
+      "message3": "📍 Margem Sul — Almada, Seixal, Barreiro, Montijo, Setúbal",
+      "message4": "¿Desea reservar un servicio en su zona?",
+      "bookService": "Reservar Servicio",
+      "backToMenu": "Volver al menú"
+    },
+    "products": {
+      "message1": "Utilizamos únicamente productos profesionales eco-friendly y biodegradables, seguros para niños y mascotas.",
+      "message2": "🧴 Limpieza general: Productos multi-superficie certificados",
+      "message3": "🌿 Desinfección: Soluciones hospitalarias de baja toxicidad",
+      "message4": "🛋️ Tapizados: Champús neutros específicos para telas",
+      "message5": "Todos nuestros productos están aprobados y cumplen las normas europeas de seguridad.",
+      "backToMenu": "Volver al menú"
+    },
+    "faq": {
+      "menuQuestion": "¿Sobre qué le gustaría saber?",
+      "guaranteeQuestion": "¿Cuál es la garantía?",
+      "guaranteeAnswer": "Ofrecemos 100% garantía de satisfacción. Nuestro equipo está capacitado para entregar siempre el mejor resultado, con total compromiso y profesionalismo.",
+      "paymentQuestion": "¿Cómo funciona el pago?",
+      "paymentAnswer": "El pago se realiza después de la realización del servicio. Aceptamos transferencia bancaria y MBWay. Para planes mensuales, el pago se realiza al final del primer mes.",
+      "teamQuestion": "¿El equipo es fijo?",
+      "teamAnswer": "¡Sí! Mantenemos el mismo equipo para cada cliente, para que conozcan su espacio y sus preferencias.",
+      "presenceQuestion": "¿Necesito estar en casa?",
+      "presenceAnswer": "No es obligatorio. Muchos clientes entregan la llave a nuestro equipo de confianza. Todos los profesionales están verificados y asegurados.",
+      "priceQuestion": "Quiero saber el precio",
+      "priceAnswer": "Para un presupuesto personalizado, ¡contáctenos por WhatsApp!",
+      "openWhatsapp": "Abrir WhatsApp",
+      "anotherQuestion": "Otra pregunta",
+      "backToMenu": "Volver al menú",
+      "whatsappMessage": "Hola, me gustaría saber el precio de los servicios."
+    },
+    "servicesInfo": {
+      "menuQuestion": "¿Sobre qué servicio le gustaría saber más?",
+      "bookThisService": "📋 Reservar este servicio",
+      "anotherService": "Otro servicio",
+      "backToMenu": "Volver al menú",
+      "includesLabel": "Qué incluye:"
+    }
+  },
+  "wizard": {
+    "selectService": "Seleccione un servicio",
+    "enterArea": "Ingrese el área en m²",
+    "whatsappGreeting": "¡Hola! Me gustaría reservar un servicio:",
+    "serviceLabel": "📋 Servicio: {value}",
+    "frequencyLabel": "🔄 Frecuencia: {value}",
+    "areaLabel": "📐 Área: {value} m²",
+    "zoneLabel": "📍 Zona: {value}",
+    "notesLabel": "📝 Observaciones: {value}",
+    "closing": "Espero su contacto. ¡Gracias!"
+  },
+  "common": {
+    "hours": "Lun-Vie 08:00-17:00",
+    "area": "Lisboa & Margem Sul"
   }
 }

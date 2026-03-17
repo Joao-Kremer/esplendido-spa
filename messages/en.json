@@ -1,6 +1,391 @@
 {
   "metadata": {
     "title": "Esplêndido | Professional Cleaning Services in Portugal",
-    "description": "Residential, commercial and professional cleaning. Trained team, eco-friendly products and 100% satisfaction guarantee. Free quote!"
+    "description": "Residential, commercial and professional cleaning services. Trained team, eco-friendly products and 100% satisfaction guarantee. Free quote!"
+  },
+  "navbar": {
+    "about": "About",
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "testimonials": "Testimonials",
+    "coverage": "Coverage",
+    "cta": "Book Now"
+  },
+  "hero": {
+    "headlineTop": "Your home deserves",
+    "headlineBottom": "to be",
+    "headlineHighlight": "splendid",
+    "subtitle1": "A dedicated, trained team at your service.",
+    "subtitle2": "Lisboa & Margem Sul.",
+    "cta": "Book via WhatsApp",
+    "clients": "300+ clients",
+    "guarantee": "100% guarantee",
+    "imageAlt": "Professional cleaning service"
+  },
+  "story": {
+    "title": "Meet Esplêndido",
+    "subtitle": "Our story told step by step",
+    "steps": [
+      {
+        "title": "Our Commitment",
+        "text": "We are constantly improving our already high standards so you see us as the best company in the industry.",
+        "highlights": [
+          "Daily, weekly or monthly cleaning",
+          "Dedicated, trained team",
+          "Best value for money"
+        ]
+      },
+      {
+        "title": "How We Work",
+        "text": "Our specialty is eliminating the stress of every aspect of cleaning. Book online in 60 seconds.",
+        "highlights": [
+          "Book in 60 seconds",
+          "Verified team — 5 stars",
+          "Manage everything online"
+        ]
+      },
+      {
+        "title": "Satisfaction Guaranteed",
+        "text": "At Esplêndido, we are fully bonded and insured, which means you can have peace of mind when we enter your home. The quality of our service is our top priority.",
+        "highlights": [
+          "Fully bonded and insured",
+          "Commitment to excellence"
+        ]
+      },
+      {
+        "title": "Eco-Friendly Products",
+        "text": "Biodegradable products that are safe for the environment, pets and people.",
+        "highlights": [
+          "100% biodegradable and safe",
+          "Extensive coverage in Lisboa and Margem Sul"
+        ]
+      }
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Cleaning solutions for every need",
+    "viewMore": "View more",
+    "book": "Book",
+    "bookService": "Book {serviceName}",
+    "includes": "What's included",
+    "items": [
+      {
+        "name": "Residential Cleaning",
+        "description": "Dusting, sanitizing and vacuuming",
+        "details": [
+          "Our team thoroughly cleans every corner of every room, from ceiling to floor!",
+          "We use surface-specific products, ensuring a deep and safe clean."
+        ],
+        "includes": [
+          "Dusting in all rooms",
+          "Surface sanitizing with specialized products",
+          "Professional vacuuming and mopping",
+          "Cleaning and sanitizing furniture (inside and out)",
+          "Full sanitizing of bathroom fixtures",
+          "Changing bed linens and replacing trash bags",
+          "Washing and drying dishes",
+          "Cleaning windows, glass, tiles, doors and baseboards"
+        ]
+      },
+      {
+        "name": "Commercial Cleaning",
+        "description": "Commercial and corporate spaces",
+        "details": [
+          "We ensure a healthy, productive environment for employees and clients, enhancing your corporate image.",
+          "We start with an initial assessment where we visit the site to understand specific needs and create a customized plan."
+        ],
+        "includes": [
+          "Entrances and reception: vacuuming, floor cleaning, rugs, doors and handles",
+          "Offices: desk and chair cleaning, sanitizing keyboards, mice and phones",
+          "Bathrooms: full sanitizing of floors, toilets, sinks and mirrors",
+          "Break rooms: furniture cleaning and sanitizing high-touch areas",
+          "Emptying bins and restocking supplies"
+        ]
+      },
+      {
+        "name": "Sofa Cleaning",
+        "description": "Spraying, brushing and washing",
+        "details": [
+          "An essential service for maintaining a clean and healthy environment, removing dirt, dust mites, odors and stains from upholstery.",
+          "We use advanced methods and products suited to the fabric type of your sofa."
+        ],
+        "includes": [
+          "Initial inspection to identify soiled areas and stains",
+          "Deep vacuuming with high-powered vacuums",
+          "Application of specialized products that eliminate dust mites and bacteria",
+          "Removal of unwanted odors and full deodorizing",
+          "Extraction for quick drying"
+        ]
+      },
+      {
+        "name": "Post-Construction Cleaning",
+        "description": "Debris removal and deep cleaning",
+        "details": [
+          "An essential service to prepare a newly built or renovated property for use.",
+          "We remove construction residue, dust, paint stains, cement and other materials, deeply sanitizing all surfaces."
+        ],
+        "includes": [
+          "Debris removal: wood scraps, cement and rubble",
+          "Vacuuming and sanitizing floors, walls, ceilings, doors and windows",
+          "Cleaning glass, baseboards, outlets and switches",
+          "Full sanitizing of kitchens and bathrooms",
+          "Sanitizing door handles, handrails and light fixtures",
+          "Final quality inspection before handover"
+        ]
+      },
+      {
+        "name": "Windows/Glass/Blinds",
+        "description": "Interior and exterior cleaning with specialized products",
+        "details": [
+          "An essential service for maintaining the brightness and appearance of any space.",
+          "We combine professional techniques with the right products to remove accumulated dust, stains and grime."
+        ],
+        "includes": [
+          "Glass: interior and exterior removal of dust, stains and fingerprints",
+          "Windows: cleaning frames, casings and fittings",
+          "Checking and cleaning tracks and drainage channels",
+          "Blinds: removal of dust, cobwebs and grime",
+          "Checking and lubricating operating mechanisms"
+        ]
+      },
+      {
+        "name": "Mold & Moisture",
+        "description": "Removing fungi from walls and ceilings",
+        "details": [
+          "A service aimed at ensuring the health and integrity of indoor environments through effective removal of fungi and mold.",
+          "We follow a systematic approach: assessment, removal, preventive treatment and thorough drying."
+        ],
+        "includes": [
+          "Detailed inspection to identify affected areas and the source of moisture",
+          "Mold removal with specialized products",
+          "Treatment of various surfaces: walls, ceilings, floors and furniture",
+          "Application of preventive antifungal solutions",
+          "Thorough drying of treated areas"
+        ]
+      },
+      {
+        "name": "Mattress Cleaning",
+        "description": "Spraying, brushing and washing",
+        "details": [
+          "An essential service for maintaining a healthy sleep environment free of dust mites, bacteria and allergens.",
+          "Especially important for people with allergies or respiratory issues."
+        ],
+        "includes": [
+          "Initial inspection to identify soiled areas and stains",
+          "Deep vacuuming with high-powered vacuums",
+          "Application of cleaning and disinfecting products specific to the fabric",
+          "Elimination of dust mites, bacteria and harmful microorganisms",
+          "Removal of stains and unwanted odors"
+        ]
+      },
+      {
+        "name": "Carpet Cleaning",
+        "description": "Deep vacuuming and shampooing",
+        "details": [
+          "A complete deep cleaning process to maintain the cleanliness and durability of your carpets.",
+          "We work with specific products suited to the fiber type of each carpet."
+        ],
+        "includes": [
+          "Initial inspection to determine fabric type and identify stains",
+          "Deep vacuuming with high-powered vacuums",
+          "Specialized washing with products suited to the fiber type",
+          "Removal of stains, odors and microorganisms",
+          "Restoring the carpet's original appearance"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "cta": "Book now",
+    "steps": [
+      {
+        "title": "Choose your service",
+        "description": "Select the type of cleaning you need from our services menu."
+      },
+      {
+        "title": "Book via WhatsApp",
+        "description": "Fill in the details and send them directly to our WhatsApp."
+      },
+      {
+        "title": "Welcome the team",
+        "description": "Our trained team arrives on the scheduled date, ready to transform your space."
+      }
+    ]
+  },
+  "socialProof": {
+    "title": "What our clients say",
+    "stats": [
+      { "label": "Happy clients" },
+      { "label": "Average rating" },
+      { "label": "Professionals" }
+    ],
+    "testimonials": [
+      { "name": "Marta Pereira", "text": "My house looks brand new after the cleaning. Very friendly team." },
+      { "name": "Manuel Oliveira", "text": "Flawless window cleaning service." },
+      { "name": "João Santos", "text": "First-class customer service, top-quality work." },
+      { "name": "Ana Silveira", "text": "Incredible post-construction cleaning." }
+    ]
+  },
+  "coverage": {
+    "title": "Where we operate",
+    "subtitle": "Coverage in Lisboa and Margem Sul",
+    "notFound": "Didn't find your area? Get in touch — we may have coverage in your zone.",
+    "zones": [
+      {
+        "name": "Lisboa Centro",
+        "areas": "Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique"
+      },
+      {
+        "name": "Margem Sul",
+        "areas": "Almada, Seixal, Barreiro, Montijo, Setúbal"
+      }
+    ],
+    "mapLabels": {
+      "lisboaCentro": "Lisboa Centro",
+      "margemSul": "Margem Sul",
+      "rioTejo": "Rio Tejo"
+    }
+  },
+  "finalCta": {
+    "badge": "Book in 60 seconds",
+    "headlineTop": "Ready to make your",
+    "headlineBottom": "home",
+    "headlineHighlight": "splendid",
+    "subtitle": "Choose the service, tell us what you need and our trained team will be at your door. No commitment.",
+    "cta": "Book via WhatsApp",
+    "phone": "or call 910 725 044"
+  },
+  "footer": {
+    "brand": "esplêndido",
+    "description": "Professional cleaning services in Lisboa and Margem Sul. Trained team, eco-friendly products and 100% satisfaction guarantee.",
+    "contacts": "Contacts",
+    "quickLinks": "Quick links",
+    "copyright": "© {year} Esplêndido. All rights reserved.",
+    "bookCta": "Book via WhatsApp"
+  },
+  "chatbot": {
+    "openChat": "Open chat",
+    "confirm": "Confirm",
+    "assistantLabel": "Esplêndido Assistant",
+    "online": "Online",
+    "notesPlaceholder": "Write your notes here...",
+    "areaPlaceholder": "E.g.: 80",
+    "noNotes": "(no notes)",
+    "sendingRequest": "Sending your request...",
+    "requestSuccess": "✅ Request sent successfully!",
+    "requestSuccessFollowup": "Our team will review your request and get in touch shortly.",
+    "requestSuccessContact": "You can also contact us directly:",
+    "requestError": "An error occurred while sending. You can try again or contact us directly:",
+    "connectionError": "A connection error occurred. You can contact us directly:",
+    "retryButton": "🔄 Try again",
+    "whatsappButton": "💬 WhatsApp",
+    "phoneButton": "📞 Call",
+    "backToMenu": "Back to menu",
+    "summaryIntro": "Perfect! Here's the summary:",
+    "summaryService": "📋 Service: {value}",
+    "summaryFrequency": "🔄 Frequency: {value}",
+    "summaryArea": "📐 Area: {value} m²",
+    "summaryZone": "📍 Zone: {value}",
+    "summaryNotes": "📝 Notes: {value}",
+    "menu": {
+      "greeting": "Hello! I'm the Esplêndido assistant. How can I help?",
+      "bookService": "📋 Book a Service",
+      "knowServices": "🔍 Explore Services",
+      "talkSupport": "💬 Talk to Support",
+      "aboutCompany": "🏢 About Esplêndido",
+      "locations": "📍 Service Locations",
+      "products": "🧴 Products We Use",
+      "faq": "❓ Frequently Asked Questions"
+    },
+    "booking": {
+      "whichService": "Which service do you need?",
+      "whichFrequency": "How often?",
+      "pontual": "One-time",
+      "semanal": "Weekly",
+      "quinzenal": "Biweekly",
+      "mensal": "Monthly",
+      "skip": "Skip",
+      "whichArea": "What is the area in m²?",
+      "enterArea": "Enter area",
+      "whichZone": "What zone?",
+      "lisboaCentro": "Lisboa Centro",
+      "margemSul": "Margem Sul",
+      "outra": "Other",
+      "anyNotes": "Do you have any notes?",
+      "yesWrite": "Yes, I'd like to write",
+      "noSendNow": "No, send now",
+      "submitBooking": "📧 Submit request",
+      "restart": "🔄 Start over"
+    },
+    "support": {
+      "message": "How would you like to contact our support?",
+      "whatsapp": "💬 WhatsApp",
+      "call": "📞 Call now",
+      "backToMenu": "Back to menu",
+      "whatsappMessage": "Hello, I need support."
+    },
+    "about": {
+      "message1": "Esplêndido is a professional cleaning services company in Lisboa and Margem Sul.",
+      "message2": "With over 300 satisfied clients, we offer a dedicated, trained team, eco-friendly products and 100% satisfaction guarantee.",
+      "message3": "Our mission is to transform spaces with quality, trust and splendid service.",
+      "backToMenu": "Back to menu"
+    },
+    "locations": {
+      "message1": "We currently serve the following zones:",
+      "message2": "📍 Lisboa Centro — Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique",
+      "message3": "📍 Margem Sul — Almada, Seixal, Barreiro, Montijo, Setúbal",
+      "message4": "Would you like to book a service in your area?",
+      "bookService": "Book a Service",
+      "backToMenu": "Back to menu"
+    },
+    "products": {
+      "message1": "We only use professional eco-friendly and biodegradable products, safe for children and pets.",
+      "message2": "🧴 General cleaning: Certified multi-surface products",
+      "message3": "🌿 Sanitizing: Low-toxicity hospital-grade solutions",
+      "message4": "🛋️ Upholstery: Neutral shampoos specific to fabrics",
+      "message5": "All our products are approved and comply with European safety standards.",
+      "backToMenu": "Back to menu"
+    },
+    "faq": {
+      "menuQuestion": "What would you like to know about?",
+      "guaranteeQuestion": "What's the guarantee?",
+      "guaranteeAnswer": "We offer a 100% satisfaction guarantee. Our team is trained to always deliver the best results, with full commitment and professionalism.",
+      "paymentQuestion": "How does payment work?",
+      "paymentAnswer": "Payment is made after the service is completed. We accept bank transfer and MBWay. For monthly plans, payment is due at the end of the first month.",
+      "teamQuestion": "Is the team dedicated?",
+      "teamAnswer": "Yes! We keep the same team for each client, so they get to know your space and your preferences.",
+      "presenceQuestion": "Do I need to be home?",
+      "presenceAnswer": "Not required. Many clients hand over the key to our trusted team. All professionals are verified and insured.",
+      "priceQuestion": "I'd like to know the price",
+      "priceAnswer": "For a personalized quote, get in touch via WhatsApp!",
+      "openWhatsapp": "Open WhatsApp",
+      "anotherQuestion": "Another question",
+      "backToMenu": "Back to menu",
+      "whatsappMessage": "Hello, I'd like to know the price of your services."
+    },
+    "servicesInfo": {
+      "menuQuestion": "Which service would you like to know more about?",
+      "bookThisService": "📋 Book this service",
+      "anotherService": "Another service",
+      "backToMenu": "Back to menu",
+      "includesLabel": "What's included:"
+    }
+  },
+  "wizard": {
+    "selectService": "Select a service",
+    "enterArea": "Enter the area in m²",
+    "whatsappGreeting": "Hello! I'd like to book a service:",
+    "serviceLabel": "📋 Service: {value}",
+    "frequencyLabel": "🔄 Frequency: {value}",
+    "areaLabel": "📐 Area: {value} m²",
+    "zoneLabel": "📍 Zone: {value}",
+    "notesLabel": "📝 Notes: {value}",
+    "closing": "Looking forward to hearing from you. Thank you!"
+  },
+  "common": {
+    "hours": "Mon-Fri 08:00-17:00",
+    "area": "Lisboa & Margem Sul"
   }
 }

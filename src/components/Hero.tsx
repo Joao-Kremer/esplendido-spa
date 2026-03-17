@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Star, Shield, MessageCircle } from "lucide-react";
 import Image from "next/image";
@@ -12,6 +13,8 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenWizard }: HeroProps) {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-dark">
       {/* Three.js background */}
@@ -27,9 +30,9 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            Sua casa merece
+            {t("headlineTop")}
             <br />
-            ser <span className="gradient-text">esplêndida</span>
+            {t("headlineBottom")} <span className="gradient-text">{t("headlineHighlight")}</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -39,9 +42,9 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 max-w-md text-base leading-relaxed text-white/50 md:text-lg"
           >
-            Equipa fixa e treinada ao seu serviço.
+            {t("subtitle1")}
             <br />
-            Lisboa & Margem Sul.
+            {t("subtitle2")}
           </motion.p>
 
           {/* CTA */}
@@ -53,7 +56,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             className="mt-6 flex w-fit items-center gap-2 rounded-lg bg-primary px-5 py-3 text-xs font-bold text-dark glow-cyan transition-transform hover:scale-105 sm:mt-8 sm:px-6 sm:text-sm"
           >
             <MessageCircle size={18} />
-            Agendar pelo WhatsApp
+            {t("cta")}
           </motion.button>
 
           {/* Proof bar */}
@@ -69,12 +72,12 @@ export default function Hero({ onOpenWizard }: HeroProps) {
                   <Star key={i} size={14} className="fill-golden text-golden" />
                 ))}
               </div>
-              <span className="text-white/40">300+ clientes</span>
+              <span className="text-white/40">{t("clients")}</span>
             </div>
             <span className="text-white/15">|</span>
             <div className="flex items-center gap-1.5">
               <Shield size={14} className="text-primary" />
-              <span className="text-white/40">100% garantia</span>
+              <span className="text-white/40">{t("guarantee")}</span>
             </div>
           </motion.div>
         </div>
@@ -89,7 +92,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
           <div className="relative h-[500px] w-full">
             <Image
               src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=1000&fit=crop"
-              alt="Serviço de limpeza profissional"
+              alt={t("imageAlt")}
               fill
               className="rounded-2xl object-cover opacity-85"
               sizes="50vw"

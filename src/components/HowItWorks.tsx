@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ClipboardList, MessageCircle, Users } from "lucide-react";
-import { steps } from "@/lib/data";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -15,7 +15,13 @@ interface HowItWorksProps {
   onOpenWizard: () => void;
 }
 
+const stepNumbers = ["01", "02", "03"];
+const iconColors = ["text-accent", "text-primary", "text-golden"];
+
 export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
+  const t = useTranslations("howItWorks");
+  const localSteps = t.raw("steps") as Array<{ title: string; description: string }>;
+
   const lineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,7 +57,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
-            Como funciona
+            {t("title")}
           </h2>
         </div>
 
@@ -63,11 +69,11 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
             className="absolute left-1/2 top-[10%] bottom-[10%] w-px origin-top border-l-2 border-dashed border-primary/20 md:left-[15%] md:right-[15%] md:top-1/2 md:bottom-auto md:h-px md:w-auto md:origin-left md:border-l-0 md:border-t-2"
           />
 
-          {steps.map((step, i) => {
+          {localSteps.map((step, i) => {
             const Icon = stepIcons[i];
             return (
               <motion.div
-                key={step.number}
+                key={stepNumbers[i]}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -75,9 +81,9 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
                 className="relative z-10 flex flex-col items-center text-center md:flex-1"
               >
                 <span className="font-heading text-3xl font-extrabold text-golden sm:text-4xl">
-                  {step.number}
+                  {stepNumbers[i]}
                 </span>
-                <div className={`mt-4 rounded-xl bg-white/5 p-4 ${step.iconColor}`}>
+                <div className={`mt-4 rounded-xl bg-white/5 p-4 ${iconColors[i]}`}>
                   <Icon size={28} />
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-bold text-white">
@@ -97,7 +103,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
             onClick={onOpenWizard}
             className="w-full rounded-lg bg-gradient-to-r from-primary to-cta px-8 py-3.5 text-sm font-bold text-white transition-transform hover:scale-105 sm:w-auto sm:py-3"
           >
-            Agendar agora
+            {t("cta")}
           </button>
         </div>
       </div>

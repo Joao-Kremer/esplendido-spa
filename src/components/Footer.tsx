@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Phone, Mail, Clock, MapPin, Facebook, Instagram } from "lucide-react";
 import { contacts } from "@/lib/data";
 
@@ -6,6 +7,7 @@ interface FooterProps {
 }
 
 export default function Footer({ onOpenWizard }: FooterProps) {
+  const t = useTranslations("footer");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -15,11 +17,10 @@ export default function Footer({ onOpenWizard }: FooterProps) {
           {/* Brand */}
           <div>
             <h3 className="font-heading text-xl font-bold text-white">
-              esplêndido
+              {t("brand")}
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-white/40">
-              Serviços de limpeza profissional em Lisboa e Margem Sul.
-              Equipa treinada, produtos eco-friendly e 100% garantia de satisfação.
+              {t("description")}
             </p>
             <div className="mt-6 flex gap-4">
               <a href={contacts.social.facebook} target="_blank" rel="noopener noreferrer" className="text-white/50 transition-colors hover:text-primary">
@@ -37,7 +38,7 @@ export default function Footer({ onOpenWizard }: FooterProps) {
           {/* Contacts */}
           <div>
             <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-white/70">
-              Contactos
+              {t("contacts")}
             </h4>
             <ul className="mt-4 space-y-1">
               <li className="flex items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 sm:py-2">
@@ -62,7 +63,7 @@ export default function Footer({ onOpenWizard }: FooterProps) {
           {/* Quick links */}
           <div>
             <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-white/70">
-              Links rápidos
+              {t("quickLinks")}
             </h4>
             <ul className="mt-4 space-y-1">
               <li>
@@ -85,14 +86,14 @@ export default function Footer({ onOpenWizard }: FooterProps) {
               onClick={onOpenWizard}
               className="mt-6 rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-dark transition-transform hover:scale-105"
             >
-              Agendar pelo WhatsApp
+              {t("bookCta")}
             </button>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-xs text-white/30">
-          © {currentYear} Esplêndido. Todos os direitos reservados.
+          {t("copyright", { year: currentYear })}
         </div>
       </div>
     </footer>

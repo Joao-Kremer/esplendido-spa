@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { MessageCircle, Sparkles } from "lucide-react";
 
@@ -8,6 +9,8 @@ interface FinalCTAProps {
 }
 
 export default function FinalCTA({ onOpenWizard }: FinalCTAProps) {
+  const t = useTranslations("finalCta");
+
   return (
     <section className="relative overflow-x-clip bg-dark py-20 md:py-28">
       {/* Decorative glows */}
@@ -25,18 +28,17 @@ export default function FinalCTA({ onOpenWizard }: FinalCTAProps) {
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2">
             <Sparkles size={16} className="text-primary" />
-            <span className="text-sm font-medium text-primary">Agende em 60 segundos</span>
+            <span className="text-sm font-medium text-primary">{t("badge")}</span>
           </div>
 
           <h2 className="font-heading text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
-            Pronto para ter a sua
+            {t("headlineTop")}
             <br />
-            casa <span className="gradient-text">esplêndida</span>?
+            {t("headlineBottom")} <span className="gradient-text">{t("headlineHighlight")}</span>?
           </h2>
 
           <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-white/50 md:text-lg">
-            Escolha o serviço, diga-nos o que precisa e receba a nossa equipa
-            treinada na sua porta. Sem compromisso.
+            {t("subtitle")}
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -45,13 +47,13 @@ export default function FinalCTA({ onOpenWizard }: FinalCTAProps) {
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-bold text-dark shadow-[0_0_24px_rgba(0,218,255,0.25)] transition-all hover:scale-105 hover:shadow-[0_0_32px_rgba(0,218,255,0.4)] sm:w-auto"
             >
               <MessageCircle size={18} />
-              Agendar pelo WhatsApp
+              {t("cta")}
             </button>
             <a
               href="tel:910725044"
               className="text-sm font-medium text-white/40 underline decoration-white/15 underline-offset-4 transition-colors hover:text-white/70"
             >
-              ou ligue 910 725 044
+              {t("phone")}
             </a>
           </div>
         </motion.div>

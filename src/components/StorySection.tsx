@@ -2,46 +2,17 @@
 
 import { useRef, useEffect, useCallback } from "react";
 import { ShieldCheck, Sparkles, Leaf, Clock, Users, Award, ThumbsUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const storySteps = [
-  {
-    title: "O Nosso Empenho",
-    text: "Estamos constantemente a melhorar os nossos já elevados padrões para que nos veja como a melhor empresa do sector.",
-    highlights: [
-      { icon: Clock, label: "Limpezas diárias, semanais ou mensais" },
-      { icon: Users, label: "Equipa fixa e treinada" },
-      { icon: Award, label: "Melhor relação qualidade-preço" },
-    ],
-  },
-  {
-    title: "Como Funcionamos",
-    text: "A nossa especialidade é eliminar o stress de qualquer aspeto da limpeza. Reserve online em 60 segundos.",
-    highlights: [
-      { icon: Clock, label: "Agendamento em 60 segundos" },
-      { icon: ThumbsUp, label: "Equipa verificada — 5 estrelas" },
-      { icon: ShieldCheck, label: "Gerencie tudo online" },
-    ],
-  },
-  {
-    title: "Satisfação Garantida",
-    text: "Na Esplêndido, estamos totalmente vinculados e segurados, o que significa que pode ter paz de espírito quando entramos em sua casa. A qualidade do nosso serviço é a nossa maior prioridade.",
-    highlights: [
-      { icon: ShieldCheck, label: "Totalmente vinculados e segurados" },
-      { icon: Sparkles, label: "Compromisso com a excelência" },
-    ],
-  },
-  {
-    title: "Produtos Eco-Friendly",
-    text: "Produtos biodegradáveis que não prejudicam o ambiente, os animais de estimação ou os seres humanos.",
-    highlights: [
-      { icon: Leaf, label: "100% biodegradáveis e seguros" },
-      { icon: Award, label: "Rede extensa em Lisboa e Margem Sul" },
-    ],
-  },
+const stepIcons = [
+  [Clock, Users, Award],
+  [Clock, ThumbsUp, ShieldCheck],
+  [ShieldCheck, Sparkles],
+  [Leaf, Award],
 ];
 
 // Dust particle system that follows the broom
@@ -163,6 +134,9 @@ function DustTrail() {
 }
 
 export default function StorySection() {
+  const t = useTranslations("story");
+  const storySteps = t.raw("steps") as Array<{ title: string; text: string; highlights: string[] }>;
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
@@ -284,10 +258,10 @@ export default function StorySection() {
         {/* Header */}
         <div className="mb-20 text-center">
           <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
-            Conheça a Esplêndido
+            {t("title")}
           </h2>
           <p className="mt-3 text-dark/50">
-            A nossa história contada passo a passo
+            {t("subtitle")}
           </p>
         </div>
 
@@ -380,12 +354,12 @@ export default function StorySection() {
                         {step.text}
                       </p>
                       <div className="mt-4 space-y-2">
-                        {step.highlights.map((h) => {
-                          const Icon = h.icon;
+                        {step.highlights.map((label, hi) => {
+                          const Icon = stepIcons[i]?.[hi] ?? Sparkles;
                           return (
-                            <div key={h.label} className="flex items-center gap-2.5">
+                            <div key={label} className="flex items-center gap-2.5">
                               <Icon size={14} className="shrink-0 text-primary" />
-                              <span className="text-[13px] font-medium text-dark/60">{h.label}</span>
+                              <span className="text-[13px] font-medium text-dark/60">{label}</span>
                             </div>
                           );
                         })}

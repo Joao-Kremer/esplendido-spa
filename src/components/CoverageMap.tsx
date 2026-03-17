@@ -2,29 +2,21 @@
 
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-
-const zones = [
-  {
-    name: "Lisboa Centro",
-    areas: "Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique",
-  },
-  {
-    name: "Margem Sul",
-    areas: "Almada, Seixal, Barreiro, Montijo, Setúbal",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function CoverageMap() {
+  const t = useTranslations("coverage");
+  const zones = t.raw("zones") as Array<{name: string; areas: string}>;
   return (
     <section id="cobertura" className="bg-neutral py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
-            Onde atuamos
+            {t("title")}
           </h2>
           <p className="mt-3 text-dark/50">
-            Cobertura em Lisboa e Margem Sul
+            {t("subtitle")}
           </p>
         </div>
 
@@ -75,7 +67,7 @@ export default function CoverageMap() {
 
                 {/* Lisboa label */}
                 <text x="220" y="100" textAnchor="middle" fill="#0A1628" fontSize="18" fontWeight="700" fontFamily="var(--font-heading)">
-                  Lisboa Centro
+                  {t("mapLabels.lisboaCentro")}
                 </text>
 
                 {/* Lisboa pin dots */}
@@ -121,7 +113,7 @@ export default function CoverageMap() {
 
                 {/* Margem Sul label */}
                 <text x="250" y="330" textAnchor="middle" fill="#0A1628" fontSize="18" fontWeight="700" fontFamily="var(--font-heading)">
-                  Margem Sul
+                  {t("mapLabels.margemSul")}
                 </text>
 
                 {/* Margem Sul pin dots */}
@@ -147,7 +139,7 @@ export default function CoverageMap() {
 
                 {/* Rio Tejo label */}
                 <text x="380" y="260" textAnchor="middle" fill="#00DAFF" fontSize="14" fontStyle="italic" opacity="0.5">
-                  Rio Tejo
+                  {t("mapLabels.rioTejo")}
                 </text>
               </svg>
             </div>
@@ -175,7 +167,7 @@ export default function CoverageMap() {
             ))}
 
             <p className="text-sm text-dark/40">
-              Não encontrou a sua zona? Entre em contacto — podemos ter cobertura na sua área.
+              {t("notFound")}
             </p>
           </div>
         </div>

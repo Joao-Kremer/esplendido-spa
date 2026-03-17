@@ -3,7 +3,8 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import { stats, testimonials } from "@/lib/data";
+import { stats } from "@/lib/data";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -53,13 +54,17 @@ function AnimatedCounter({
 }
 
 export default function SocialProof() {
+  const t = useTranslations("socialProof");
+  const statLabels = t.raw("stats") as Array<{label: string}>;
+  const localTestimonials = t.raw("testimonials") as Array<{name: string; text: string}>;
+
   return (
     <section id="depoimentos" className="bg-neutral py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Stats */}
         <div className="mb-16 flex flex-col items-center justify-center gap-6 sm:mb-20 sm:gap-8 md:flex-row md:gap-16">
           {stats.map((stat, i) => (
-            <div key={stat.label} className="flex items-center gap-6 sm:gap-8">
+            <div key={i} className="flex items-center gap-6 sm:gap-8">
               <div className="text-center">
                 <p className={`font-heading text-3xl font-extrabold sm:text-4xl md:text-5xl ${stat.color}`}>
                   <AnimatedCounter
@@ -68,7 +73,7 @@ export default function SocialProof() {
                     decimals={stat.decimals}
                   />
                 </p>
-                <p className="mt-1 text-sm text-dark/50">{stat.label}</p>
+                <p className="mt-1 text-sm text-dark/50">{statLabels[i].label}</p>
               </div>
               {i < stats.length - 1 && (
                 <div className="hidden h-12 w-px bg-primary/15 md:block" />
@@ -80,7 +85,7 @@ export default function SocialProof() {
         {/* Testimonials */}
         <div className="mb-12 text-center">
           <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
-            O que dizem os nossos clientes
+            {t("title")}
           </h2>
         </div>
 
@@ -89,27 +94,27 @@ export default function SocialProof() {
           className="-mx-4 flex touch-pan-x snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-4 pb-4 sm:-mx-6 sm:px-6 md:hidden"
           style={{ scrollbarWidth: "none" }}
         >
-          {testimonials.map((t) => (
+          {localTestimonials.map((item) => (
             <div
-              key={t.name}
+              key={item.name}
               className="w-[280px] shrink-0 snap-start rounded-2xl border-l-[3px] border-primary bg-white p-5 shadow-sm sm:p-6"
             >
               <div className="mb-3 flex">
-                {[...Array(t.rating)].map((_, j) => (
+                {[...Array(5)].map((_, j) => (
                   <Star key={j} size={16} className="fill-golden text-golden" />
                 ))}
               </div>
-              <p className="text-sm leading-relaxed text-dark">{t.text}</p>
-              <p className="mt-4 font-heading text-sm font-bold text-dark">{t.name}</p>
+              <p className="text-sm leading-relaxed text-dark">{item.text}</p>
+              <p className="mt-4 font-heading text-sm font-bold text-dark">{item.name}</p>
             </div>
           ))}
         </div>
 
         {/* Desktop: static grid */}
         <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-4">
-          {testimonials.map((t, i) => (
+          {localTestimonials.map((item, i) => (
             <motion.div
-              key={t.name}
+              key={item.name}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -117,12 +122,12 @@ export default function SocialProof() {
               className="rounded-2xl border-l-[3px] border-primary bg-white p-6 shadow-sm"
             >
               <div className="mb-3 flex">
-                {[...Array(t.rating)].map((_, j) => (
+                {[...Array(5)].map((_, j) => (
                   <Star key={j} size={16} className="fill-golden text-golden" />
                 ))}
               </div>
-              <p className="text-sm leading-relaxed text-dark">{t.text}</p>
-              <p className="mt-4 font-heading text-sm font-bold text-dark">{t.name}</p>
+              <p className="text-sm leading-relaxed text-dark">{item.text}</p>
+              <p className="mt-4 font-heading text-sm font-bold text-dark">{item.name}</p>
             </motion.div>
           ))}
         </div>

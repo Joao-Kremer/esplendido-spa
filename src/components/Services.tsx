@@ -3,14 +3,18 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, CheckCircle2 } from "lucide-react";
-import { services, type Service } from "@/lib/data";
+import { services } from "@/lib/data";
+import { useTranslations } from "next-intl";
 
 interface ServicesProps {
   onOpenWizard: (preselectedService?: string) => void;
 }
 
 export default function Services({ onOpenWizard }: ServicesProps) {
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const t = useTranslations("services");
+  const serviceItems = t.raw("items") as Array<{name: string; description: string; details: string[]; includes: string[]}>;
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const selectedService = selectedIndex !== null ? { ...serviceItems[selectedIndex], icon: services[selectedIndex].icon } : null;
 
   return (
     <section id="servicos" className="bg-neutral py-20 md:py-28">
@@ -18,20 +22,20 @@ export default function Services({ onOpenWizard }: ServicesProps) {
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
-            Nossos Serviços
+            {t("title")}
           </h2>
           <p className="mt-3 text-dark/50">
-            Soluções de limpeza para cada necessidade
+            {t("subtitle")}
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, i) => {
-            const Icon = service.icon;
+          {serviceItems.map((item, i) => {
+            const Icon = services[i].icon;
             return (
               <motion.div
-                key={service.name}
+                key={item.name}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -40,24 +44,24 @@ export default function Services({ onOpenWizard }: ServicesProps) {
               >
                 <Icon size={32} className="mb-4 text-primary" />
                 <h3 className="font-heading text-lg font-bold text-dark">
-                  {service.name}
+                  {item.name}
                 </h3>
                 <p className="mt-1 flex-1 text-sm text-dark/50">
-                  {service.description}
+                  {item.description}
                 </p>
                 <div className="mt-4 flex gap-2">
                   <button
-                    onClick={() => setSelectedService(service)}
+                    onClick={() => setSelectedIndex(i)}
                     className="text-xs font-medium text-primary transition-colors hover:text-cta"
                   >
-                    Ver mais
+                    {t("viewMore")}
                   </button>
                   <span className="text-dark/15">|</span>
                   <button
-                    onClick={() => onOpenWizard(service.name)}
+                    onClick={() => onOpenWizard(item.name)}
                     className="flex items-center gap-1 text-xs font-medium text-dark/40 transition-colors hover:text-dark"
                   >
-                    Agendar
+                    {t("book")}
                     <ArrowRight size={10} />
                   </button>
                 </div>
@@ -76,7 +80,7 @@ export default function Services({ onOpenWizard }: ServicesProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setSelectedService(null)}
+              onClick={() => setSelectedIndex(null)}
               className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
             />
 
@@ -101,7 +105,7 @@ export default function Services({ onOpenWizard }: ServicesProps) {
                   <p className="text-sm text-white/40">{selectedService.description}</p>
                 </div>
                 <button
-                  onClick={() => setSelectedService(null)}
+                  onClick={() => setSelectedIndex(null)}
                   className="flex h-8 w-8 items-center justify-center rounded-lg text-white/30 transition-all hover:bg-white/[0.06] hover:text-white/60"
                 >
                   <X size={16} />
@@ -125,7 +129,7 @@ export default function Services({ onOpenWizard }: ServicesProps) {
                 {/* Includes */}
                 <div className="mt-6">
                   <h4 className="mb-3 text-xs font-bold uppercase tracking-wider text-primary/70">
-                    O que inclui
+                    {t("includes")}
                   </h4>
                   <ul className="space-y-2.5">
                     {selectedService.includes.map((item, i) => (
@@ -148,12 +152,12 @@ export default function Services({ onOpenWizard }: ServicesProps) {
               <div className="border-t border-white/[0.06] px-4 py-3 sm:px-6 sm:py-4">
                 <button
                   onClick={() => {
-                    setSelectedService(null);
+                    setSelectedIndex(null);
                     onOpenWizard(selectedService.name);
                   }}
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-bold text-dark transition-all hover:shadow-[0_0_24px_rgba(0,218,255,0.3)]"
                 >
-                  Agendar {selectedService.name}
+                  {t("bookService", { serviceName: selectedService.name })}
                   <ArrowRight size={16} />
                 </button>
               </div>

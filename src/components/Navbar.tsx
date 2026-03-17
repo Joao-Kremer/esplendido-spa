@@ -4,23 +4,26 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
+import { useTranslations } from "next-intl";
 import { createPortal } from "react-dom";
-
-const navLinks = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Como Funciona", href: "#como-funciona" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Cobertura", href: "#cobertura" },
-];
+import LanguageSelector from "./LanguageSelector";
 
 interface NavbarProps {
   onOpenWizard: () => void;
 }
 
 export default function Navbar({ onOpenWizard }: NavbarProps) {
+  const t = useTranslations("navbar");
   const isScrolled = useScrollPosition(50);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { label: t("about"), href: "#sobre" },
+    { label: t("services"), href: "#servicos" },
+    { label: t("howItWorks"), href: "#como-funciona" },
+    { label: t("testimonials"), href: "#depoimentos" },
+    { label: t("coverage"), href: "#cobertura" },
+  ];
 
   return (
     <>
@@ -50,19 +53,22 @@ export default function Navbar({ onOpenWizard }: NavbarProps) {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <button
-            onClick={onOpenWizard}
-            className="hidden rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-dark transition-all hover:shadow-[0_0_12px_rgba(0,218,255,0.45),0_0_32px_rgba(0,218,255,0.2)] lg:block"
-          >
-            Agendar
-          </button>
+          {/* Desktop CTA + Language */}
+          <div className="hidden items-center gap-3 lg:flex">
+            <LanguageSelector />
+            <button
+              onClick={onOpenWizard}
+              className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-dark transition-all hover:shadow-[0_0_12px_rgba(0,218,255,0.45),0_0_32px_rgba(0,218,255,0.2)]"
+            >
+              {t("cta")}
+            </button>
+          </div>
 
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="relative z-[70] text-white lg:hidden"
-            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -85,7 +91,7 @@ export default function Navbar({ onOpenWizard }: NavbarProps) {
                 <button
                   onClick={() => setMobileOpen(false)}
                   className="absolute top-3 right-4 flex h-10 w-10 items-center justify-center rounded-lg text-white/70 transition-colors hover:bg-white/10 hover:text-white"
-                  aria-label="Fechar menu"
+                  aria-label="Close menu"
                 >
                   <X size={24} />
                 </button>
@@ -107,8 +113,13 @@ export default function Navbar({ onOpenWizard }: NavbarProps) {
                   }}
                   className="rounded-lg bg-primary px-8 py-3 text-lg font-semibold text-dark"
                 >
-                  Agendar
+                  {t("cta")}
                 </button>
+
+                {/* Language selector in mobile menu */}
+                <div className="mt-4">
+                  <LanguageSelector />
+                </div>
               </motion.div>
             )}
           </AnimatePresence>,
