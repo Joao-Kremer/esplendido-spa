@@ -9,7 +9,7 @@
     "howItWorks": "Cómo Funciona",
     "testimonials": "Testimonios",
     "coverage": "Cobertura",
-    "cta": "Reservar"
+    "cta": "Presupuesto"
   },
   "hero": {
     "headlineTop": "Tu casa merece",
@@ -17,7 +17,7 @@
     "headlineHighlight": "esplêndida",
     "subtitle1": "Equipo fijo y capacitado a tu servicio.",
     "subtitle2": "Lisboa & Margem Sul.",
-    "cta": "Reservar",
+    "cta": "Pedir Presupuesto",
     "clients": "300+ clientes",
     "guarantee": "100% garantía",
     "imageAlt": "Servicio de limpieza profesional"
@@ -37,9 +37,9 @@
       },
       {
         "title": "Cómo Funcionamos",
-        "text": "Nuestra especialidad es eliminar el estrés de cualquier aspecto de la limpieza. Reserve en línea en 60 segundos.",
+        "text": "Nuestra especialidad es eliminar el estrés de cualquier aspecto de la limpieza. Pida su presupuesto en línea en 60 segundos.",
         "highlights": [
-          "Reserva en 60 segundos",
+          "Presupuesto en 60 segundos",
           "Equipo verificado — 5 estrellas",
           "Gestione todo en línea"
         ]
@@ -66,8 +66,8 @@
     "title": "Nuestros Servicios",
     "subtitle": "Soluciones de limpieza para cada necesidad",
     "viewMore": "Ver más",
-    "book": "Reservar",
-    "bookService": "Reservar {serviceName}",
+    "book": "Presupuesto",
+    "bookService": "Presupuesto {serviceName}",
     "includes": "Qué incluye",
     "items": [
       {
@@ -198,15 +198,15 @@
   },
   "howItWorks": {
     "title": "Cómo funciona",
-    "cta": "Reservar ahora",
+    "cta": "Pedir presupuesto",
     "steps": [
       {
         "title": "Elija el servicio",
         "description": "Seleccione el tipo de limpieza que necesita en nuestro menú de servicios."
       },
       {
-        "title": "Reserve por WhatsApp",
-        "description": "Complete los detalles y envíe directamente a nuestro WhatsApp."
+        "title": "Pida el presupuesto",
+        "description": "Complete los detalles y envíenos su solicitud de presupuesto."
       },
       {
         "title": "Reciba al equipo",
@@ -249,12 +249,12 @@
     }
   },
   "finalCta": {
-    "badge": "Reserve en 60 segundos",
+    "badge": "Presupuesto en 60 segundos",
     "headlineTop": "¿Listo para tener su",
     "headlineBottom": "casa",
     "headlineHighlight": "esplêndida",
     "subtitle": "Elija el servicio, díganos lo que necesita y reciba a nuestro equipo capacitado en su puerta. Sin compromiso.",
-    "cta": "Reservar",
+    "cta": "Pedir Presupuesto",
     "phone": "o llame al 910 725 044"
   },
   "footer": {
@@ -263,19 +263,19 @@
     "contacts": "Contactos",
     "quickLinks": "Enlaces rápidos",
     "copyright": "© {year} Esplêndido. Todos los derechos reservados.",
-    "bookCta": "Reservar"
+    "bookCta": "Pedir Presupuesto"
   },
   "chatbot": {
     "openChat": "Abrir chat",
     "confirm": "Confirmar",
     "assistantLabel": "Asistente Esplêndido",
     "online": "En línea",
-    "notesPlaceholder": "Escriba aquí sus observaciones...",
-    "areaPlaceholder": "Ej: 80",
-    "noNotes": "(sin observaciones)",
-    "sendingRequest": "Enviando su solicitud...",
+    "messagePlaceholder": "Escriba aquí su mensaje...",
+    "textInputPlaceholder": "Escriba aquí...",
+    "noMessage": "(sin mensaje)",
+    "sendingRequest": "Enviando su solicitud de presupuesto...",
     "requestSuccess": "✅ ¡Solicitud enviada con éxito!",
-    "requestSuccessFollowup": "Nuestro equipo analizará su solicitud y se pondrá en contacto lo antes posible, en un plazo máximo de 24 horas. ¡Estamos aquí para atenderle de la mejor manera!",
+    "requestSuccessFollowup": "Nuestro equipo analizará su solicitud de presupuesto y se pondrá en contacto lo antes posible, en un plazo máximo de 24 horas. ¡Estamos aquí para atenderle de la mejor manera!",
     "requestSuccessContact": "También puede contactarnos directamente:",
     "requestError": "Ocurrió un error al enviar. Puede intentar de nuevo o contactarnos directamente:",
     "connectionError": "Ocurrió un error de conexión. Puede contactarnos directamente:",
@@ -285,13 +285,13 @@
     "backToMenu": "Volver al menú",
     "summaryIntro": "¡Perfecto! Aquí está el resumen:",
     "summaryService": "📋 Servicio: {value}",
-    "summaryFrequency": "🔄 Frecuencia: {value}",
-    "summaryArea": "📐 Área: {value} m²",
-    "summaryZone": "📍 Zona: {value}",
-    "summaryNotes": "📝 Observaciones: {value}",
+    "summaryName": "👤 Nombre: {value}",
+    "summaryPostalCode": "📮 Código postal: {value}",
+    "summaryContact": "📞 Contacto: {value}",
+    "summaryMessage": "💬 Mensaje: {value}",
     "menu": {
       "greeting": "¡Hola! Soy el asistente de Esplêndido. ¿Cómo puedo ayudarle?",
-      "bookService": "📋 Reservar Servicio",
+      "bookService": "📋 Pedir Presupuesto",
       "knowServices": "🔍 Conocer Servicios",
       "talkSupport": "💬 Hablar con Soporte",
       "aboutCompany": "🏢 Sobre Esplêndido",
@@ -301,22 +301,16 @@
     },
     "booking": {
       "whichService": "¿Qué servicio necesita?",
-      "whichFrequency": "¿Con qué frecuencia?",
-      "pontual": "Puntual",
-      "semanal": "Semanal",
-      "quinzenal": "Quincenal",
-      "mensal": "Mensual",
-      "skip": "Omitir",
-      "whichArea": "¿Cuál es el área del espacio en m²?",
-      "enterArea": "Ingresar área",
-      "whichZone": "¿Cuál es la zona?",
-      "lisboaCentro": "Lisboa Centro",
-      "margemSul": "Margem Sul",
-      "outra": "Otra",
-      "anyNotes": "¿Tiene alguna observación?",
+      "askName": "¿Cuál es su nombre?",
+      "enterName": "Ingresar nombre",
+      "askPostalCode": "¿Cuál es su código postal?",
+      "enterPostalCode": "Ingresar código postal",
+      "askContact": "¿Cuál es su contacto? (teléfono o correo electrónico)",
+      "enterContact": "Ingresar contacto",
+      "askMessage": "¿Desea dejar algún mensaje?",
       "yesWrite": "Sí, quiero escribir",
       "noSendNow": "No, enviar ahora",
-      "submitBooking": "📧 Enviar solicitud",
+      "submitBooking": "📧 Enviar presupuesto",
       "restart": "🔄 Comenzar de nuevo"
     },
     "support": {
@@ -336,8 +330,8 @@
       "message1": "Actualmente atendemos en las siguientes zonas:",
       "message2": "📍 Lisboa Centro — Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique",
       "message3": "📍 Margem Sul — Almada, Seixal, Barreiro, Montijo, Setúbal",
-      "message4": "¿Desea reservar un servicio en su zona?",
-      "bookService": "Reservar Servicio",
+      "message4": "¿Desea pedir un presupuesto para su zona?",
+      "bookService": "Pedir Presupuesto",
       "backToMenu": "Volver al menú"
     },
     "products": {
@@ -367,7 +361,7 @@
     },
     "servicesInfo": {
       "menuQuestion": "¿Sobre qué servicio le gustaría saber más?",
-      "bookThisService": "📋 Reservar este servicio",
+      "bookThisService": "📋 Presupuesto de este servicio",
       "anotherService": "Otro servicio",
       "backToMenu": "Volver al menú",
       "includesLabel": "Qué incluye:"
@@ -375,13 +369,12 @@
   },
   "wizard": {
     "selectService": "Seleccione un servicio",
-    "enterArea": "Ingrese el área en m²",
-    "whatsappGreeting": "¡Hola! Me gustaría reservar un servicio:",
+    "whatsappGreeting": "¡Hola! Me gustaría pedir un presupuesto:",
     "serviceLabel": "📋 Servicio: {value}",
-    "frequencyLabel": "🔄 Frecuencia: {value}",
-    "areaLabel": "📐 Área: {value} m²",
-    "zoneLabel": "📍 Zona: {value}",
-    "notesLabel": "📝 Observaciones: {value}",
+    "nameLabel": "👤 Nombre: {value}",
+    "postalCodeLabel": "📮 Código postal: {value}",
+    "contactLabel": "📞 Contacto: {value}",
+    "messageLabel": "💬 Mensaje: {value}",
     "closing": "Espero su contacto. ¡Gracias!"
   },
   "common": {

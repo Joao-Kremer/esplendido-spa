@@ -13,16 +13,16 @@ export async function POST(request: Request) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await request.json();
-    const { service, frequency, area, zone, notes } = body;
+    const { service, name, postalCode, contact, message } = body;
 
-    if (!service || !area) {
-      return NextResponse.json({ error: "Serviço e área são obrigatórios" }, { status: 400 });
+    if (!service || !name || !contact) {
+      return NextResponse.json({ error: "Campos obrigatórios em falta" }, { status: 400 });
     }
 
     const htmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="background: #00458B; padding: 24px; border-radius: 12px 12px 0 0;">
-          <h1 style="color: #00DAFF; margin: 0; font-size: 24px;">Novo Agendamento</h1>
+          <h1 style="color: #00DAFF; margin: 0; font-size: 24px;">Novo Pedido de Orçamento</h1>
           <p style="color: rgba(255,255,255,0.7); margin: 8px 0 0;">Recebido pelo chatbot da Esplêndido</p>
         </div>
         <div style="background: #f7f9fa; padding: 24px; border-radius: 0 0 12px 12px;">
@@ -31,24 +31,22 @@ export async function POST(request: Request) {
               <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; color: #666; width: 140px;">📋 Serviço</td>
               <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #0A1628;">${service}</td>
             </tr>
-            ${frequency ? `
             <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; color: #666;">🔄 Frequência</td>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #0A1628;">${frequency}</td>
-            </tr>` : ""}
-            <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; color: #666;">📐 Área</td>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #0A1628;">${area} m²</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; color: #666;">👤 Nome</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #0A1628;">${name}</td>
             </tr>
-            ${zone ? `
             <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; color: #666;">📍 Zona</td>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #0A1628;">${zone}</td>
-            </tr>` : ""}
-            ${notes ? `
+              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; color: #666;">📮 Código Postal</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #0A1628;">${postalCode}</td>
+            </tr>
             <tr>
-              <td style="padding: 12px 0; color: #666;">📝 Observações</td>
-              <td style="padding: 12px 0; color: #0A1628;">${notes}</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; color: #666;">📞 Contacto</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #0A1628;">${contact}</td>
+            </tr>
+            ${message ? `
+            <tr>
+              <td style="padding: 12px 0; color: #666;">💬 Mensagem</td>
+              <td style="padding: 12px 0; color: #0A1628;">${message}</td>
             </tr>` : ""}
           </table>
         </div>
@@ -61,7 +59,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from: `Esplêndido Site <${FROM_EMAIL}>`,
       to: [TO_EMAIL],
-      subject: `Novo Agendamento: ${service} — ${area}m²`,
+      subject: `Novo Orçamento: ${service} — ${name}`,
       html: htmlContent,
     });
 

@@ -9,7 +9,7 @@
     "howItWorks": "Como Funciona",
     "testimonials": "Depoimentos",
     "coverage": "Cobertura",
-    "cta": "Agendar"
+    "cta": "Orçamento"
   },
   "hero": {
     "headlineTop": "Sua casa merece",
@@ -17,7 +17,7 @@
     "headlineHighlight": "esplêndida",
     "subtitle1": "Equipa fixa e treinada ao seu serviço.",
     "subtitle2": "Lisboa & Margem Sul.",
-    "cta": "Agendar",
+    "cta": "Pedir Orçamento",
     "clients": "300+ clientes",
     "guarantee": "100% garantia",
     "imageAlt": "Serviço de limpeza profissional"
@@ -37,9 +37,9 @@
       },
       {
         "title": "Como Funcionamos",
-        "text": "A nossa especialidade é eliminar o stress de qualquer aspeto da limpeza. Reserve online em 60 segundos.",
+        "text": "A nossa especialidade é eliminar o stress de qualquer aspeto da limpeza. Peça o seu orçamento online em 60 segundos.",
         "highlights": [
-          "Agendamento em 60 segundos",
+          "Orçamento em 60 segundos",
           "Equipa verificada — 5 estrelas",
           "Gerencie tudo online"
         ]
@@ -66,8 +66,8 @@
     "title": "Nossos Serviços",
     "subtitle": "Soluções de limpeza para cada necessidade",
     "viewMore": "Ver mais",
-    "book": "Agendar",
-    "bookService": "Agendar {serviceName}",
+    "book": "Orçamento",
+    "bookService": "Orçamento {serviceName}",
     "includes": "O que inclui",
     "items": [
       {
@@ -198,15 +198,15 @@
   },
   "howItWorks": {
     "title": "Como funciona",
-    "cta": "Agendar agora",
+    "cta": "Pedir orçamento",
     "steps": [
       {
         "title": "Escolha o serviço",
         "description": "Selecione o tipo de limpeza que precisa no nosso menu de serviços."
       },
       {
-        "title": "Agende pelo WhatsApp",
-        "description": "Preencha os detalhes e envie diretamente para o nosso WhatsApp."
+        "title": "Peça o orçamento",
+        "description": "Preencha os detalhes e envie o seu pedido de orçamento diretamente para nós."
       },
       {
         "title": "Receba a equipa",
@@ -249,12 +249,12 @@
     }
   },
   "finalCta": {
-    "badge": "Agende em 60 segundos",
+    "badge": "Orçamento em 60 segundos",
     "headlineTop": "Pronto para ter a sua",
     "headlineBottom": "casa",
     "headlineHighlight": "esplêndida",
     "subtitle": "Escolha o serviço, diga-nos o que precisa e receba a nossa equipa treinada na sua porta. Sem compromisso.",
-    "cta": "Agendar",
+    "cta": "Pedir Orçamento",
     "phone": "ou ligue 910 725 044"
   },
   "footer": {
@@ -263,19 +263,19 @@
     "contacts": "Contactos",
     "quickLinks": "Links rápidos",
     "copyright": "© {year} Esplêndido. Todos os direitos reservados.",
-    "bookCta": "Agendar"
+    "bookCta": "Pedir Orçamento"
   },
   "chatbot": {
     "openChat": "Abrir chat",
     "confirm": "Confirmar",
     "assistantLabel": "Assistente Esplêndido",
     "online": "Online",
-    "notesPlaceholder": "Escreva aqui as suas observações...",
-    "areaPlaceholder": "Ex: 80",
-    "noNotes": "(sem observações)",
-    "sendingRequest": "A enviar o seu pedido...",
+    "messagePlaceholder": "Escreva aqui a sua mensagem...",
+    "textInputPlaceholder": "Escreva aqui...",
+    "noMessage": "(sem mensagem)",
+    "sendingRequest": "A enviar o seu pedido de orçamento...",
     "requestSuccess": "✅ Pedido enviado com sucesso!",
-    "requestSuccessFollowup": "A nossa equipa vai analisar o seu pedido e entrar em contacto o mais rápido possível, num prazo máximo de 24 horas. Estamos cá para o atender da melhor forma!",
+    "requestSuccessFollowup": "A nossa equipa vai analisar o seu pedido de orçamento e entrar em contacto o mais rápido possível, num prazo máximo de 24 horas. Estamos cá para o atender da melhor forma!",
     "requestSuccessContact": "Pode também contactar-nos diretamente:",
     "requestError": "Ocorreu um erro ao enviar. Pode tentar novamente ou contactar-nos diretamente:",
     "connectionError": "Ocorreu um erro de conexão. Pode contactar-nos diretamente:",
@@ -285,13 +285,13 @@
     "backToMenu": "Voltar ao menu",
     "summaryIntro": "Perfeito! Aqui está o resumo:",
     "summaryService": "📋 Serviço: {value}",
-    "summaryFrequency": "🔄 Frequência: {value}",
-    "summaryArea": "📐 Área: {value} m²",
-    "summaryZone": "📍 Zona: {value}",
-    "summaryNotes": "📝 Observações: {value}",
+    "summaryName": "👤 Nome: {value}",
+    "summaryPostalCode": "📮 Código postal: {value}",
+    "summaryContact": "📞 Contacto: {value}",
+    "summaryMessage": "💬 Mensagem: {value}",
     "menu": {
       "greeting": "Olá! Sou o assistente da Esplêndido. Como posso ajudar?",
-      "bookService": "📋 Agendar Serviço",
+      "bookService": "📋 Pedir Orçamento",
       "knowServices": "🔍 Conhecer Serviços",
       "talkSupport": "💬 Falar com Suporte",
       "aboutCompany": "🏢 Sobre a Esplêndido",
@@ -300,23 +300,17 @@
       "faq": "❓ Perguntas Frequentes"
     },
     "booking": {
-      "whichService": "Qual serviço precisa?",
-      "whichFrequency": "Com que frequência?",
-      "pontual": "Pontual",
-      "semanal": "Semanal",
-      "quinzenal": "Quinzenal",
-      "mensal": "Mensal",
-      "skip": "Pular",
-      "whichArea": "Qual a área do espaço em m²?",
-      "enterArea": "Inserir área",
-      "whichZone": "Qual a zona?",
-      "lisboaCentro": "Lisboa Centro",
-      "margemSul": "Margem Sul",
-      "outra": "Outra",
-      "anyNotes": "Tem alguma observação?",
+      "whichService": "Qual serviço pretende?",
+      "askName": "Qual é o seu nome?",
+      "enterName": "Inserir nome",
+      "askPostalCode": "Qual é o seu código postal?",
+      "enterPostalCode": "Inserir código postal",
+      "askContact": "Qual é o seu contacto? (telemóvel ou e-mail)",
+      "enterContact": "Inserir contacto",
+      "askMessage": "Deseja deixar alguma mensagem?",
       "yesWrite": "Sim, quero escrever",
       "noSendNow": "Não, enviar agora",
-      "submitBooking": "📧 Enviar pedido",
+      "submitBooking": "📧 Enviar orçamento",
       "restart": "🔄 Recomeçar"
     },
     "support": {
@@ -336,8 +330,8 @@
       "message1": "Atualmente atendemos nas seguintes zonas:",
       "message2": "📍 Lisboa Centro — Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique",
       "message3": "📍 Margem Sul — Almada, Seixal, Barreiro, Montijo, Setúbal",
-      "message4": "Quer agendar um serviço na sua zona?",
-      "bookService": "Agendar Serviço",
+      "message4": "Quer pedir um orçamento para a sua zona?",
+      "bookService": "Pedir Orçamento",
       "backToMenu": "Voltar ao menu"
     },
     "products": {
@@ -367,7 +361,7 @@
     },
     "servicesInfo": {
       "menuQuestion": "Sobre qual serviço gostaria de saber mais?",
-      "bookThisService": "📋 Agendar este serviço",
+      "bookThisService": "📋 Orçamento deste serviço",
       "anotherService": "Outro serviço",
       "backToMenu": "Voltar ao menu",
       "includesLabel": "O que inclui:"
@@ -375,13 +369,12 @@
   },
   "wizard": {
     "selectService": "Selecione um serviço",
-    "enterArea": "Insira a área em m²",
-    "whatsappGreeting": "Olá! Gostaria de agendar um serviço:",
+    "whatsappGreeting": "Olá! Gostaria de pedir um orçamento:",
     "serviceLabel": "📋 Serviço: {value}",
-    "frequencyLabel": "🔄 Frequência: {value}",
-    "areaLabel": "📐 Área: {value} m²",
-    "zoneLabel": "📍 Zona: {value}",
-    "notesLabel": "📝 Observações: {value}",
+    "nameLabel": "👤 Nome: {value}",
+    "postalCodeLabel": "📮 Código postal: {value}",
+    "contactLabel": "📞 Contacto: {value}",
+    "messageLabel": "💬 Mensagem: {value}",
     "closing": "Aguardo contacto. Obrigado!"
   },
   "common": {

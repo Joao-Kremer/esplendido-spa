@@ -8,7 +8,7 @@ export type ChatAction =
   | { type: "whatsapp"; message: string }
   | { type: "phone" }
   | { type: "set_field"; field: string; value: string | number; nextStep: string }
-  | { type: "show_area_input"; nextStep: string }
+  | { type: "show_text_input"; field: string; nextStep: string }
   | { type: "show_notes_input"; nextStep: string }
   | { type: "submit_booking" }
   | { type: "restart" };
@@ -78,39 +78,33 @@ export function buildFlows(
         messages: [t("booking.whichService")],
         buttons: serviceNames.map((name) => ({
           label: name,
-          action: { type: "set_field" as const, field: "service", value: name, nextStep: "frequency" },
+          action: { type: "set_field" as const, field: "service", value: name, nextStep: "name" },
         })),
       },
       {
-        id: "frequency",
-        messages: [t("booking.whichFrequency")],
+        id: "name",
+        messages: [t("booking.askName")],
         buttons: [
-          { label: t("booking.pontual"), action: { type: "set_field", field: "frequency", value: t("booking.pontual"), nextStep: "area" } },
-          { label: t("booking.semanal"), action: { type: "set_field", field: "frequency", value: t("booking.semanal"), nextStep: "area" } },
-          { label: t("booking.quinzenal"), action: { type: "set_field", field: "frequency", value: t("booking.quinzenal"), nextStep: "area" } },
-          { label: t("booking.mensal"), action: { type: "set_field", field: "frequency", value: t("booking.mensal"), nextStep: "area" } },
-          { label: t("booking.skip"), action: { type: "set_field", field: "frequency", value: "", nextStep: "area" } },
+          { label: t("booking.enterName"), action: { type: "show_text_input", field: "name", nextStep: "postalCode" } },
         ],
       },
       {
-        id: "area",
-        messages: [t("booking.whichArea")],
+        id: "postalCode",
+        messages: [t("booking.askPostalCode")],
         buttons: [
-          { label: t("booking.enterArea"), action: { type: "show_area_input", nextStep: "zone" } },
+          { label: t("booking.enterPostalCode"), action: { type: "show_text_input", field: "postalCode", nextStep: "contact" } },
         ],
       },
       {
-        id: "zone",
-        messages: [t("booking.whichZone")],
+        id: "contact",
+        messages: [t("booking.askContact")],
         buttons: [
-          { label: t("booking.lisboaCentro"), action: { type: "set_field", field: "zone", value: t("booking.lisboaCentro"), nextStep: "notes" } },
-          { label: t("booking.margemSul"), action: { type: "set_field", field: "zone", value: t("booking.margemSul"), nextStep: "notes" } },
-          { label: t("booking.outra"), action: { type: "set_field", field: "zone", value: t("booking.outra"), nextStep: "notes" } },
+          { label: t("booking.enterContact"), action: { type: "show_text_input", field: "contact", nextStep: "message" } },
         ],
       },
       {
-        id: "notes",
-        messages: [t("booking.anyNotes")],
+        id: "message",
+        messages: [t("booking.askMessage")],
         buttons: [
           { label: t("booking.yesWrite"), action: { type: "show_notes_input", nextStep: "summary" } },
           { label: t("booking.noSendNow"), action: { type: "goto", flow: "booking", step: "summary" } },
@@ -275,7 +269,7 @@ export function buildFlows(
           `${t("servicesInfo.includesLabel")}\n${s.includes.map((item) => `• ${item}`).join("\n")}`,
         ],
         buttons: [
-          { label: t("servicesInfo.bookThisService"), action: { type: "set_field", field: "service", value: s.name, nextStep: "frequency" } },
+          { label: t("servicesInfo.bookThisService"), action: { type: "set_field", field: "service", value: s.name, nextStep: "name" } },
           { label: t("servicesInfo.anotherService"), action: { type: "goto", flow: "services_info", step: "menu" } },
           { label: t("servicesInfo.backToMenu"), action: { type: "goto_menu" } },
         ],

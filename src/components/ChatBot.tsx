@@ -41,9 +41,10 @@ export default function ChatBot({
   const [messages, setMessages] = useState<DisplayMessage[]>([]);
   const [activeButtons, setActiveButtons] = useState<FlowButton[]>([]);
   const [showNotes, setShowNotes] = useState(false);
-  const [showAreaInput, setShowAreaInput] = useState(false);
-  const [areaValue, setAreaValue] = useState("");
-  const [areaNextStep, setAreaNextStep] = useState("");
+  const [showTextInput, setShowTextInput] = useState(false);
+  const [textInputField, setTextInputField] = useState("");
+  const [textInputValue, setTextInputValue] = useState("");
+  const [textInputNextStep, setTextInputNextStep] = useState("");
   const [notesValue, setNotesValue] = useState("");
   const [notesNextStep, setNotesNextStep] = useState("");
   const [formData, setFormData] = useState<Partial<WizardFormData>>({});
@@ -93,10 +94,10 @@ export default function ChatBot({
       if (flowId === "booking" && stepId === "summary") {
         const lines = [t("summaryIntro")];
         if (formData.service) lines.push(t("summaryService", { value: formData.service }));
-        if (formData.frequency) lines.push(t("summaryFrequency", { value: formData.frequency }));
-        if (formData.area) lines.push(t("summaryArea", { value: formData.area }));
-        if (formData.zone) lines.push(t("summaryZone", { value: formData.zone }));
-        if (formData.notes) lines.push(t("summaryNotes", { value: formData.notes }));
+        if (formData.name) lines.push(t("summaryName", { value: formData.name }));
+        if (formData.postalCode) lines.push(t("summaryPostalCode", { value: formData.postalCode }));
+        if (formData.contact) lines.push(t("summaryContact", { value: formData.contact }));
+        if (formData.message) lines.push(t("summaryMessage", { value: formData.message }));
         await addBotMessages(lines, node.buttons ?? []);
         return;
       }
@@ -118,9 +119,9 @@ export default function ChatBot({
     setActiveButtons([]);
     setFormData({});
     setShowNotes(false);
-    setShowAreaInput(false);
+    setShowTextInput(false);
     setNotesValue("");
-    setAreaValue("");
+    setTextInputValue("");
     msgIdRef.current = 0;
 
     if (preselectedService) {
@@ -133,7 +134,7 @@ export default function ChatBot({
             setTimeout(() => {
               addMessage("user", preselectedService);
               setFormData((prev) => ({ ...prev, service: preselectedService }));
-              setTimeout(() => navigateToNode("booking", "frequency"), 400);
+              setTimeout(() => navigateToNode("booking", "name"), 400);
             }, 300);
           }, 400);
         });
@@ -173,7 +174,7 @@ export default function ChatBot({
           case "restart":
             setFormData({});
             setShowNotes(false);
-            setShowAreaInput(false);
+            setShowTextInput(false);
             await navigateToNode("menu", "main");
             break;
 
@@ -192,9 +193,11 @@ export default function ChatBot({
             await navigateToNode("booking", action.nextStep);
             break;
 
-          case "show_area_input":
-            setShowAreaInput(true);
-            setAreaNextStep(action.nextStep);
+          case "show_text_input":
+            setShowTextInput(true);
+            setTextInputField(action.field);
+            setTextInputNextStep(action.nextStep);
+            setTextInputValue("");
             scrollToBottom();
             break;
 
@@ -207,10 +210,10 @@ export default function ChatBot({
           case "submit_booking": {
             const data = {
               service: formData.service ?? "",
-              frequency: formData.frequency ?? "",
-              area: formData.area ?? 0,
-              zone: formData.zone ?? "",
-              notes: formData.notes ?? "",
+              name: formData.name ?? "",
+              postalCode: formData.postalCode ?? "",
+              contact: formData.contact ?? "",
+              message: formData.message ?? "",
             };
 
             addMessage("bot", t("sendingRequest"));
@@ -241,7 +244,7 @@ export default function ChatBot({
                   [t("requestError")],
                   [
                     { label: t("retryButton"), action: { type: "submit_booking" } },
-                    { label: t("whatsappButton"), action: { type: "whatsapp", message: `${t("support.whatsappMessage")} ${data.service}, ${data.area}m², ${data.zone}.` } },
+                    { label: t("whatsappButton"), action: { type: "whatsapp", message: `${t("support.whatsappMessage")} ${data.service}.` } },
                     { label: t("phoneButton"), action: { type: "phone" } },
                   ]
                 );
@@ -265,19 +268,19 @@ export default function ChatBot({
     [addMessage, navigateToNode, formData, scrollToBottom, addBotMessages, t]
   );
 
-  const handleAreaConfirm = useCallback(() => {
-    const num = parseInt(areaValue, 10);
-    if (!num || num <= 0) return;
-    setFormData((prev) => ({ ...prev, area: num }));
-    setShowAreaInput(false);
-    addMessage("user", `${num} m²`);
-    setTimeout(() => navigateToNode("booking", areaNextStep), 400);
-  }, [areaValue, areaNextStep, addMessage, navigateToNode]);
+  const handleTextInputConfirm = useCallback(() => {
+    const val = textInputValue.trim();
+    if (!val) return;
+    setFormData((prev) => ({ ...prev, [textInputField]: val }));
+    setShowTextInput(false);
+    addMessage("user", val);
+    setTimeout(() => navigateToNode("booking", textInputNextStep), 400);
+  }, [textInputValue, textInputField, textInputNextStep, addMessage, navigateToNode]);
 
   const handleNotesConfirm = useCallback(() => {
-    setFormData((prev) => ({ ...prev, notes: notesValue }));
+    setFormData((prev) => ({ ...prev, message: notesValue }));
     setShowNotes(false);
-    addMessage("user", notesValue.trim() || t("noNotes"));
+    addMessage("user", notesValue.trim() || t("noMessage"));
     setTimeout(() => navigateToNode("booking", notesNextStep), 400);
   }, [notesValue, notesNextStep, addMessage, navigateToNode, t]);
 
@@ -305,9 +308,7 @@ export default function ChatBot({
           >
             {/* Header */}
             <div className="relative flex items-center gap-3 px-5 py-4">
-              {/* Subtle top glow */}
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-
               <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.07] ring-1 ring-white/[0.08]">
                 <MessageSquare size={18} className="text-primary" />
               </div>
@@ -404,32 +405,25 @@ export default function ChatBot({
                   </motion.div>
                 )}
 
-                {/* Area input */}
-                {showAreaInput && (
+                {/* Text input (name, postal code, contact) */}
+                {showTextInput && (
                   <motion.div
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center gap-2"
                   >
-                    <div className="relative flex-1">
-                      <input
-                        type="number"
-                        inputMode="numeric"
-                        min="1"
-                        placeholder={t("areaPlaceholder")}
-                        value={areaValue}
-                        onChange={(e) => setAreaValue(e.target.value)}
-                        onKeyDown={(e) => e.key === "Enter" && handleAreaConfirm()}
-                        className="w-full rounded-xl border border-white/[0.08] bg-white/[0.04] px-4 py-3 pr-12 text-sm text-white placeholder:text-white/20 outline-none transition-all focus:border-primary/40 focus:bg-white/[0.06] focus:ring-1 focus:ring-primary/20"
-                        autoFocus
-                      />
-                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-medium text-white/25">
-                        m²
-                      </span>
-                    </div>
+                    <input
+                      type="text"
+                      placeholder={t("textInputPlaceholder")}
+                      value={textInputValue}
+                      onChange={(e) => setTextInputValue(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleTextInputConfirm()}
+                      className="w-full rounded-xl border border-white/[0.08] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all focus:border-primary/40 focus:bg-white/[0.06] focus:ring-1 focus:ring-primary/20"
+                      autoFocus
+                    />
                     <button
-                      onClick={handleAreaConfirm}
-                      disabled={!areaValue || parseInt(areaValue, 10) <= 0}
+                      onClick={handleTextInputConfirm}
+                      disabled={!textInputValue.trim()}
                       className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-xl bg-primary text-dark transition-all hover:shadow-[0_0_16px_rgba(0,218,255,0.3)] disabled:opacity-20 disabled:hover:shadow-none"
                     >
                       <Send size={16} />
@@ -437,7 +431,7 @@ export default function ChatBot({
                   </motion.div>
                 )}
 
-                {/* Notes textarea */}
+                {/* Message textarea */}
                 {showNotes && (
                   <motion.div
                     initial={{ opacity: 0, y: 12 }}
@@ -447,7 +441,7 @@ export default function ChatBot({
                     <textarea
                       value={notesValue}
                       onChange={(e) => setNotesValue(e.target.value)}
-                      placeholder={t("notesPlaceholder")}
+                      placeholder={t("messagePlaceholder")}
                       rows={3}
                       className="w-full resize-none rounded-xl border border-white/[0.08] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all focus:border-primary/40 focus:bg-white/[0.06] focus:ring-1 focus:ring-primary/20"
                       autoFocus

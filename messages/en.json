@@ -9,7 +9,7 @@
     "howItWorks": "How It Works",
     "testimonials": "Testimonials",
     "coverage": "Coverage",
-    "cta": "Book Now"
+    "cta": "Get Quote"
   },
   "hero": {
     "headlineTop": "Your home deserves",
@@ -17,7 +17,7 @@
     "headlineHighlight": "splendid",
     "subtitle1": "A dedicated, trained team at your service.",
     "subtitle2": "Lisboa & Margem Sul.",
-    "cta": "Book Now",
+    "cta": "Get a Quote",
     "clients": "300+ clients",
     "guarantee": "100% guarantee",
     "imageAlt": "Professional cleaning service"
@@ -37,9 +37,9 @@
       },
       {
         "title": "How We Work",
-        "text": "Our specialty is eliminating the stress of every aspect of cleaning. Book online in 60 seconds.",
+        "text": "Our specialty is eliminating the stress of every aspect of cleaning. Get a quote online in 60 seconds.",
         "highlights": [
-          "Book in 60 seconds",
+          "Quote in 60 seconds",
           "Verified team — 5 stars",
           "Manage everything online"
         ]
@@ -66,8 +66,8 @@
     "title": "Our Services",
     "subtitle": "Cleaning solutions for every need",
     "viewMore": "View more",
-    "book": "Book",
-    "bookService": "Book {serviceName}",
+    "book": "Quote",
+    "bookService": "Quote {serviceName}",
     "includes": "What's included",
     "items": [
       {
@@ -198,15 +198,15 @@
   },
   "howItWorks": {
     "title": "How it works",
-    "cta": "Book now",
+    "cta": "Get a quote",
     "steps": [
       {
         "title": "Choose your service",
         "description": "Select the type of cleaning you need from our services menu."
       },
       {
-        "title": "Book Now",
-        "description": "Fill in the details and send them directly to our WhatsApp."
+        "title": "Request a quote",
+        "description": "Fill in the details and send us your quote request."
       },
       {
         "title": "Welcome the team",
@@ -249,12 +249,12 @@
     }
   },
   "finalCta": {
-    "badge": "Book in 60 seconds",
+    "badge": "Quote in 60 seconds",
     "headlineTop": "Ready to make your",
     "headlineBottom": "home",
     "headlineHighlight": "splendid",
     "subtitle": "Choose the service, tell us what you need and our trained team will be at your door. No commitment.",
-    "cta": "Book Now",
+    "cta": "Get a Quote",
     "phone": "or call 910 725 044"
   },
   "footer": {
@@ -263,19 +263,19 @@
     "contacts": "Contacts",
     "quickLinks": "Quick links",
     "copyright": "© {year} Esplêndido. All rights reserved.",
-    "bookCta": "Book Now"
+    "bookCta": "Get a Quote"
   },
   "chatbot": {
     "openChat": "Open chat",
     "confirm": "Confirm",
     "assistantLabel": "Esplêndido Assistant",
     "online": "Online",
-    "notesPlaceholder": "Write your notes here...",
-    "areaPlaceholder": "E.g.: 80",
-    "noNotes": "(no notes)",
-    "sendingRequest": "Sending your request...",
+    "messagePlaceholder": "Write your message here...",
+    "textInputPlaceholder": "Type here...",
+    "noMessage": "(no message)",
+    "sendingRequest": "Sending your quote request...",
     "requestSuccess": "✅ Request sent successfully!",
-    "requestSuccessFollowup": "Our team will review your request and get back to you as soon as possible, within 24 hours at most. We're here to provide you with the best service!",
+    "requestSuccessFollowup": "Our team will review your quote request and get back to you as soon as possible, within 24 hours at most. We're here to provide you with the best service!",
     "requestSuccessContact": "You can also contact us directly:",
     "requestError": "An error occurred while sending. You can try again or contact us directly:",
     "connectionError": "A connection error occurred. You can contact us directly:",
@@ -285,13 +285,13 @@
     "backToMenu": "Back to menu",
     "summaryIntro": "Perfect! Here's the summary:",
     "summaryService": "📋 Service: {value}",
-    "summaryFrequency": "🔄 Frequency: {value}",
-    "summaryArea": "📐 Area: {value} m²",
-    "summaryZone": "📍 Zone: {value}",
-    "summaryNotes": "📝 Notes: {value}",
+    "summaryName": "👤 Name: {value}",
+    "summaryPostalCode": "📮 Postal code: {value}",
+    "summaryContact": "📞 Contact: {value}",
+    "summaryMessage": "💬 Message: {value}",
     "menu": {
       "greeting": "Hello! I'm the Esplêndido assistant. How can I help?",
-      "bookService": "📋 Book a Service",
+      "bookService": "📋 Get a Quote",
       "knowServices": "🔍 Explore Services",
       "talkSupport": "💬 Talk to Support",
       "aboutCompany": "🏢 About Esplêndido",
@@ -300,23 +300,17 @@
       "faq": "❓ Frequently Asked Questions"
     },
     "booking": {
-      "whichService": "Which service do you need?",
-      "whichFrequency": "How often?",
-      "pontual": "One-time",
-      "semanal": "Weekly",
-      "quinzenal": "Biweekly",
-      "mensal": "Monthly",
-      "skip": "Skip",
-      "whichArea": "What is the area in m²?",
-      "enterArea": "Enter area",
-      "whichZone": "What zone?",
-      "lisboaCentro": "Lisboa Centro",
-      "margemSul": "Margem Sul",
-      "outra": "Other",
-      "anyNotes": "Do you have any notes?",
+      "whichService": "Which service are you looking for?",
+      "askName": "What is your name?",
+      "enterName": "Enter name",
+      "askPostalCode": "What is your postal code?",
+      "enterPostalCode": "Enter postal code",
+      "askContact": "What is your contact? (phone or email)",
+      "enterContact": "Enter contact",
+      "askMessage": "Would you like to leave a message?",
       "yesWrite": "Yes, I'd like to write",
       "noSendNow": "No, send now",
-      "submitBooking": "📧 Submit request",
+      "submitBooking": "📧 Submit quote request",
       "restart": "🔄 Start over"
     },
     "support": {
@@ -336,8 +330,8 @@
       "message1": "We currently serve the following zones:",
       "message2": "📍 Lisboa Centro — Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique",
       "message3": "📍 Margem Sul — Almada, Seixal, Barreiro, Montijo, Setúbal",
-      "message4": "Would you like to book a service in your area?",
-      "bookService": "Book a Service",
+      "message4": "Would you like to get a quote for your area?",
+      "bookService": "Get a Quote",
       "backToMenu": "Back to menu"
     },
     "products": {
@@ -367,7 +361,7 @@
     },
     "servicesInfo": {
       "menuQuestion": "Which service would you like to know more about?",
-      "bookThisService": "📋 Book this service",
+      "bookThisService": "📋 Quote this service",
       "anotherService": "Another service",
       "backToMenu": "Back to menu",
       "includesLabel": "What's included:"
@@ -375,13 +369,12 @@
   },
   "wizard": {
     "selectService": "Select a service",
-    "enterArea": "Enter the area in m²",
-    "whatsappGreeting": "Hello! I'd like to book a service:",
+    "whatsappGreeting": "Hello! I'd like to request a quote:",
     "serviceLabel": "📋 Service: {value}",
-    "frequencyLabel": "🔄 Frequency: {value}",
-    "areaLabel": "📐 Area: {value} m²",
-    "zoneLabel": "📍 Zone: {value}",
-    "notesLabel": "📝 Notes: {value}",
+    "nameLabel": "👤 Name: {value}",
+    "postalCodeLabel": "📮 Postal code: {value}",
+    "contactLabel": "📞 Contact: {value}",
+    "messageLabel": "💬 Message: {value}",
     "closing": "Looking forward to hearing from you. Thank you!"
   },
   "common": {
