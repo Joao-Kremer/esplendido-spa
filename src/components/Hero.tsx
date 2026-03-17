@@ -17,15 +17,15 @@ export default function Hero({ onOpenWizard }: HeroProps) {
       {/* Three.js background */}
       <BubbleScene />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center px-6 pt-24 md:flex-row md:gap-12 md:pt-0">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 sm:px-6 md:flex-row md:gap-12">
         {/* Left content */}
-        <div className="flex flex-1 flex-col justify-center py-12 md:py-0">
+        <div className="flex flex-1 flex-col justify-center">
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-heading text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl"
+            className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
           >
             Sua casa merece
             <br />
@@ -50,7 +50,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             onClick={onOpenWizard}
-            className="mt-8 flex w-fit items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-dark glow-cyan transition-transform hover:scale-105"
+            className="mt-6 flex w-fit items-center gap-2 rounded-lg bg-primary px-5 py-3 text-xs font-bold text-dark glow-cyan transition-transform hover:scale-105 sm:mt-8 sm:px-6 sm:text-sm"
           >
             <MessageCircle size={18} />
             Agendar pelo WhatsApp
@@ -61,7 +61,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-8 flex items-center gap-4 text-sm"
+            className="mt-6 flex flex-wrap items-center gap-3 text-xs sm:mt-8 sm:gap-4 sm:text-sm"
           >
             <div className="flex items-center gap-1.5">
               <div className="flex">
@@ -79,27 +79,25 @@ export default function Hero({ onOpenWizard }: HeroProps) {
           </motion.div>
         </div>
 
-        {/* Right image */}
+        {/* Right image — hidden on mobile */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative order-first flex-1 md:order-last"
+          className="relative hidden flex-1 md:block"
         >
-          <div className="relative h-[300px] w-full md:h-[500px]">
+          <div className="relative h-[500px] w-full">
             <Image
               src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=1000&fit=crop"
               alt="Serviço de limpeza profissional"
               fill
               className="rounded-2xl object-cover opacity-85"
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="50vw"
             />
             {/* Fade gradient left */}
             <div className="absolute inset-0 bg-gradient-to-r from-dark via-transparent to-transparent" />
             {/* Fade gradient bottom */}
             <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
-
           </div>
         </motion.div>
       </div>

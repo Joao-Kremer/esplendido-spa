@@ -279,8 +279,8 @@ export default function StorySection() {
   }, [broomPosRef]);
 
   return (
-    <section id="sobre" ref={sectionRef} className="relative bg-neutral py-20 md:py-32">
-      <div className="mx-auto max-w-5xl px-6">
+    <section id="sobre" ref={sectionRef} className="relative overflow-x-clip bg-neutral py-20 md:py-32">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* Header */}
         <div className="mb-20 text-center">
           <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
@@ -297,7 +297,7 @@ export default function StorySection() {
           {dustCanvas}
 
           {/* Vertical timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-px md:left-1/2 md:-translate-x-1/2">
+          <div className="absolute left-4 top-0 bottom-0 w-px sm:left-6 md:left-1/2 md:-translate-x-1/2">
             <div className="absolute inset-0 bg-dark/10" />
             <div
               ref={lineRef}
@@ -309,7 +309,7 @@ export default function StorySection() {
           {/* Broom */}
           <div
             ref={broomRef}
-            className="pointer-events-none absolute left-6 z-20 md:left-1/2 md:-translate-x-1/2"
+            className="pointer-events-none absolute left-4 z-20 sm:left-6 md:left-1/2 md:-translate-x-1/2"
             style={{ top: "0%" }}
           >
             <div ref={broomInnerRef} className="relative -translate-x-1/2">
@@ -345,7 +345,7 @@ export default function StorySection() {
                   {/* Timeline dot */}
                   <div
                     ref={(el) => { dotsRef.current[i] = el; }}
-                    className="absolute left-6 z-10 -translate-x-1/2 md:left-1/2"
+                    className="absolute left-4 z-10 -translate-x-1/2 sm:left-6 md:left-1/2"
                     style={{ transform: "scale(0)" }}
                   >
                     <div className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-primary bg-white shadow-sm">
@@ -358,7 +358,7 @@ export default function StorySection() {
                   {/* Card */}
                   <div
                     ref={(el) => { cardsRef.current[i] = el; }}
-                    className="ml-14 flex-1 md:ml-0 md:w-1/2"
+                    className="ml-10 flex-1 sm:ml-14 md:ml-0 md:w-1/2"
                     style={{ opacity: 0 }}
                   >
                     <div
@@ -367,7 +367,7 @@ export default function StorySection() {
                       }`}
                     />
 
-                    <div className="rounded-2xl border border-primary/10 bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg md:p-7">
+                    <div className="rounded-xl border border-primary/10 bg-white p-4 shadow-md transition-shadow duration-300 hover:shadow-lg sm:rounded-2xl sm:p-6 md:p-7">
                       <div className="mb-3 flex items-center gap-3">
                         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 font-heading text-sm font-bold text-primary">
                           {String(i + 1).padStart(2, "0")}

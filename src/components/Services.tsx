@@ -14,7 +14,7 @@ export default function Services({ onOpenWizard }: ServicesProps) {
 
   return (
     <section id="servicos" className="bg-neutral py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
@@ -86,11 +86,11 @@ export default function Services({ onOpenWizard }: ServicesProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 250 }}
-              className="fixed inset-4 z-50 m-auto flex max-h-[85vh] max-w-lg flex-col overflow-hidden rounded-2xl shadow-2xl sm:inset-auto sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2"
+              className="fixed inset-0 z-50 m-auto flex max-h-full flex-col overflow-hidden shadow-2xl sm:inset-4 sm:max-h-[85vh] sm:max-w-lg sm:rounded-2xl"
               style={{ background: "linear-gradient(180deg, #0d1e36 0%, #0A1628 100%)" }}
             >
               {/* Modal Header */}
-              <div className="relative flex items-center gap-4 px-6 pt-6 pb-4">
+              <div className="relative flex items-center gap-3 px-4 pt-5 pb-3 sm:gap-4 sm:px-6 sm:pt-6 sm:pb-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
                   <selectedService.icon size={24} className="text-primary" />
                 </div>
@@ -109,10 +109,10 @@ export default function Services({ onOpenWizard }: ServicesProps) {
               </div>
 
               {/* Divider */}
-              <div className="mx-6 h-px bg-white/[0.06]" />
+              <div className="mx-4 h-px bg-white/[0.06] sm:mx-6" />
 
               {/* Modal Content */}
-              <div className="flex-1 overflow-y-auto px-6 py-5" style={{ scrollbarWidth: "none" }}>
+              <div className="flex-1 overflow-y-auto px-4 py-4 sm:px-6 sm:py-5" style={{ scrollbarWidth: "none" }}>
                 {/* Details */}
                 <div className="space-y-3">
                   {selectedService.details.map((detail, i) => (
@@ -145,7 +145,7 @@ export default function Services({ onOpenWizard }: ServicesProps) {
               </div>
 
               {/* Modal Footer */}
-              <div className="border-t border-white/[0.06] px-6 py-4">
+              <div className="border-t border-white/[0.06] px-4 py-3 sm:px-6 sm:py-4">
                 <button
                   onClick={() => {
                     setSelectedService(null);

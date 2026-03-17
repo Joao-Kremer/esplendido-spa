@@ -21,7 +21,8 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
   useEffect(() => {
     if (!lineRef.current) return;
 
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const mql = window.matchMedia("(max-width: 767px)");
+    const isMobile = mql.matches;
     const scaleAxis = isMobile ? "scaleY" : "scaleX";
 
     const ctx = gsap.context(() => {
@@ -46,7 +47,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
 
   return (
     <section id="como-funciona" className="bg-dark py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
@@ -55,7 +56,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
         </div>
 
         {/* Steps */}
-        <div className="relative flex flex-col items-center gap-12 md:flex-row md:justify-between md:gap-0">
+        <div className="relative flex flex-col items-center gap-10 sm:gap-12 md:flex-row md:justify-between md:gap-0">
           {/* Connecting line (desktop: horizontal, mobile: vertical) */}
           <div
             ref={lineRef}
@@ -73,7 +74,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 className="relative z-10 flex flex-col items-center text-center md:flex-1"
               >
-                <span className="font-heading text-4xl font-extrabold text-golden">
+                <span className="font-heading text-3xl font-extrabold text-golden sm:text-4xl">
                   {step.number}
                 </span>
                 <div className={`mt-4 rounded-xl bg-white/5 p-4 ${step.iconColor}`}>
@@ -94,7 +95,7 @@ export default function HowItWorks({ onOpenWizard }: HowItWorksProps) {
         <div className="mt-16 text-center">
           <button
             onClick={onOpenWizard}
-            className="rounded-lg bg-gradient-to-r from-primary to-cta px-8 py-3 text-sm font-bold text-white transition-transform hover:scale-105"
+            className="w-full rounded-lg bg-gradient-to-r from-primary to-cta px-8 py-3.5 text-sm font-bold text-white transition-transform hover:scale-105 sm:w-auto sm:py-3"
           >
             Agendar agora
           </button>

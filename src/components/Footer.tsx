@@ -9,9 +9,9 @@ export default function Footer({ onOpenWizard }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark py-16">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+    <footer className="bg-dark py-12 sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
             <h3 className="font-heading text-xl font-bold text-white">
@@ -39,21 +39,21 @@ export default function Footer({ onOpenWizard }: FooterProps) {
             <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-white/70">
               Contactos
             </h4>
-            <ul className="mt-4 space-y-3">
-              <li className="flex items-center gap-3 text-sm text-white/60">
-                <Phone size={16} className="text-primary" />
+            <ul className="mt-4 space-y-1">
+              <li className="flex items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 sm:py-2">
+                <Phone size={16} className="shrink-0 text-primary" />
                 {contacts.phone}
               </li>
-              <li className="flex items-center gap-3 text-sm text-white/60">
-                <Mail size={16} className="text-primary" />
+              <li className="flex items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 sm:py-2">
+                <Mail size={16} className="shrink-0 text-primary" />
                 {contacts.email}
               </li>
-              <li className="flex items-center gap-3 text-sm text-white/60">
-                <Clock size={16} className="text-primary" />
+              <li className="flex items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 sm:py-2">
+                <Clock size={16} className="shrink-0 text-primary" />
                 {contacts.hours}
               </li>
-              <li className="flex items-center gap-3 text-sm text-white/60">
-                <MapPin size={16} className="text-primary" />
+              <li className="flex items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 sm:py-2">
+                <MapPin size={16} className="shrink-0 text-primary" />
                 {contacts.area}
               </li>
             </ul>
@@ -64,19 +64,19 @@ export default function Footer({ onOpenWizard }: FooterProps) {
             <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-white/70">
               Links rápidos
             </h4>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-4 space-y-1">
               <li>
-                <a href="#servicos" className="text-sm text-white/60 transition-colors hover:text-primary">
+                <a href="#servicos" className="inline-block rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 hover:text-primary sm:py-2">
                   Serviços
                 </a>
               </li>
               <li>
-                <a href="#como-funciona" className="text-sm text-white/60 transition-colors hover:text-primary">
+                <a href="#como-funciona" className="inline-block rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 hover:text-primary sm:py-2">
                   Como Funciona
                 </a>
               </li>
               <li>
-                <a href="#depoimentos" className="text-sm text-white/60 transition-colors hover:text-primary">
+                <a href="#depoimentos" className="inline-block rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 hover:text-primary sm:py-2">
                   Depoimentos
                 </a>
               </li>

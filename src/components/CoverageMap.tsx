@@ -17,7 +17,7 @@ const zones = [
 export default function CoverageMap() {
   return (
     <section id="cobertura" className="bg-neutral py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
@@ -37,9 +37,9 @@ export default function CoverageMap() {
             transition={{ duration: 0.6 }}
             className="relative w-full max-w-lg flex-1"
           >
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-dark/5 p-4">
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-dark/5 p-2 sm:p-4">
               {/* SVG Map of Lisbon & Margem Sul region */}
-              <svg viewBox="0 0 500 500" className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 500 500" className="h-full w-full" xmlns="http://www.w3.org/2000/svg" style={{ fontSize: "inherit" }}>
                 {/* Water / Tejo */}
                 <path
                   d="M0 200 Q100 220 200 210 Q300 200 400 230 Q450 245 500 240 L500 280 Q400 300 300 290 Q200 280 100 295 Q50 300 0 290 Z"
@@ -74,7 +74,7 @@ export default function CoverageMap() {
                 />
 
                 {/* Lisboa label */}
-                <text x="220" y="100" textAnchor="middle" fill="#0A1628" fontSize="14" fontWeight="700" fontFamily="var(--font-heading)">
+                <text x="220" y="100" textAnchor="middle" fill="#0A1628" fontSize="18" fontWeight="700" fontFamily="var(--font-heading)">
                   Lisboa Centro
                 </text>
 
@@ -90,9 +90,9 @@ export default function CoverageMap() {
                   { x: 280, y: 110, label: "Lumiar" },
                 ].map((pin) => (
                   <g key={pin.label}>
-                    <circle cx={pin.x} cy={pin.y} r="4" fill="#00DAFF" opacity="0.8" />
-                    <circle cx={pin.x} cy={pin.y} r="7" fill="none" stroke="#00DAFF" strokeWidth="1" opacity="0.3" />
-                    <text x={pin.x} y={pin.y - 10} textAnchor="middle" fill="#0A1628" fontSize="8" opacity="0.5">
+                    <circle cx={pin.x} cy={pin.y} r="5" fill="#00DAFF" opacity="0.8" />
+                    <circle cx={pin.x} cy={pin.y} r="9" fill="none" stroke="#00DAFF" strokeWidth="1.5" opacity="0.3" />
+                    <text x={pin.x} y={pin.y - 12} textAnchor="middle" fill="#0A1628" fontSize="11" opacity="0.6" fontWeight="500">
                       {pin.label}
                     </text>
                   </g>
@@ -120,7 +120,7 @@ export default function CoverageMap() {
                 />
 
                 {/* Margem Sul label */}
-                <text x="250" y="330" textAnchor="middle" fill="#0A1628" fontSize="14" fontWeight="700" fontFamily="var(--font-heading)">
+                <text x="250" y="330" textAnchor="middle" fill="#0A1628" fontSize="18" fontWeight="700" fontFamily="var(--font-heading)">
                   Margem Sul
                 </text>
 
@@ -133,9 +133,9 @@ export default function CoverageMap() {
                   { x: 280, y: 410, label: "Setúbal" },
                 ].map((pin) => (
                   <g key={pin.label}>
-                    <circle cx={pin.x} cy={pin.y} r="4" fill="#00DAFF" opacity="0.8" />
-                    <circle cx={pin.x} cy={pin.y} r="7" fill="none" stroke="#00DAFF" strokeWidth="1" opacity="0.3" />
-                    <text x={pin.x} y={pin.y - 10} textAnchor="middle" fill="#0A1628" fontSize="8" opacity="0.5">
+                    <circle cx={pin.x} cy={pin.y} r="5" fill="#00DAFF" opacity="0.8" />
+                    <circle cx={pin.x} cy={pin.y} r="9" fill="none" stroke="#00DAFF" strokeWidth="1.5" opacity="0.3" />
+                    <text x={pin.x} y={pin.y - 12} textAnchor="middle" fill="#0A1628" fontSize="11" opacity="0.6" fontWeight="500">
                       {pin.label}
                     </text>
                   </g>
@@ -146,7 +146,7 @@ export default function CoverageMap() {
                 <line x1="280" y1="240" x2="300" y2="300" stroke="#0A1628" strokeWidth="1.5" opacity="0.15" strokeDasharray="4 3" />
 
                 {/* Rio Tejo label */}
-                <text x="380" y="260" textAnchor="middle" fill="#00DAFF" fontSize="11" fontStyle="italic" opacity="0.5">
+                <text x="380" y="260" textAnchor="middle" fill="#00DAFF" fontSize="14" fontStyle="italic" opacity="0.5">
                   Rio Tejo
                 </text>
               </svg>

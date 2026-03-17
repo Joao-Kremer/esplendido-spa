@@ -290,7 +290,7 @@ export default function ChatBot({
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0.8 }}
             transition={{ type: "spring", damping: 28, stiffness: 220 }}
-            className="fixed inset-y-0 right-0 z-50 flex w-full flex-col overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] sm:inset-y-4 sm:right-4 sm:w-[400px] sm:rounded-2xl"
+            className="fixed inset-0 z-50 flex w-full flex-col overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] sm:inset-y-4 sm:left-auto sm:right-4 sm:w-[400px] sm:rounded-2xl"
             style={{ background: "linear-gradient(180deg, #0d1e36 0%, #0A1628 40%, #080f1e 100%)" }}
           >
             {/* Header */}
@@ -383,7 +383,7 @@ export default function ChatBot({
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.2, delay: idx * 0.04 }}
                         onClick={() => handleButtonClick(btn)}
-                        className="group relative overflow-hidden rounded-full border border-primary/20 bg-primary/[0.06] px-4 py-2.5 text-[13px] font-medium text-primary transition-all duration-200 hover:border-primary/40 hover:bg-primary/[0.12] active:scale-[0.97]"
+                        className="group relative overflow-hidden rounded-full border border-primary/20 bg-primary/[0.06] px-3.5 py-2.5 text-[13px] font-medium text-primary transition-all duration-200 hover:border-primary/40 hover:bg-primary/[0.12] active:scale-[0.97] sm:px-4"
                       >
                         <span className="relative z-10 flex items-center gap-1.5">
                           {btn.label}

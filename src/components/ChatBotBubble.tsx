@@ -17,7 +17,7 @@ export default function ChatBotBubble({ visible, onClick }: ChatBotBubbleProps) 
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0, opacity: 0 }}
           transition={{ type: "spring", damping: 12, stiffness: 180, delay: 0.3 }}
-          className="fixed bottom-5 right-5 z-40 sm:bottom-6 sm:right-6"
+          className="fixed bottom-4 right-4 z-40 sm:bottom-6 sm:right-6"
         >
           {/* Outer ping rings */}
           <span
@@ -34,7 +34,7 @@ export default function ChatBotBubble({ visible, onClick }: ChatBotBubbleProps) 
 
           <button
             onClick={onClick}
-            className="relative flex h-[60px] w-[60px] items-center justify-center rounded-full bg-primary text-dark shadow-[0_4px_24px_rgba(0,218,255,0.45),0_0_60px_rgba(0,218,255,0.15)] transition-all duration-300 hover:scale-110 hover:shadow-[0_4px_32px_rgba(0,218,255,0.6),0_0_80px_rgba(0,218,255,0.25)] active:scale-95 sm:h-[64px] sm:w-[64px]"
+            className="relative flex h-14 w-14 items-center justify-center rounded-full bg-primary text-dark shadow-[0_4px_24px_rgba(0,218,255,0.45),0_0_60px_rgba(0,218,255,0.15)] transition-all duration-300 hover:scale-110 hover:shadow-[0_4px_32px_rgba(0,218,255,0.6),0_0_80px_rgba(0,218,255,0.25)] active:scale-95 sm:h-16 sm:w-16"
             style={{ animation: "bounce-subtle 3s ease-in-out infinite" }}
             aria-label="Abrir chat"
           >
