@@ -8,6 +8,8 @@ interface FooterProps {
 
 export default function Footer({ onOpenWizard }: FooterProps) {
   const t = useTranslations("footer");
+  const tCommon = useTranslations("common");
+  const tNav = useTranslations("navbar");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -51,11 +53,11 @@ export default function Footer({ onOpenWizard }: FooterProps) {
               </li>
               <li className="flex items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 sm:py-2">
                 <Clock size={16} className="shrink-0 text-primary" />
-                {contacts.hours}
+                {tCommon("hours")}
               </li>
               <li className="flex items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 sm:py-2">
                 <MapPin size={16} className="shrink-0 text-primary" />
-                {contacts.area}
+                {tCommon("area")}
               </li>
             </ul>
           </div>
@@ -68,17 +70,17 @@ export default function Footer({ onOpenWizard }: FooterProps) {
             <ul className="mt-4 space-y-1">
               <li>
                 <a href="#servicos" className="inline-block rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 hover:text-primary sm:py-2">
-                  Serviços
+                  {tNav("services")}
                 </a>
               </li>
               <li>
                 <a href="#como-funciona" className="inline-block rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 hover:text-primary sm:py-2">
-                  Como Funciona
+                  {tNav("howItWorks")}
                 </a>
               </li>
               <li>
                 <a href="#depoimentos" className="inline-block rounded-lg px-2 py-2.5 text-sm text-white/60 transition-colors hover:bg-white/5 hover:text-primary sm:py-2">
-                  Depoimentos
+                  {tNav("testimonials")}
                 </a>
               </li>
             </ul>

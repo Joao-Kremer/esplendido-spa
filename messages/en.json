@@ -17,7 +17,7 @@
     "headlineHighlight": "splendid",
     "subtitle1": "A dedicated, trained team at your service.",
     "subtitle2": "Lisboa & Margem Sul.",
-    "cta": "Book via WhatsApp",
+    "cta": "Book Now",
     "clients": "300+ clients",
     "guarantee": "100% guarantee",
     "imageAlt": "Professional cleaning service"
@@ -205,7 +205,7 @@
         "description": "Select the type of cleaning you need from our services menu."
       },
       {
-        "title": "Book via WhatsApp",
+        "title": "Book Now",
         "description": "Fill in the details and send them directly to our WhatsApp."
       },
       {
@@ -254,7 +254,7 @@
     "headlineBottom": "home",
     "headlineHighlight": "splendid",
     "subtitle": "Choose the service, tell us what you need and our trained team will be at your door. No commitment.",
-    "cta": "Book via WhatsApp",
+    "cta": "Book Now",
     "phone": "or call 910 725 044"
   },
   "footer": {
@@ -263,7 +263,7 @@
     "contacts": "Contacts",
     "quickLinks": "Quick links",
     "copyright": "© {year} Esplêndido. All rights reserved.",
-    "bookCta": "Book via WhatsApp"
+    "bookCta": "Book Now"
   },
   "chatbot": {
     "openChat": "Open chat",
@@ -275,7 +275,7 @@
     "noNotes": "(no notes)",
     "sendingRequest": "Sending your request...",
     "requestSuccess": "✅ Request sent successfully!",
-    "requestSuccessFollowup": "Our team will review your request and get in touch shortly.",
+    "requestSuccessFollowup": "Our team will review your request and get back to you as soon as possible, within 24 hours at most. We're here to provide you with the best service!",
     "requestSuccessContact": "You can also contact us directly:",
     "requestError": "An error occurred while sending. You can try again or contact us directly:",
     "connectionError": "A connection error occurred. You can contact us directly:",

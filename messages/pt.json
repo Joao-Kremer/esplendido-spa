@@ -17,7 +17,7 @@
     "headlineHighlight": "esplêndida",
     "subtitle1": "Equipa fixa e treinada ao seu serviço.",
     "subtitle2": "Lisboa & Margem Sul.",
-    "cta": "Agendar pelo WhatsApp",
+    "cta": "Agendar",
     "clients": "300+ clientes",
     "guarantee": "100% garantia",
     "imageAlt": "Serviço de limpeza profissional"
@@ -254,7 +254,7 @@
     "headlineBottom": "casa",
     "headlineHighlight": "esplêndida",
     "subtitle": "Escolha o serviço, diga-nos o que precisa e receba a nossa equipa treinada na sua porta. Sem compromisso.",
-    "cta": "Agendar pelo WhatsApp",
+    "cta": "Agendar",
     "phone": "ou ligue 910 725 044"
   },
   "footer": {
@@ -263,7 +263,7 @@
     "contacts": "Contactos",
     "quickLinks": "Links rápidos",
     "copyright": "© {year} Esplêndido. Todos os direitos reservados.",
-    "bookCta": "Agendar pelo WhatsApp"
+    "bookCta": "Agendar"
   },
   "chatbot": {
     "openChat": "Abrir chat",
@@ -275,7 +275,7 @@
     "noNotes": "(sem observações)",
     "sendingRequest": "A enviar o seu pedido...",
     "requestSuccess": "✅ Pedido enviado com sucesso!",
-    "requestSuccessFollowup": "A nossa equipa vai analisar o seu pedido e entrar em contacto brevemente.",
+    "requestSuccessFollowup": "A nossa equipa vai analisar o seu pedido e entrar em contacto o mais rápido possível, num prazo máximo de 24 horas. Estamos cá para o atender da melhor forma!",
     "requestSuccessContact": "Pode também contactar-nos diretamente:",
     "requestError": "Ocorreu um erro ao enviar. Pode tentar novamente ou contactar-nos diretamente:",
     "connectionError": "Ocorreu um erro de conexão. Pode contactar-nos diretamente:",
