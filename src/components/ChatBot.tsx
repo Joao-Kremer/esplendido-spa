@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, MessageSquare, Send, ArrowRight } from "lucide-react";
-import { getFlowNode, WHATSAPP_BASE, type ChatButton as FlowButton } from "@/lib/chatbot-flows";
+import { useTranslations } from "next-intl";
+import { buildFlows, getFlowNode, WHATSAPP_BASE, type ChatButton as FlowButton } from "@/lib/chatbot-flows";
 import { type WizardFormData } from "@/lib/wizard-schema";
 import { contacts } from "@/lib/data";
 
@@ -28,6 +29,15 @@ export default function ChatBot({
   initialStep,
   preselectedService,
 }: ChatBotProps) {
+  const t = useTranslations("chatbot");
+  const tServices = useTranslations("services");
+  const serviceItems = tServices.raw("items") as Array<{name: string; details: string[]; includes: string[]}>;
+  const serviceNames = useMemo(() => serviceItems.map((s) => s.name), [serviceItems]);
+  const chatFlows = useMemo(
+    () => buildFlows((key: string) => t(key as never), serviceNames, serviceItems),
+    [t, serviceNames, serviceItems]
+  );
+
   const [messages, setMessages] = useState<DisplayMessage[]>([]);
   const [activeButtons, setActiveButtons] = useState<FlowButton[]>([]);
   const [showNotes, setShowNotes] = useState(false);
@@ -77,23 +87,23 @@ export default function ChatBot({
 
   const navigateToNode = useCallback(
     async (flowId: string, stepId: string) => {
-      const node = getFlowNode(flowId, stepId);
+      const node = getFlowNode(flowId, stepId, chatFlows);
       if (!node) return;
 
       if (flowId === "booking" && stepId === "summary") {
-        const lines = ["Perfeito! Aqui está o resumo:"];
-        if (formData.service) lines.push(`📋 Serviço: ${formData.service}`);
-        if (formData.frequency) lines.push(`🔄 Frequência: ${formData.frequency}`);
-        if (formData.area) lines.push(`📐 Área: ${formData.area} m²`);
-        if (formData.zone) lines.push(`📍 Zona: ${formData.zone}`);
-        if (formData.notes) lines.push(`📝 Observações: ${formData.notes}`);
+        const lines = [t("summaryIntro")];
+        if (formData.service) lines.push(t("summaryService", { value: formData.service }));
+        if (formData.frequency) lines.push(t("summaryFrequency", { value: formData.frequency }));
+        if (formData.area) lines.push(t("summaryArea", { value: formData.area }));
+        if (formData.zone) lines.push(t("summaryZone", { value: formData.zone }));
+        if (formData.notes) lines.push(t("summaryNotes", { value: formData.notes }));
         await addBotMessages(lines, node.buttons ?? []);
         return;
       }
 
       await addBotMessages(node.messages, node.buttons ?? []);
     },
-    [addBotMessages, formData]
+    [addBotMessages, formData, chatFlows, t]
   );
 
   useEffect(() => {
@@ -114,12 +124,12 @@ export default function ChatBot({
     msgIdRef.current = 0;
 
     if (preselectedService) {
-      const welcomeNode = getFlowNode("menu", "main");
+      const welcomeNode = getFlowNode("menu", "main", chatFlows);
       if (welcomeNode) {
         addBotMessages(welcomeNode.messages, []).then(() => {
-          addMessage("user", "📋 Agendar Serviço");
+          addMessage("user", t("menu.bookService"));
           setTimeout(() => {
-            addMessage("bot", "Qual serviço precisa?");
+            addMessage("bot", t("booking.whichService"));
             setTimeout(() => {
               addMessage("user", preselectedService);
               setFormData((prev) => ({ ...prev, service: preselectedService }));
@@ -129,10 +139,10 @@ export default function ChatBot({
         });
       }
     } else if (initialFlow && initialStep) {
-      const welcomeNode = getFlowNode("menu", "main");
+      const welcomeNode = getFlowNode("menu", "main", chatFlows);
       if (welcomeNode && initialFlow === "booking") {
         addBotMessages(welcomeNode.messages, []).then(() => {
-          addMessage("user", "📋 Agendar Serviço");
+          addMessage("user", t("menu.bookService"));
           setTimeout(() => navigateToNode(initialFlow, initialStep), 400);
         });
       } else {
@@ -141,7 +151,7 @@ export default function ChatBot({
     } else {
       navigateToNode("menu", "main");
     }
-  }, [open, preselectedService, initialFlow, initialStep, addBotMessages, addMessage, navigateToNode]);
+  }, [open, preselectedService, initialFlow, initialStep, addBotMessages, addMessage, navigateToNode, chatFlows, t]);
 
   const handleButtonClick = useCallback(
     (button: FlowButton) => {
@@ -203,7 +213,7 @@ export default function ChatBot({
               notes: formData.notes ?? "",
             };
 
-            addMessage("bot", "A enviar o seu pedido...");
+            addMessage("bot", t("sendingRequest"));
             scrollToBottom();
 
             try {
@@ -216,33 +226,33 @@ export default function ChatBot({
               if (res.ok) {
                 await addBotMessages(
                   [
-                    "✅ Pedido enviado com sucesso!",
-                    "A nossa equipa vai analisar o seu pedido e entrar em contacto brevemente.",
-                    "Pode também contactar-nos diretamente:",
+                    t("requestSuccess"),
+                    t("requestSuccessFollowup"),
+                    t("requestSuccessContact"),
                   ],
                   [
-                    { label: "💬 WhatsApp", action: { type: "whatsapp", message: `Olá, enviei um pedido de agendamento para ${data.service}.` } },
-                    { label: "📞 Ligar", action: { type: "phone" } },
-                    { label: "Voltar ao menu", action: { type: "goto_menu" } },
+                    { label: t("whatsappButton"), action: { type: "whatsapp", message: `${t("support.whatsappMessage")} ${data.service}.` } },
+                    { label: t("phoneButton"), action: { type: "phone" } },
+                    { label: t("backToMenu"), action: { type: "goto_menu" } },
                   ]
                 );
               } else {
                 await addBotMessages(
-                  ["Ocorreu um erro ao enviar. Pode tentar novamente ou contactar-nos diretamente:"],
+                  [t("requestError")],
                   [
-                    { label: "🔄 Tentar novamente", action: { type: "submit_booking" } },
-                    { label: "💬 WhatsApp", action: { type: "whatsapp", message: `Olá, gostaria de agendar ${data.service}, ${data.area}m², ${data.zone}.` } },
-                    { label: "📞 Ligar", action: { type: "phone" } },
+                    { label: t("retryButton"), action: { type: "submit_booking" } },
+                    { label: t("whatsappButton"), action: { type: "whatsapp", message: `${t("support.whatsappMessage")} ${data.service}, ${data.area}m², ${data.zone}.` } },
+                    { label: t("phoneButton"), action: { type: "phone" } },
                   ]
                 );
               }
             } catch {
               await addBotMessages(
-                ["Ocorreu um erro de conexão. Pode contactar-nos diretamente:"],
+                [t("connectionError")],
                 [
-                  { label: "💬 WhatsApp", action: { type: "whatsapp", message: `Olá, gostaria de agendar ${data.service}.` } },
-                  { label: "📞 Ligar", action: { type: "phone" } },
-                  { label: "Voltar ao menu", action: { type: "goto_menu" } },
+                  { label: t("whatsappButton"), action: { type: "whatsapp", message: `${t("support.whatsappMessage")} ${data.service}.` } },
+                  { label: t("phoneButton"), action: { type: "phone" } },
+                  { label: t("backToMenu"), action: { type: "goto_menu" } },
                 ]
               );
             }
@@ -252,7 +262,7 @@ export default function ChatBot({
         processingRef.current = false;
       }, 300);
     },
-    [addMessage, navigateToNode, formData, scrollToBottom]
+    [addMessage, navigateToNode, formData, scrollToBottom, addBotMessages, t]
   );
 
   const handleAreaConfirm = useCallback(() => {
@@ -267,9 +277,9 @@ export default function ChatBot({
   const handleNotesConfirm = useCallback(() => {
     setFormData((prev) => ({ ...prev, notes: notesValue }));
     setShowNotes(false);
-    addMessage("user", notesValue.trim() || "(sem observações)");
+    addMessage("user", notesValue.trim() || t("noNotes"));
     setTimeout(() => navigateToNode("booking", notesNextStep), 400);
-  }, [notesValue, notesNextStep, addMessage, navigateToNode]);
+  }, [notesValue, notesNextStep, addMessage, navigateToNode, t]);
 
   return (
     <AnimatePresence>
@@ -303,14 +313,14 @@ export default function ChatBot({
               </div>
               <div className="flex-1">
                 <h3 className="font-heading text-[15px] font-bold text-white">
-                  Esplêndido
+                  {t("assistantLabel")}
                 </h3>
                 <div className="flex items-center gap-1.5">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-50" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
                   </span>
-                  <span className="text-[11px] font-medium text-green-400/80">Online</span>
+                  <span className="text-[11px] font-medium text-green-400/80">{t("online")}</span>
                 </div>
               </div>
               <button
@@ -406,7 +416,7 @@ export default function ChatBot({
                         type="number"
                         inputMode="numeric"
                         min="1"
-                        placeholder="Ex: 80"
+                        placeholder={t("areaPlaceholder")}
                         value={areaValue}
                         onChange={(e) => setAreaValue(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && handleAreaConfirm()}
@@ -437,7 +447,7 @@ export default function ChatBot({
                     <textarea
                       value={notesValue}
                       onChange={(e) => setNotesValue(e.target.value)}
-                      placeholder="Escreva aqui as suas observações..."
+                      placeholder={t("notesPlaceholder")}
                       rows={3}
                       className="w-full resize-none rounded-xl border border-white/[0.08] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all focus:border-primary/40 focus:bg-white/[0.06] focus:ring-1 focus:ring-primary/20"
                       autoFocus
@@ -447,7 +457,7 @@ export default function ChatBot({
                       className="flex items-center gap-2 self-end rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-dark transition-all hover:shadow-[0_0_16px_rgba(0,218,255,0.3)]"
                     >
                       <Send size={14} />
-                      Confirmar
+                      {t("confirm")}
                     </button>
                   </motion.div>
                 )}
@@ -458,7 +468,7 @@ export default function ChatBot({
             <div className="relative px-5 py-3">
               <div className="absolute inset-x-0 top-0 h-px bg-white/[0.04]" />
               <p className="text-center text-[10px] tracking-wide text-white/15">
-                Assistente Esplêndido
+                {t("assistantLabel")}
               </p>
             </div>
           </motion.div>

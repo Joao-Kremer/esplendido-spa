@@ -11,19 +11,29 @@ export const wizardSchema = z.object({
 
 export type WizardFormData = z.infer<typeof wizardSchema>;
 
-export function buildWhatsAppUrl(data: WizardFormData): string {
+export interface WhatsAppLabels {
+  greeting: string;
+  serviceLabel: string;
+  frequencyLabel: string;
+  areaLabel: string;
+  zoneLabel: string;
+  notesLabel: string;
+  closing: string;
+}
+
+export function buildWhatsAppUrl(data: WizardFormData, labels: WhatsAppLabels): string {
   const lines = [
-    "Olá! Gostaria de agendar um serviço:",
+    labels.greeting,
     "",
-    `📋 Serviço: ${data.service}`,
+    labels.serviceLabel.replace("{value}", data.service),
   ];
 
-  if (data.frequency) lines.push(`🔄 Frequência: ${data.frequency}`);
-  lines.push(`📐 Área: ${data.area} m²`);
-  if (data.zone) lines.push(`📍 Zona: ${data.zone}`);
-  if (data.notes) lines.push(`📝 Observações: ${data.notes}`);
+  if (data.frequency) lines.push(labels.frequencyLabel.replace("{value}", data.frequency));
+  lines.push(labels.areaLabel.replace("{value}", String(data.area)));
+  if (data.zone) lines.push(labels.zoneLabel.replace("{value}", data.zone));
+  if (data.notes) lines.push(labels.notesLabel.replace("{value}", data.notes));
 
-  lines.push("", "Aguardo contacto. Obrigado!");
+  lines.push("", labels.closing);
 
   const text = encodeURIComponent(lines.join("\n"));
   return `https://wa.me/${contacts.whatsapp}?text=${text}`;

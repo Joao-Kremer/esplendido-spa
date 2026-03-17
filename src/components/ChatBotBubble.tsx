@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ChatBotBubbleProps {
   visible: boolean;
@@ -9,6 +10,7 @@ interface ChatBotBubbleProps {
 }
 
 export default function ChatBotBubble({ visible, onClick }: ChatBotBubbleProps) {
+  const t = useTranslations("chatbot");
   return (
     <AnimatePresence>
       {visible && (
@@ -36,7 +38,7 @@ export default function ChatBotBubble({ visible, onClick }: ChatBotBubbleProps) 
             onClick={onClick}
             className="relative flex h-14 w-14 items-center justify-center rounded-full bg-primary text-dark shadow-[0_4px_24px_rgba(0,218,255,0.45),0_0_60px_rgba(0,218,255,0.15)] transition-all duration-300 hover:scale-110 hover:shadow-[0_4px_32px_rgba(0,218,255,0.6),0_0_80px_rgba(0,218,255,0.25)] active:scale-95 sm:h-16 sm:w-16"
             style={{ animation: "bounce-subtle 3s ease-in-out infinite" }}
-            aria-label="Abrir chat"
+            aria-label={t("openChat")}
           >
             <MessageCircle size={26} strokeWidth={2.2} />
 
