@@ -16,7 +16,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-dark">
+    <section className="relative min-h-screen overflow-hidden bg-white">
       {/* Three.js background */}
       <BubbleScene />
 
@@ -28,11 +28,11 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
+            className="font-heading text-3xl font-bold leading-tight text-dark sm:text-4xl md:text-5xl lg:text-6xl"
           >
             {t("headlineTop")}
             <br />
-            {t("headlineBottom")} <span className="gradient-text">{t("headlineHighlight")}</span>
+            {t("headlineBottom")}{t("headlineBottom") ? " " : ""}<span className="gradient-text">{t("headlineHighlight")}</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -40,7 +40,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 max-w-md text-base leading-relaxed text-white/50 md:text-lg"
+            className="mt-4 max-w-md text-base leading-relaxed text-dark/60 md:text-lg"
           >
             {t("subtitle1")}
             <br />
@@ -72,12 +72,12 @@ export default function Hero({ onOpenWizard }: HeroProps) {
                   <Star key={i} size={14} className="fill-golden text-golden" />
                 ))}
               </div>
-              <span className="text-white/40">{t("clients")}</span>
+              <span className="text-dark/50">{t("clients")}</span>
             </div>
-            <span className="text-white/15">|</span>
+            <span className="text-dark/20">|</span>
             <div className="flex items-center gap-1.5">
               <Shield size={14} className="text-primary" />
-              <span className="text-white/40">{t("guarantee")}</span>
+              <span className="text-dark/50">{t("guarantee")}</span>
             </div>
           </motion.div>
         </div>
@@ -91,16 +91,16 @@ export default function Hero({ onOpenWizard }: HeroProps) {
         >
           <div className="relative h-[500px] w-full">
             <Image
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=1000&fit=crop"
+              src="/images/hero/hero_woman.png"
               alt={t("imageAlt")}
               fill
               className="rounded-2xl object-cover opacity-85"
               sizes="50vw"
             />
             {/* Fade gradient left */}
-            <div className="absolute inset-0 bg-gradient-to-r from-dark via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent" />
             {/* Fade gradient bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
           </div>
         </motion.div>
       </div>

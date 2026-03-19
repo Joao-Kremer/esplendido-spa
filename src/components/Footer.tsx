@@ -29,14 +29,14 @@ export default function Footer({ onOpenWizard }: FooterProps) {
             <p className="mt-3 text-sm leading-relaxed text-white/40">
               {t("description")}
             </p>
-            <div className="mt-6 flex gap-4">
-              <a href={contacts.social.facebook} target="_blank" rel="noopener noreferrer" className="text-white/50 transition-colors hover:text-primary">
+            <div className="mt-6 flex gap-3">
+              <a href={contacts.social.facebook} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/[0.07] text-white/60 ring-1 ring-white/[0.08] transition-all hover:bg-primary/20 hover:text-primary hover:ring-primary/30">
                 <Facebook size={20} />
               </a>
-              <a href={contacts.social.instagram} target="_blank" rel="noopener noreferrer" className="text-white/50 transition-colors hover:text-primary">
+              <a href={contacts.social.instagram} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/[0.07] text-white/60 ring-1 ring-white/[0.08] transition-all hover:bg-primary/20 hover:text-primary hover:ring-primary/30">
                 <Instagram size={20} />
               </a>
-              <a href={contacts.social.tiktok} target="_blank" rel="noopener noreferrer" className="text-white/50 transition-colors hover:text-primary">
+              <a href={contacts.social.tiktok} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/[0.07] text-white/60 ring-1 ring-white/[0.08] transition-all hover:bg-primary/20 hover:text-primary hover:ring-primary/30">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" /></svg>
               </a>
             </div>

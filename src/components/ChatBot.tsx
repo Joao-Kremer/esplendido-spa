@@ -48,6 +48,7 @@ export default function ChatBot({
   const [notesValue, setNotesValue] = useState("");
   const [notesNextStep, setNotesNextStep] = useState("");
   const [formData, setFormData] = useState<Partial<WizardFormData>>({});
+  const [textInputBackStep, setTextInputBackStep] = useState<{ flow: string; step: string } | null>(null);
   const [isTyping, setIsTyping] = useState(false);
   const msgIdRef = useRef(0);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -102,9 +103,25 @@ export default function ChatBot({
         return;
       }
 
-      await addBotMessages(node.messages, node.buttons ?? []);
+      // Personalize message with client name after they identify themselves
+      let personalizedMessages = [...node.messages];
+      if (formData.name && flowId === "booking" && stepId === "postalCode") {
+        personalizedMessages = [`${formData.name}, ${node.messages[0].charAt(0).toLowerCase()}${node.messages[0].slice(1)}`];
+      }
+
+      await addBotMessages(personalizedMessages, node.buttons ?? []);
+
+      // Auto-show text input for nodes with autoInput
+      if (node.autoInput) {
+        setShowTextInput(true);
+        setTextInputField(node.autoInput.field);
+        setTextInputNextStep(node.autoInput.nextStep);
+        setTextInputValue("");
+        setTextInputBackStep(node.autoInput.backStep || null);
+        scrollToBottom();
+      }
     },
-    [addBotMessages, formData, chatFlows, t]
+    [addBotMessages, formData, chatFlows, t, scrollToBottom]
   );
 
   useEffect(() => {
@@ -120,6 +137,7 @@ export default function ChatBot({
     setFormData({});
     setShowNotes(false);
     setShowTextInput(false);
+    setTextInputBackStep(null);
     setNotesValue("");
     setTextInputValue("");
     msgIdRef.current = 0;
@@ -175,6 +193,7 @@ export default function ChatBot({
             setFormData({});
             setShowNotes(false);
             setShowTextInput(false);
+            setTextInputBackStep(null);
             await navigateToNode("menu", "main");
             break;
 
@@ -273,6 +292,7 @@ export default function ChatBot({
     if (!val) return;
     setFormData((prev) => ({ ...prev, [textInputField]: val }));
     setShowTextInput(false);
+    setTextInputBackStep(null);
     addMessage("user", val);
     setTimeout(() => navigateToNode("booking", textInputNextStep), 400);
   }, [textInputValue, textInputField, textInputNextStep, addMessage, navigateToNode]);
@@ -412,6 +432,18 @@ export default function ChatBot({
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center gap-2"
                   >
+                    {textInputBackStep && (
+                      <button
+                        onClick={() => {
+                          setShowTextInput(false);
+                          setTextInputBackStep(null);
+                          navigateToNode(textInputBackStep.flow, textInputBackStep.step);
+                        }}
+                        className="flex h-[46px] items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] px-3 text-sm text-white/40 transition-all hover:bg-white/[0.08] hover:text-white/60"
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5" /><path d="m12 19-7-7 7-7" /></svg>
+                      </button>
+                    )}
                     <input
                       type="text"
                       placeholder={t("textInputPlaceholder")}

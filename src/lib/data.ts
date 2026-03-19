@@ -1,12 +1,14 @@
 import {
   Home,
-  Building2,
+  SprayCan,
   Sofa,
   HardHat,
   PanelTop,
   Droplets,
   Bed,
   SquareStack,
+  Layers,
+  Settings,
   type LucideIcon,
 } from "lucide-react";
 
@@ -20,7 +22,7 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    name: "Limpeza Doméstica",
+    name: "Limpeza Doméstica Manutenção",
     description: "Limpeza de pó, desinfetação e aspiração",
     icon: Home,
     details: [
@@ -39,39 +41,24 @@ export const services: Service[] = [
     ],
   },
   {
-    name: "Limpeza Comercial",
-    description: "Espaços comerciais e empresariais",
-    icon: Building2,
+    name: "Limpeza Profunda",
+    description: "Limpeza intensiva de todos os espaços",
+    icon: SprayCan,
     details: [
-      "Garantimos um ambiente saudável e produtivo para funcionários e clientes, melhorando a imagem corporativa.",
-      "Começamos com uma avaliação inicial onde visitamos o local para entender as necessidades específicas e criamos um plano customizado.",
+      "Serviço completo de limpeza profunda para quem quer um resultado intensivo e minucioso em todo o espaço.",
+      "Ideal para limpezas pontuais, mudanças de estação ou quando o espaço precisa de uma renovação completa.",
     ],
     includes: [
-      "Entradas e recepção: aspiração, limpeza de pisos, tapetes, portas e maçanetas",
-      "Escritórios: limpeza de mesas, cadeiras, desinfetação de teclados, mouses e telefones",
-      "Casas de banho: desinfetação completa de pisos, sanitários, pias e espelhos",
-      "Salas de descanso: limpeza de móveis e desinfetação de áreas de alto contacto",
-      "Esvaziamento de lixeiras e reposição de consumíveis",
+      "Limpeza intensiva de todas as divisões",
+      "Desinfetação profunda de superfícies e cantos",
+      "Limpeza de rodapés, portas e interruptores",
+      "Aspiração e limpeza profunda de pisos",
+      "Limpeza detalhada de cozinha e casas de banho",
+      "Limpeza interior de eletrodomésticos",
     ],
   },
   {
-    name: "Higienização Sofás",
-    description: "Pulverização, escovagem e lavagem",
-    icon: Sofa,
-    details: [
-      "Serviço fundamental para manter um ambiente limpo e saudável, eliminando sujidade, ácaros, odores e manchas dos estofados.",
-      "Utilizamos metodologias avançadas e produtos adaptados ao tipo de tecido do seu sofá.",
-    ],
-    includes: [
-      "Inspeção inicial para identificar áreas de sujidade e manchas",
-      "Aspiração profunda com aspiradores de alta potência",
-      "Aplicação de produtos específicos que eliminam ácaros e bactérias",
-      "Remoção de odores indesejados e desodorização completa",
-      "Extração para secagem rápida",
-    ],
-  },
-  {
-    name: "Limpeza Pós-obra",
+    name: "Limpeza Pós Obra",
     description: "Recolha de entulho e limpeza profunda",
     icon: HardHat,
     details: [
@@ -88,23 +75,7 @@ export const services: Service[] = [
     ],
   },
   {
-    name: "Vidros/Janelas/Estores",
-    description: "Limpeza interior e exterior com produtos específicos",
-    icon: PanelTop,
-    details: [
-      "Serviço essencial para manter a luminosidade e a estética de qualquer espaço.",
-      "Combinamos técnicas profissionais com produtos adequados para remover acumulações de poeira, manchas e sujidade.",
-    ],
-    includes: [
-      "Vidros: remoção interna e externa de poeira, manchas e marcas digitais",
-      "Janelas: limpeza de molduras, caixilhos e esquadrias",
-      "Verificação e limpeza de trilhos e canais de drenagem",
-      "Estores: remoção de poeira, teias de aranha e sujidade",
-      "Verificação e lubrificação dos mecanismos de funcionamento",
-    ],
-  },
-  {
-    name: "Bolor e Humidade",
+    name: "Limpeza de Bolor e Humidade",
     description: "Remoção de fungos em paredes e tetos",
     icon: Droplets,
     details: [
@@ -120,7 +91,39 @@ export const services: Service[] = [
     ],
   },
   {
-    name: "Higiene Colchões",
+    name: "Limpeza de Vidros, Janelas e Estores",
+    description: "Limpeza interior e exterior com produtos específicos",
+    icon: PanelTop,
+    details: [
+      "Serviço essencial para manter a luminosidade e a estética de qualquer espaço.",
+      "Combinamos técnicas profissionais com produtos adequados para remover acumulações de poeira, manchas e sujidade.",
+    ],
+    includes: [
+      "Vidros: remoção interna e externa de poeira, manchas e marcas digitais",
+      "Janelas: limpeza de molduras, caixilhos e esquadrias",
+      "Verificação e limpeza de trilhos e canais de drenagem",
+      "Estores: remoção de poeira, teias de aranha e sujidade",
+      "Verificação e lubrificação dos mecanismos de funcionamento",
+    ],
+  },
+  {
+    name: "Higienização de Sofá",
+    description: "Pulverização, escovagem e lavagem",
+    icon: Sofa,
+    details: [
+      "Serviço fundamental para manter um ambiente limpo e saudável, eliminando sujidade, ácaros, odores e manchas dos estofados.",
+      "Utilizamos metodologias avançadas e produtos adaptados ao tipo de tecido do seu sofá.",
+    ],
+    includes: [
+      "Inspeção inicial para identificar áreas de sujidade e manchas",
+      "Aspiração profunda com aspiradores de alta potência",
+      "Aplicação de produtos específicos que eliminam ácaros e bactérias",
+      "Remoção de odores indesejados e desodorização completa",
+      "Extração para secagem rápida",
+    ],
+  },
+  {
+    name: "Higienização de Colchão",
     description: "Pulverização, escovagem e lavagem",
     icon: Bed,
     details: [
@@ -136,7 +139,7 @@ export const services: Service[] = [
     ],
   },
   {
-    name: "Higiene Tapetes",
+    name: "Higienização de Tapetes",
     description: "Aspiração profunda e shampoo",
     icon: SquareStack,
     details: [
@@ -151,6 +154,38 @@ export const services: Service[] = [
       "Restauração da aparência original do tapete",
     ],
   },
+  {
+    name: "Higienização de Alcatifas",
+    description: "Lavagem profunda e desodorização",
+    icon: Layers,
+    details: [
+      "Processo especializado de limpeza profunda para alcatifas, removendo sujidade acumulada, ácaros e alérgenos.",
+      "Utilizamos equipamentos profissionais e produtos adequados para restaurar a aparência e higiene da sua alcatifa.",
+    ],
+    includes: [
+      "Inspeção inicial do estado e tipo de fibra",
+      "Aspiração profunda com equipamento profissional",
+      "Lavagem especializada com produtos adequados",
+      "Remoção de manchas, odores e microrganismos",
+      "Tratamento antialérgico e desodorização",
+    ],
+  },
+  {
+    name: "Limpeza Personalizada",
+    description: "Serviço adaptado às suas necessidades",
+    icon: Settings,
+    details: [
+      "Cada espaço é único e cada cliente tem necessidades específicas. O nosso serviço personalizado é feito à medida.",
+      "Contacte-nos para discutir exatamente o que precisa e criamos um plano de limpeza exclusivo para si.",
+    ],
+    includes: [
+      "Avaliação presencial do espaço",
+      "Plano de limpeza personalizado",
+      "Equipa dedicada ao seu projeto",
+      "Flexibilidade de horários e frequência",
+      "Acompanhamento por supervisor dedicado",
+    ],
+  },
 ];
 
 export interface Testimonial {
@@ -160,10 +195,11 @@ export interface Testimonial {
 }
 
 export const testimonials: Testimonial[] = [
-  { name: "Marta Pereira", text: "Minha casa parece nova depois da limpeza. Equipa muito simpática.", rating: 5 },
-  { name: "Manuel Oliveira", text: "Serviço de limpeza de janelas impecável.", rating: 5 },
-  { name: "João Santos", text: "Atendimento de primeira, serviço de alta qualidade.", rating: 5 },
-  { name: "Ana Silveira", text: "Limpeza pós-obra incrível.", rating: 5 },
+  { name: "Marta Pereira", text: "Já fazem a limpeza da minha casa há mais de 6 meses e estou encantada! A equipa é sempre a mesma, super simpática e cuidadosa. Recomendo a 100%!", rating: 5 },
+  { name: "Manuel Oliveira", text: "Pedi uma limpeza de vidros e janelas para o meu apartamento e fiquei surpreendido com o resultado. Ficou tudo impecável, até os cantos mais difíceis!", rating: 5 },
+  { name: "João Santos", text: "Contratei a Esplêndido para uma limpeza pós-obra e superaram todas as expectativas. A casa ficou como nova, sem vestígio de poeira. Equipa super profissional.", rating: 5 },
+  { name: "Ana Silveira", text: "Uso o serviço de limpeza semanal e é a melhor decisão que tomei. O supervisor ligou-me para saber se estava tudo bem — esse tipo de atenção faz toda a diferença.", rating: 5 },
+  { name: "Ricardo Mendes", text: "A higienização do sofá ficou espetacular! Já não tinha esperança de tirar aquelas manchas, mas a equipa fez milagres. Parece sofá novo. Muito obrigado!", rating: 5 },
 ];
 
 export interface Step {
@@ -174,13 +210,13 @@ export interface Step {
 }
 
 export const steps: Step[] = [
-  { number: "01", title: "Escolha o serviço", description: "Selecione o tipo de limpeza que precisa no nosso menu de serviços.", iconColor: "text-accent" },
-  { number: "02", title: "Agende pelo WhatsApp", description: "Preencha os detalhes e envie diretamente para o nosso WhatsApp.", iconColor: "text-primary" },
+  { number: "01", title: "Solicite o orçamento", description: "Solicite o vosso orçamento em apenas 1 minuto através do nosso chat ou WhatsApp.", iconColor: "text-accent" },
+  { number: "02", title: "Contacto do especialista", description: "Um especialista entrará em contacto para entender a fundo a vossa necessidade e agendar o melhor dia para si.", iconColor: "text-primary" },
   { number: "03", title: "Receba a equipa", description: "A nossa equipa treinada chega na data marcada, pronta para transformar o seu espaço.", iconColor: "text-golden" },
 ];
 
 export const stats = [
-  { value: 300, suffix: "+", label: "Clientes felizes", color: "text-primary" },
+  { value: 1000, suffix: "+", label: "Clientes satisfeitos", color: "text-primary" },
   { value: 4.9, suffix: "★", label: "Avaliação média", color: "text-golden", decimals: 1 },
   { value: 20, suffix: "+", label: "Profissionais", color: "text-accent" },
 ];
@@ -189,8 +225,8 @@ export const contacts = {
   phone: "910 725 044",
   email: "contatocliente@esplendidoapp.com",
   whatsapp: "351910725044",
-  hours: "Seg-Sex 08:00-17:00",
-  area: "Lisboa & Margem Sul",
+  hours: "Seg-Sáb 08:00-18:00",
+  area: "Lisboa, Cascais, Almada e Seixal",
   social: {
     facebook: "https://www.facebook.com/esplendidoapp",
     instagram: "https://www.instagram.com/esplendido_app/",

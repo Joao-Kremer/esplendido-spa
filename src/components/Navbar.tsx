@@ -37,13 +37,14 @@ export default function Navbar({ onOpenWizard }: NavbarProps) {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
           {/* Logo */}
-          <a href="#">
+          <a href="#" className="group relative">
+            <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 blur-sm transition-opacity group-hover:opacity-100" />
             <Image
               src="/images/esplendido-logo.png"
               alt="Esplêndido"
               width={150}
               height={50}
-              className="h-8 w-auto sm:h-10"
+              className="relative h-8 w-auto brightness-110 drop-shadow-[0_0_8px_rgba(0,218,255,0.3)] sm:h-10"
               priority
             />
           </a>

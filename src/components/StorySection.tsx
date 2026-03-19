@@ -15,7 +15,7 @@ const stepIcons = [
   [Leaf, Award],
 ];
 
-// Dust particle system that follows the broom
+// Bubble particle system that follows the sponge
 interface DustParticle {
   x: number;
   y: number;
@@ -27,7 +27,7 @@ interface DustParticle {
   maxLife: number;
 }
 
-function DustTrail() {
+function BubbleTrail() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<DustParticle[]>([]);
   const broomPosRef = useRef({ x: 0, y: 0, angle: 0 });
@@ -45,7 +45,7 @@ function DustTrail() {
         y: y + (Math.random() - 0.5) * 20,
         vx: dir * speed + spread,
         vy: -(Math.random() * 1.5 + 0.5),
-        size: Math.random() * 4 + 1.5,
+        size: Math.random() * 6 + 2,
         opacity: Math.random() * 0.5 + 0.3,
         life: 0,
         maxLife: Math.random() * 40 + 25,
@@ -93,19 +93,29 @@ function DustTrail() {
 
         p.x += p.vx;
         p.y += p.vy;
-        p.vy += 0.04; // gravity
+        p.vy -= 0.03; // float upward
         p.vx *= 0.98; // friction
 
         const progress = p.life / p.maxLife;
         const alpha = p.opacity * (1 - progress);
 
-        // Draw dust speck
+        // Draw bubble
         ctx.save();
         ctx.globalAlpha = alpha;
-        ctx.fillStyle = "#8B7355";
-        ctx.beginPath();
         const sz = p.size * (1 - progress * 0.5);
-        ctx.ellipse(p.x, p.y, sz, sz * 0.7, 0, 0, Math.PI * 2);
+        // Main bubble
+        ctx.fillStyle = "rgba(0, 218, 255, 0.3)";
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, sz, 0, Math.PI * 2);
+        ctx.fill();
+        // Bubble outline
+        ctx.strokeStyle = "rgba(0, 218, 255, 0.4)";
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+        // White highlight dot for shine effect
+        ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
+        ctx.beginPath();
+        ctx.arc(p.x - sz * 0.3, p.y - sz * 0.3, sz * 0.2, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
 
@@ -145,7 +155,7 @@ export default function StorySection() {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const dotsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  const { canvas: dustCanvas, broomPosRef } = DustTrail();
+  const { canvas: bubbleCanvas, broomPosRef } = BubbleTrail();
 
   useEffect(() => {
     if (!sectionRef.current || !lineRef.current || !broomRef.current || !timelineRef.current) return;
@@ -253,7 +263,7 @@ export default function StorySection() {
   }, [broomPosRef]);
 
   return (
-    <section id="sobre" ref={sectionRef} className="relative overflow-x-clip bg-neutral py-20 md:py-32">
+    <section id="sobre" ref={sectionRef} className="relative overflow-x-clip bg-gradient-to-b from-neutral via-sky-50/40 to-neutral py-20 md:py-32">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* Header */}
         <div className="mb-20 text-center">
@@ -268,7 +278,7 @@ export default function StorySection() {
         {/* Timeline container */}
         <div ref={timelineRef} className="relative">
           {/* Dust particle canvas */}
-          {dustCanvas}
+          {bubbleCanvas}
 
           {/* Vertical timeline line */}
           <div className="absolute left-4 top-0 bottom-0 w-px sm:left-6 md:left-1/2 md:-translate-x-1/2">
@@ -293,15 +303,15 @@ export default function StorySection() {
               <div className="absolute -left-6 -right-6 top-1/2 h-px bg-primary/10" />
               {/* Main broom */}
               <div className="relative flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary bg-white shadow-[0_0_24px_rgba(0,218,255,0.35)]">
-                <span className="text-xl">🧹</span>
+                <span className="text-xl">🧽</span>
               </div>
-              {/* Dust puff indicators */}
-              <div className="absolute -left-3 top-0 h-1.5 w-1.5 rounded-full bg-amber-700/20" />
-              <div className="absolute -right-4 top-2 h-2 w-2 rounded-full bg-amber-700/15" />
-              <div className="absolute -left-5 bottom-1 h-1 w-1 rounded-full bg-amber-700/25" />
-              {/* Sparkle trail below */}
-              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-xs text-primary/50">✨</div>
-              <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 text-[10px] text-primary/30">✨</div>
+              {/* Bubble puff indicators */}
+              <div className="absolute -left-3 top-0 h-1.5 w-1.5 rounded-full bg-primary/20" />
+              <div className="absolute -right-4 top-2 h-2 w-2 rounded-full bg-primary/15" />
+              <div className="absolute -left-5 bottom-1 h-1 w-1 rounded-full bg-primary/25" />
+              {/* Bubble trail below */}
+              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-xs text-primary/50">🫧</div>
+              <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 text-[10px] text-primary/30">🫧</div>
             </div>
           </div>
 

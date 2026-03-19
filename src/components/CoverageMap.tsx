@@ -1,174 +1,53 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+const zones = [
+  { name: "Lisboa", color: "#00DAFF" },
+  { name: "Cascais", color: "#FAC72C" },
+  { name: "Almada", color: "#00DAFF" },
+  { name: "Seixal", color: "#FAC72C" },
+];
+
 export default function CoverageMap() {
   const t = useTranslations("coverage");
-  const zones = t.raw("zones") as Array<{name: string; areas: string}>;
+
   return (
-    <section id="cobertura" className="bg-neutral py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
+    <section id="cobertura" className="bg-neutral py-16 md:py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="mb-10 text-center">
+          <h2 className="font-heading text-2xl font-bold text-dark md:text-3xl">
             {t("title")}
           </h2>
-          <p className="mt-3 text-dark/50">
-            {t("subtitle")}
-          </p>
+          <p className="mt-2 text-sm text-dark/50">{t("subtitle")}</p>
         </div>
 
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
-          {/* Map */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative w-full max-w-lg flex-1"
-          >
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-dark/5 p-2 sm:p-4">
-              {/* SVG Map of Lisbon & Margem Sul region */}
-              <svg viewBox="0 0 500 500" className="h-full w-full" xmlns="http://www.w3.org/2000/svg" style={{ fontSize: "inherit" }}>
-                {/* Water / Tejo */}
-                <path
-                  d="M0 200 Q100 220 200 210 Q300 200 400 230 Q450 245 500 240 L500 280 Q400 300 300 290 Q200 280 100 295 Q50 300 0 290 Z"
-                  fill="#00DAFF"
-                  opacity="0.15"
-                />
-                <path
-                  d="M0 210 Q100 230 200 220 Q300 210 400 240 Q450 255 500 250 L500 270 Q400 290 300 280 Q200 270 100 285 Q50 290 0 280 Z"
-                  fill="#00DAFF"
-                  opacity="0.08"
-                />
+        <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+          {/* Mapa interactivo */}
+          <div className="w-full overflow-hidden rounded-xl shadow-md ring-1 ring-dark/5 md:w-[380px] md:shrink-0">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-9.3%2C38.62%2C-9.0%2C38.80&layer=mapnik&marker=38.7223%2C-9.1393"
+              width="380"
+              height="320"
+              className="block h-[320px] w-full"
+              title="Mapa de cobertura"
+              loading="lazy"
+            />
+          </div>
 
-                {/* Lisboa region - north of river */}
-                <ellipse
-                  cx="220"
-                  cy="150"
-                  rx="140"
-                  ry="100"
-                  fill="none"
-                  stroke="#00DAFF"
-                  strokeWidth="2.5"
-                  strokeDasharray="8 4"
-                  opacity="0.6"
-                />
-                <ellipse
-                  cx="220"
-                  cy="150"
-                  rx="140"
-                  ry="100"
-                  fill="#00DAFF"
-                  opacity="0.06"
-                />
-
-                {/* Lisboa label */}
-                <text x="220" y="100" textAnchor="middle" fill="#0A1628" fontSize="18" fontWeight="700" fontFamily="var(--font-heading)">
-                  {t("mapLabels.lisboaCentro")}
-                </text>
-
-                {/* Lisboa pin dots */}
-                {[
-                  { x: 200, y: 140, label: "Baixa" },
-                  { x: 240, y: 130, label: "Chiado" },
-                  { x: 260, y: 155, label: "Saldanha" },
-                  { x: 310, y: 140, label: "P. Nações" },
-                  { x: 160, y: 120, label: "Benfica" },
-                  { x: 190, y: 170, label: "C. Ourique" },
-                  { x: 230, y: 180, label: "Avenida" },
-                  { x: 280, y: 110, label: "Lumiar" },
-                ].map((pin) => (
-                  <g key={pin.label}>
-                    <circle cx={pin.x} cy={pin.y} r="5" fill="#00DAFF" opacity="0.8" />
-                    <circle cx={pin.x} cy={pin.y} r="9" fill="none" stroke="#00DAFF" strokeWidth="1.5" opacity="0.3" />
-                    <text x={pin.x} y={pin.y - 12} textAnchor="middle" fill="#0A1628" fontSize="11" opacity="0.6" fontWeight="500">
-                      {pin.label}
-                    </text>
-                  </g>
-                ))}
-
-                {/* Margem Sul region - south of river */}
-                <ellipse
-                  cx="250"
-                  cy="370"
-                  rx="160"
-                  ry="80"
-                  fill="none"
-                  stroke="#00DAFF"
-                  strokeWidth="2.5"
-                  strokeDasharray="8 4"
-                  opacity="0.6"
-                />
-                <ellipse
-                  cx="250"
-                  cy="370"
-                  rx="160"
-                  ry="80"
-                  fill="#00DAFF"
-                  opacity="0.06"
-                />
-
-                {/* Margem Sul label */}
-                <text x="250" y="330" textAnchor="middle" fill="#0A1628" fontSize="18" fontWeight="700" fontFamily="var(--font-heading)">
-                  {t("mapLabels.margemSul")}
-                </text>
-
-                {/* Margem Sul pin dots */}
-                {[
-                  { x: 180, y: 360, label: "Almada" },
-                  { x: 240, y: 380, label: "Seixal" },
-                  { x: 300, y: 370, label: "Barreiro" },
-                  { x: 350, y: 360, label: "Montijo" },
-                  { x: 280, y: 410, label: "Setúbal" },
-                ].map((pin) => (
-                  <g key={pin.label}>
-                    <circle cx={pin.x} cy={pin.y} r="5" fill="#00DAFF" opacity="0.8" />
-                    <circle cx={pin.x} cy={pin.y} r="9" fill="none" stroke="#00DAFF" strokeWidth="1.5" opacity="0.3" />
-                    <text x={pin.x} y={pin.y - 12} textAnchor="middle" fill="#0A1628" fontSize="11" opacity="0.6" fontWeight="500">
-                      {pin.label}
-                    </text>
-                  </g>
-                ))}
-
-                {/* Bridge indicator */}
-                <line x1="180" y1="240" x2="220" y2="300" stroke="#0A1628" strokeWidth="1.5" opacity="0.15" strokeDasharray="4 3" />
-                <line x1="280" y1="240" x2="300" y2="300" stroke="#0A1628" strokeWidth="1.5" opacity="0.15" strokeDasharray="4 3" />
-
-                {/* Rio Tejo label */}
-                <text x="380" y="260" textAnchor="middle" fill="#00DAFF" fontSize="14" fontStyle="italic" opacity="0.5">
-                  {t("mapLabels.rioTejo")}
-                </text>
-              </svg>
-            </div>
-          </motion.div>
-
-          {/* Zone details */}
-          <div className="flex flex-1 flex-col gap-6">
-            {zones.map((zone, i) => (
-              <motion.div
+          {/* Regiões */}
+          <div className="flex w-full flex-col gap-3">
+            {zones.map((zone) => (
+              <div
                 key={zone.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="rounded-xl border border-primary/15 bg-white p-6 shadow-sm"
+                className="flex items-center gap-3 rounded-lg border border-dark/5 bg-white px-4 py-3 shadow-sm"
               >
-                <div className="mb-3 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                    <MapPin size={20} className="text-primary" />
-                  </div>
-                  <h3 className="font-heading text-lg font-bold text-dark">{zone.name}</h3>
-                </div>
-                <p className="text-sm leading-relaxed text-dark/50">{zone.areas}</p>
-              </motion.div>
+                <MapPin size={16} style={{ color: zone.color }} />
+                <span className="text-sm font-semibold text-dark">{zone.name}</span>
+              </div>
             ))}
-
-            <p className="text-sm text-dark/40">
-              {t("notFound")}
-            </p>
+            <p className="mt-1 text-xs text-dark/35">{t("notFound")}</p>
           </div>
         </div>
       </div>

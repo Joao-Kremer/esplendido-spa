@@ -12,13 +12,13 @@
     "cta": "Get Quote"
   },
   "hero": {
-    "headlineTop": "Your home deserves",
-    "headlineBottom": "to be",
-    "headlineHighlight": "splendid",
+    "headlineTop": "Book a cleaning and...",
+    "headlineBottom": "",
+    "headlineHighlight": "Splendid!",
     "subtitle1": "A dedicated, trained team at your service.",
     "subtitle2": "Lisboa & Margem Sul.",
     "cta": "Get a Quote",
-    "clients": "300+ clients",
+    "clients": "1000+ satisfied clients",
     "guarantee": "100% guarantee",
     "imageAlt": "Professional cleaning service"
   },
@@ -46,10 +46,10 @@
       },
       {
         "title": "Satisfaction Guaranteed",
-        "text": "At Esplêndido, we are fully bonded and insured, which means you can have peace of mind when we enter your home. The quality of our service is our top priority.",
+        "text": "We are fully committed to your satisfaction, with an attentive and properly trained team, paying attention to the smallest details.",
         "highlights": [
-          "Fully bonded and insured",
-          "Commitment to excellence"
+          "Commitment to excellence",
+          "Supervisor always available"
         ]
       },
       {
@@ -71,7 +71,7 @@
     "includes": "What's included",
     "items": [
       {
-        "name": "Residential Cleaning",
+        "name": "Maintenance Domestic Cleaning",
         "description": "Dusting, sanitizing and vacuuming",
         "details": [
           "Our team thoroughly cleans every corner of every room, from ceiling to floor!",
@@ -89,33 +89,19 @@
         ]
       },
       {
-        "name": "Commercial Cleaning",
-        "description": "Commercial and corporate spaces",
+        "name": "Deep Cleaning",
+        "description": "Intensive cleaning of all spaces",
         "details": [
-          "We ensure a healthy, productive environment for employees and clients, enhancing your corporate image.",
-          "We start with an initial assessment where we visit the site to understand specific needs and create a customized plan."
+          "A complete deep cleaning service for those who want an intensive and thorough result throughout the entire space.",
+          "Ideal for one-off cleans, seasonal changes or when your space needs a complete refresh."
         ],
         "includes": [
-          "Entrances and reception: vacuuming, floor cleaning, rugs, doors and handles",
-          "Offices: desk and chair cleaning, sanitizing keyboards, mice and phones",
-          "Bathrooms: full sanitizing of floors, toilets, sinks and mirrors",
-          "Break rooms: furniture cleaning and sanitizing high-touch areas",
-          "Emptying bins and restocking supplies"
-        ]
-      },
-      {
-        "name": "Sofa Cleaning",
-        "description": "Spraying, brushing and washing",
-        "details": [
-          "An essential service for maintaining a clean and healthy environment, removing dirt, dust mites, odors and stains from upholstery.",
-          "We use advanced methods and products suited to the fabric type of your sofa."
-        ],
-        "includes": [
-          "Initial inspection to identify soiled areas and stains",
-          "Deep vacuuming with high-powered vacuums",
-          "Application of specialized products that eliminate dust mites and bacteria",
-          "Removal of unwanted odors and full deodorizing",
-          "Extraction for quick drying"
+          "Intensive cleaning of all rooms",
+          "Deep sanitizing of surfaces and corners",
+          "Cleaning of baseboards, doors and switches",
+          "Vacuuming and deep floor cleaning",
+          "Detailed cleaning of kitchen and bathrooms",
+          "Interior cleaning of appliances"
         ]
       },
       {
@@ -135,7 +121,22 @@
         ]
       },
       {
-        "name": "Windows/Glass/Blinds",
+        "name": "Mold & Moisture Cleaning",
+        "description": "Removing fungi from walls and ceilings",
+        "details": [
+          "A service aimed at ensuring the health and integrity of indoor environments through effective removal of fungi and mold.",
+          "We follow a systematic approach: assessment, removal, preventive treatment and thorough drying."
+        ],
+        "includes": [
+          "Detailed inspection to identify affected areas and the source of moisture",
+          "Mold removal with specialized products",
+          "Treatment of various surfaces: walls, ceilings, floors and furniture",
+          "Application of preventive antifungal solutions",
+          "Thorough drying of treated areas"
+        ]
+      },
+      {
+        "name": "Glass, Window & Blind Cleaning",
         "description": "Interior and exterior cleaning with specialized products",
         "details": [
           "An essential service for maintaining the brightness and appearance of any space.",
@@ -150,18 +151,18 @@
         ]
       },
       {
-        "name": "Mold & Moisture",
-        "description": "Removing fungi from walls and ceilings",
+        "name": "Sofa Cleaning",
+        "description": "Spraying, brushing and washing",
         "details": [
-          "A service aimed at ensuring the health and integrity of indoor environments through effective removal of fungi and mold.",
-          "We follow a systematic approach: assessment, removal, preventive treatment and thorough drying."
+          "An essential service for maintaining a clean and healthy environment, removing dirt, dust mites, odors and stains from upholstery.",
+          "We use advanced methods and products suited to the fabric type of your sofa."
         ],
         "includes": [
-          "Detailed inspection to identify affected areas and the source of moisture",
-          "Mold removal with specialized products",
-          "Treatment of various surfaces: walls, ceilings, floors and furniture",
-          "Application of preventive antifungal solutions",
-          "Thorough drying of treated areas"
+          "Initial inspection to identify soiled areas and stains",
+          "Deep vacuuming with high-powered vacuums",
+          "Application of specialized products that eliminate dust mites and bacteria",
+          "Removal of unwanted odors and full deodorizing",
+          "Extraction for quick drying"
         ]
       },
       {
@@ -180,18 +181,48 @@
         ]
       },
       {
-        "name": "Carpet Cleaning",
+        "name": "Rug Cleaning",
         "description": "Deep vacuuming and shampooing",
         "details": [
-          "A complete deep cleaning process to maintain the cleanliness and durability of your carpets.",
-          "We work with specific products suited to the fiber type of each carpet."
+          "A complete deep cleaning process to maintain the cleanliness and durability of your rugs.",
+          "We work with specific products suited to the fiber type of each rug."
         ],
         "includes": [
           "Initial inspection to determine fabric type and identify stains",
           "Deep vacuuming with high-powered vacuums",
           "Specialized washing with products suited to the fiber type",
           "Removal of stains, odors and microorganisms",
-          "Restoring the carpet's original appearance"
+          "Restoring the rug's original appearance"
+        ]
+      },
+      {
+        "name": "Carpet Cleaning",
+        "description": "Deep washing and deodorizing",
+        "details": [
+          "A specialized deep cleaning process for carpets, removing accumulated dirt, dust mites and allergens.",
+          "We use professional equipment and suitable products to restore the appearance and hygiene of your carpet."
+        ],
+        "includes": [
+          "Initial inspection of condition and fiber type",
+          "Deep vacuuming with professional equipment",
+          "Specialized washing with suitable products",
+          "Removal of stains, odors and microorganisms",
+          "Anti-allergenic treatment and deodorizing"
+        ]
+      },
+      {
+        "name": "Custom Cleaning",
+        "description": "Service tailored to your needs",
+        "details": [
+          "Every space is unique and every client has specific needs. Our custom service is made to measure.",
+          "Contact us to discuss exactly what you need and we'll create an exclusive cleaning plan for you."
+        ],
+        "includes": [
+          "On-site space assessment",
+          "Personalized cleaning plan",
+          "Dedicated team for your project",
+          "Flexible scheduling and frequency",
+          "Supervision by a dedicated supervisor"
         ]
       }
     ]
@@ -201,12 +232,12 @@
     "cta": "Get a quote",
     "steps": [
       {
-        "title": "Choose your service",
-        "description": "Select the type of cleaning you need from our services menu."
+        "title": "Request a quote",
+        "description": "Request your quote in just 1 minute through our chat or WhatsApp."
       },
       {
-        "title": "Request a quote",
-        "description": "Fill in the details and send us your quote request."
+        "title": "Specialist contact",
+        "description": "A specialist will get in touch to fully understand your needs and schedule the best day for you."
       },
       {
         "title": "Welcome the team",
@@ -217,36 +248,28 @@
   "socialProof": {
     "title": "What our clients say",
     "stats": [
-      { "label": "Happy clients" },
+      { "label": "Satisfied clients" },
       { "label": "Average rating" },
       { "label": "Professionals" }
     ],
     "testimonials": [
-      { "name": "Marta Pereira", "text": "My house looks brand new after the cleaning. Very friendly team." },
-      { "name": "Manuel Oliveira", "text": "Flawless window cleaning service." },
-      { "name": "João Santos", "text": "First-class customer service, top-quality work." },
-      { "name": "Ana Silveira", "text": "Incredible post-construction cleaning." }
+      { "name": "Marta Pereira", "text": "They've been cleaning my house for over 6 months and I'm thrilled! The team is always the same, super friendly and careful. I recommend them 100%!" },
+      { "name": "Manuel Oliveira", "text": "I requested a glass and window cleaning for my apartment and was amazed by the result. Everything was spotless, even the hardest corners!" },
+      { "name": "João Santos", "text": "I hired Esplêndido for a post-construction cleaning and they exceeded all expectations. The house looked brand new, not a trace of dust. Super professional team." },
+      { "name": "Ana Silveira", "text": "I use the weekly cleaning service and it's the best decision I've made. The supervisor called me to check if everything was okay — that kind of attention makes all the difference." },
+      { "name": "Ricardo Mendes", "text": "The sofa cleaning was spectacular! I had lost hope of removing those stains, but the team worked miracles. It looks like a new sofa. Thank you so much!" }
     ]
   },
   "coverage": {
     "title": "Where we operate",
-    "subtitle": "Coverage in Lisboa and Margem Sul",
+    "subtitle": "We serve all of Lisboa, Cascais, Almada and Seixal",
     "notFound": "Didn't find your area? Get in touch — we may have coverage in your zone.",
     "zones": [
-      {
-        "name": "Lisboa Centro",
-        "areas": "Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique"
-      },
-      {
-        "name": "Margem Sul",
-        "areas": "Almada, Seixal, Barreiro, Montijo, Setúbal"
-      }
-    ],
-    "mapLabels": {
-      "lisboaCentro": "Lisboa Centro",
-      "margemSul": "Margem Sul",
-      "rioTejo": "Rio Tejo"
-    }
+      { "name": "Lisboa" },
+      { "name": "Cascais" },
+      { "name": "Almada" },
+      { "name": "Seixal" }
+    ]
   },
   "finalCta": {
     "badge": "Quote in 60 seconds",
@@ -302,16 +325,14 @@
     "booking": {
       "whichService": "Which service are you looking for?",
       "askName": "What is your name?",
-      "enterName": "Enter name",
       "askPostalCode": "What is your postal code?",
-      "enterPostalCode": "Enter postal code",
       "askContact": "What is your contact? (phone or email)",
-      "enterContact": "Enter contact",
-      "askMessage": "Would you like to leave a message?",
-      "yesWrite": "Yes, I'd like to write",
-      "noSendNow": "No, send now",
+      "askMessage": "Would you like to include any additional message?",
+      "yesWrite": "Yes",
+      "noSendNow": "No, thank you",
       "submitBooking": "📧 Submit quote request",
-      "restart": "🔄 Start over"
+      "restart": "🔄 Start over",
+      "back": "⬅️ Back"
     },
     "support": {
       "message": "How would you like to contact our support?",
@@ -322,7 +343,7 @@
     },
     "about": {
       "message1": "Esplêndido is a professional cleaning services company in Lisboa and Margem Sul.",
-      "message2": "With over 300 satisfied clients, we offer a dedicated, trained team, eco-friendly products and 100% satisfaction guarantee.",
+      "message2": "With over 1000 satisfied clients, we offer a dedicated, trained team, eco-friendly products and 100% satisfaction guarantee.",
       "message3": "Our mission is to transform spaces with quality, trust and splendid service.",
       "backToMenu": "Back to menu"
     },
@@ -378,7 +399,30 @@
     "closing": "Looking forward to hearing from you. Thank you!"
   },
   "common": {
-    "hours": "Mon-Fri 08:00-17:00",
-    "area": "Lisboa & Margem Sul"
+    "hours": "Mon-Sat 08:00-18:00",
+    "area": "Lisboa, Cascais, Almada & Seixal"
+  },
+  "quoteOptions": {
+    "title": "How would you like to proceed with your quote?",
+    "chat": "Chat",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "subtitle": "Meet Esplêndido",
+    "description": "Esplêndido was born with the goal of offering excellent cleaning services in Portugal. With a dedicated and trained team, we seek to transform every space with attention to detail, quality products and a genuine commitment to our clients' satisfaction.",
+    "cta": "Learn more"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "recurring": "Recurring cleaning from",
+    "recurringPrice": "€90/month",
+    "domestic": "Domestic cleaning from",
+    "domesticPrice": "€30",
+    "deep": "Deep cleaning from",
+    "deepPrice": "€90",
+    "cta": "Get a Quote"
   }
 }

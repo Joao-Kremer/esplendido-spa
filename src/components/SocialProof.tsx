@@ -111,7 +111,7 @@ export default function SocialProof() {
         </div>
 
         {/* Desktop: static grid */}
-        <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-4">
+        <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
           {localTestimonials.map((item, i) => (
             <motion.div
               key={item.name}

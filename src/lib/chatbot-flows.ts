@@ -22,6 +22,7 @@ export interface ChatNode {
   id: string;
   messages: string[];
   buttons?: ChatButton[];
+  autoInput?: { field: string; nextStep: string; backStep?: { flow: string; step: string } };
 }
 
 export interface ChatFlow {
@@ -84,23 +85,17 @@ export function buildFlows(
       {
         id: "name",
         messages: [t("booking.askName")],
-        buttons: [
-          { label: t("booking.enterName"), action: { type: "show_text_input", field: "name", nextStep: "postalCode" } },
-        ],
+        autoInput: { field: "name", nextStep: "postalCode" },
       },
       {
         id: "postalCode",
         messages: [t("booking.askPostalCode")],
-        buttons: [
-          { label: t("booking.enterPostalCode"), action: { type: "show_text_input", field: "postalCode", nextStep: "contact" } },
-        ],
+        autoInput: { field: "postalCode", nextStep: "contact", backStep: { flow: "booking", step: "name" } },
       },
       {
         id: "contact",
         messages: [t("booking.askContact")],
-        buttons: [
-          { label: t("booking.enterContact"), action: { type: "show_text_input", field: "contact", nextStep: "message" } },
-        ],
+        autoInput: { field: "contact", nextStep: "message", backStep: { flow: "booking", step: "postalCode" } },
       },
       {
         id: "message",
@@ -108,6 +103,7 @@ export function buildFlows(
         buttons: [
           { label: t("booking.yesWrite"), action: { type: "show_notes_input", nextStep: "summary" } },
           { label: t("booking.noSendNow"), action: { type: "goto", flow: "booking", step: "summary" } },
+          { label: t("booking.back"), action: { type: "goto", flow: "booking", step: "contact" } },
         ],
       },
       {
@@ -116,6 +112,7 @@ export function buildFlows(
         buttons: [
           { label: t("booking.submitBooking"), action: { type: "submit_booking" } },
           { label: t("booking.restart"), action: { type: "restart" } },
+          { label: t("booking.back"), action: { type: "goto", flow: "booking", step: "message" } },
         ],
       },
     ],

@@ -12,13 +12,13 @@
     "cta": "Presupuesto"
   },
   "hero": {
-    "headlineTop": "Tu casa merece",
-    "headlineBottom": "ser",
-    "headlineHighlight": "esplêndida",
+    "headlineTop": "Agende una limpieza y...",
+    "headlineBottom": "",
+    "headlineHighlight": "Esplêndido!",
     "subtitle1": "Equipo fijo y capacitado a tu servicio.",
     "subtitle2": "Lisboa & Margem Sul.",
     "cta": "Pedir Presupuesto",
-    "clients": "300+ clientes",
+    "clients": "1000+ clientes satisfechos",
     "guarantee": "100% garantía",
     "imageAlt": "Servicio de limpieza profesional"
   },
@@ -46,10 +46,10 @@
       },
       {
         "title": "Satisfacción Garantizada",
-        "text": "En Esplêndido, estamos totalmente asegurados y respaldados, lo que significa que puede tener tranquilidad cuando entramos en su hogar. La calidad de nuestro servicio es nuestra mayor prioridad.",
+        "text": "Estamos totalmente comprometidos con su satisfacción, con un equipo atento y debidamente formado, con atención a los más pequeños detalles.",
         "highlights": [
-          "Totalmente asegurados y respaldados",
-          "Compromiso con la excelencia"
+          "Compromiso con la excelencia",
+          "Supervisor siempre disponible"
         ]
       },
       {
@@ -71,7 +71,7 @@
     "includes": "Qué incluye",
     "items": [
       {
-        "name": "Limpieza Doméstica",
+        "name": "Limpieza Doméstica Mantenimiento",
         "description": "Limpieza de polvo, desinfección y aspiración",
         "details": [
           "Nuestro equipo limpia minuciosamente todos los rincones de cada habitación, ¡del techo al suelo!",
@@ -89,33 +89,19 @@
         ]
       },
       {
-        "name": "Limpieza Comercial",
-        "description": "Espacios comerciales y empresariales",
+        "name": "Limpieza Profunda",
+        "description": "Limpieza intensiva de todos los espacios",
         "details": [
-          "Garantizamos un ambiente saludable y productivo para empleados y clientes, mejorando la imagen corporativa.",
-          "Comenzamos con una evaluación inicial donde visitamos el local para entender las necesidades específicas y creamos un plan personalizado."
+          "Servicio completo de limpieza profunda para quienes desean un resultado intensivo y minucioso en todo el espacio.",
+          "Ideal para limpiezas puntuales, cambios de estación o cuando el espacio necesita una renovación completa."
         ],
         "includes": [
-          "Entradas y recepción: aspiración, limpieza de pisos, alfombras, puertas y manijas",
-          "Oficinas: limpieza de escritorios, sillas, desinfección de teclados, ratones y teléfonos",
-          "Baños: desinfección completa de pisos, sanitarios, lavabos y espejos",
-          "Salas de descanso: limpieza de muebles y desinfección de áreas de alto contacto",
-          "Vaciado de papeleras y reposición de consumibles"
-        ]
-      },
-      {
-        "name": "Higienización de Sofás",
-        "description": "Pulverización, cepillado y lavado",
-        "details": [
-          "Servicio fundamental para mantener un ambiente limpio y saludable, eliminando suciedad, ácaros, olores y manchas de los tapizados.",
-          "Utilizamos metodologías avanzadas y productos adaptados al tipo de tela de su sofá."
-        ],
-        "includes": [
-          "Inspección inicial para identificar áreas de suciedad y manchas",
-          "Aspiración profunda con aspiradoras de alta potencia",
-          "Aplicación de productos específicos que eliminan ácaros y bacterias",
-          "Eliminación de olores indeseados y desodorización completa",
-          "Extracción para secado rápido"
+          "Limpieza intensiva de todas las habitaciones",
+          "Desinfección profunda de superficies y rincones",
+          "Limpieza de zócalos, puertas e interruptores",
+          "Aspiración y limpieza profunda de pisos",
+          "Limpieza detallada de cocina y baños",
+          "Limpieza interior de electrodomésticos"
         ]
       },
       {
@@ -135,22 +121,7 @@
         ]
       },
       {
-        "name": "Cristales/Ventanas/Persianas",
-        "description": "Limpieza interior y exterior con productos específicos",
-        "details": [
-          "Servicio esencial para mantener la luminosidad y la estética de cualquier espacio.",
-          "Combinamos técnicas profesionales con productos adecuados para eliminar acumulaciones de polvo, manchas y suciedad."
-        ],
-        "includes": [
-          "Cristales: eliminación interna y externa de polvo, manchas y huellas dactilares",
-          "Ventanas: limpieza de marcos, bastidores y carpintería",
-          "Verificación y limpieza de rieles y canales de drenaje",
-          "Persianas: eliminación de polvo, telarañas y suciedad",
-          "Verificación y lubricación de los mecanismos de funcionamiento"
-        ]
-      },
-      {
-        "name": "Moho y Humedad",
+        "name": "Limpieza de Moho y Humedad",
         "description": "Eliminación de hongos en paredes y techos",
         "details": [
           "Servicio que busca garantizar la salud y la integridad de ambientes interiores mediante la eliminación eficaz de hongos y moho.",
@@ -165,7 +136,37 @@
         ]
       },
       {
-        "name": "Higiene de Colchones",
+        "name": "Limpieza de Cristales, Ventanas y Persianas",
+        "description": "Limpieza interior y exterior con productos específicos",
+        "details": [
+          "Servicio esencial para mantener la luminosidad y la estética de cualquier espacio.",
+          "Combinamos técnicas profesionales con productos adecuados para eliminar acumulaciones de polvo, manchas y suciedad."
+        ],
+        "includes": [
+          "Cristales: eliminación interna y externa de polvo, manchas y huellas dactilares",
+          "Ventanas: limpieza de marcos, bastidores y carpintería",
+          "Verificación y limpieza de rieles y canales de drenaje",
+          "Persianas: eliminación de polvo, telarañas y suciedad",
+          "Verificación y lubricación de los mecanismos de funcionamiento"
+        ]
+      },
+      {
+        "name": "Higienización de Sofá",
+        "description": "Pulverización, cepillado y lavado",
+        "details": [
+          "Servicio fundamental para mantener un ambiente limpio y saludable, eliminando suciedad, ácaros, olores y manchas de los tapizados.",
+          "Utilizamos metodologías avanzadas y productos adaptados al tipo de tela de su sofá."
+        ],
+        "includes": [
+          "Inspección inicial para identificar áreas de suciedad y manchas",
+          "Aspiración profunda con aspiradoras de alta potencia",
+          "Aplicación de productos específicos que eliminan ácaros y bacterias",
+          "Eliminación de olores indeseados y desodorización completa",
+          "Extracción para secado rápido"
+        ]
+      },
+      {
+        "name": "Higienización de Colchón",
         "description": "Pulverización, cepillado y lavado",
         "details": [
           "Servicio esencial para mantener un ambiente de sueño saludable y libre de ácaros, bacterias y alérgenos.",
@@ -180,7 +181,7 @@
         ]
       },
       {
-        "name": "Higiene de Alfombras",
+        "name": "Higienización de Alfombras",
         "description": "Aspiración profunda y champú",
         "details": [
           "Proceso completo de limpieza profunda para mantener la limpieza y la durabilidad de sus alfombras.",
@@ -193,6 +194,36 @@
           "Eliminación de manchas, olores y microorganismos",
           "Restauración de la apariencia original de la alfombra"
         ]
+      },
+      {
+        "name": "Higienización de Moquetas",
+        "description": "Lavado profundo y desodorización",
+        "details": [
+          "Proceso especializado de limpieza profunda para moquetas, eliminando suciedad acumulada, ácaros y alérgenos.",
+          "Utilizamos equipos profesionales y productos adecuados para restaurar la apariencia e higiene de su moqueta."
+        ],
+        "includes": [
+          "Inspección inicial del estado y tipo de fibra",
+          "Aspiración profunda con equipo profesional",
+          "Lavado especializado con productos adecuados",
+          "Eliminación de manchas, olores y microorganismos",
+          "Tratamiento antialérgico y desodorización"
+        ]
+      },
+      {
+        "name": "Limpieza Personalizada",
+        "description": "Servicio adaptado a sus necesidades",
+        "details": [
+          "Cada espacio es único y cada cliente tiene necesidades específicas. Nuestro servicio personalizado está hecho a medida.",
+          "Contáctenos para discutir exactamente lo que necesita y crearemos un plan de limpieza exclusivo para usted."
+        ],
+        "includes": [
+          "Evaluación presencial del espacio",
+          "Plan de limpieza personalizado",
+          "Equipo dedicado a su proyecto",
+          "Flexibilidad de horarios y frecuencia",
+          "Seguimiento por supervisor dedicado"
+        ]
       }
     ]
   },
@@ -201,12 +232,12 @@
     "cta": "Pedir presupuesto",
     "steps": [
       {
-        "title": "Elija el servicio",
-        "description": "Seleccione el tipo de limpieza que necesita en nuestro menú de servicios."
+        "title": "Solicite el presupuesto",
+        "description": "Solicite su presupuesto en solo 1 minuto a través de nuestro chat o WhatsApp."
       },
       {
-        "title": "Pida el presupuesto",
-        "description": "Complete los detalles y envíenos su solicitud de presupuesto."
+        "title": "Contacto del especialista",
+        "description": "Un especialista se pondrá en contacto para entender a fondo su necesidad y agendar el mejor día para usted."
       },
       {
         "title": "Reciba al equipo",
@@ -217,36 +248,28 @@
   "socialProof": {
     "title": "Lo que dicen nuestros clientes",
     "stats": [
-      { "label": "Clientes felices" },
+      { "label": "Clientes satisfechos" },
       { "label": "Valoración media" },
       { "label": "Profesionales" }
     ],
     "testimonials": [
-      { "name": "Marta Pereira", "text": "Mi casa parece nueva después de la limpieza. Equipo muy amable." },
-      { "name": "Manuel Oliveira", "text": "Servicio de limpieza de ventanas impecable." },
-      { "name": "João Santos", "text": "Atención de primera, servicio de alta calidad." },
-      { "name": "Ana Silveira", "text": "Limpieza post-obra increíble." }
+      { "name": "Marta Pereira", "text": "¡Llevan limpiando mi casa más de 6 meses y estoy encantada! El equipo es siempre el mismo, super amable y cuidadoso. ¡Los recomiendo al 100%!" },
+      { "name": "Manuel Oliveira", "text": "Pedí una limpieza de cristales y ventanas para mi apartamento y me sorprendió el resultado. ¡Todo quedó impecable, hasta los rincones más difíciles!" },
+      { "name": "João Santos", "text": "Contraté a Esplêndido para una limpieza post-obra y superaron todas las expectativas. La casa quedó como nueva, sin rastro de polvo. Equipo super profesional." },
+      { "name": "Ana Silveira", "text": "Uso el servicio de limpieza semanal y es la mejor decisión que he tomado. El supervisor me llamó para saber si todo estaba bien — ese tipo de atención marca la diferencia." },
+      { "name": "Ricardo Mendes", "text": "¡La higienización del sofá quedó espectacular! Ya no tenía esperanza de quitar esas manchas, pero el equipo hizo milagros. Parece sofá nuevo. ¡Muchas gracias!" }
     ]
   },
   "coverage": {
     "title": "Dónde actuamos",
-    "subtitle": "Cobertura en Lisboa y Margem Sul",
+    "subtitle": "Atendemos toda Lisboa, Cascais, Almada y Seixal",
     "notFound": "¿No encontró su zona? Contáctenos — puede que tengamos cobertura en su área.",
     "zones": [
-      {
-        "name": "Lisboa Centro",
-        "areas": "Baixa, Chiado, Avenida, Saldanha, Marquês, Parque das Nações, Benfica, Lumiar, Telheiras, Campo de Ourique"
-      },
-      {
-        "name": "Margem Sul",
-        "areas": "Almada, Seixal, Barreiro, Montijo, Setúbal"
-      }
-    ],
-    "mapLabels": {
-      "lisboaCentro": "Lisboa Centro",
-      "margemSul": "Margem Sul",
-      "rioTejo": "Rio Tejo"
-    }
+      { "name": "Lisboa" },
+      { "name": "Cascais" },
+      { "name": "Almada" },
+      { "name": "Seixal" }
+    ]
   },
   "finalCta": {
     "badge": "Presupuesto en 60 segundos",
@@ -302,16 +325,14 @@
     "booking": {
       "whichService": "¿Qué servicio necesita?",
       "askName": "¿Cuál es su nombre?",
-      "enterName": "Ingresar nombre",
       "askPostalCode": "¿Cuál es su código postal?",
-      "enterPostalCode": "Ingresar código postal",
       "askContact": "¿Cuál es su contacto? (teléfono o correo electrónico)",
-      "enterContact": "Ingresar contacto",
-      "askMessage": "¿Desea dejar algún mensaje?",
-      "yesWrite": "Sí, quiero escribir",
-      "noSendNow": "No, enviar ahora",
+      "askMessage": "¿Desea incluir algún mensaje adicional?",
+      "yesWrite": "Sí",
+      "noSendNow": "No, gracias",
       "submitBooking": "📧 Enviar presupuesto",
-      "restart": "🔄 Comenzar de nuevo"
+      "restart": "🔄 Comenzar de nuevo",
+      "back": "⬅️ Volver"
     },
     "support": {
       "message": "¿Cómo prefiere contactar con nuestro soporte?",
@@ -322,7 +343,7 @@
     },
     "about": {
       "message1": "Esplêndido es una empresa de servicios de limpieza profesional en Lisboa y Margem Sul.",
-      "message2": "Con más de 300 clientes satisfechos, ofrecemos equipo fijo y capacitado, productos eco-friendly y 100% garantía de satisfacción.",
+      "message2": "Con más de 1000 clientes satisfechos, ofrecemos equipo fijo y capacitado, productos eco-friendly y 100% garantía de satisfacción.",
       "message3": "Nuestra misión es transformar espacios con calidad, confianza y una atención esplêndida.",
       "backToMenu": "Volver al menú"
     },
@@ -378,7 +399,30 @@
     "closing": "Espero su contacto. ¡Gracias!"
   },
   "common": {
-    "hours": "Lun-Vie 08:00-17:00",
-    "area": "Lisboa & Margem Sul"
+    "hours": "Lun-Sáb 08:00-18:00",
+    "area": "Lisboa, Cascais, Almada y Seixal"
+  },
+  "quoteOptions": {
+    "title": "¿Cómo desea proceder con su presupuesto?",
+    "chat": "Chat",
+    "phone": "Teléfono",
+    "email": "Email",
+    "whatsapp": "WhatsApp"
+  },
+  "aboutUs": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Conozca a Esplêndido",
+    "description": "Esplêndido nació con el objetivo de ofrecer servicios de limpieza de excelencia en Portugal. Con un equipo dedicado y capacitado, buscamos transformar cada espacio con atención al detalle, productos de calidad y un compromiso genuino con la satisfacción de nuestros clientes.",
+    "cta": "Saber más"
+  },
+  "pricing": {
+    "title": "Precios",
+    "recurring": "Limpiezas recurrentes desde",
+    "recurringPrice": "90€/mes",
+    "domestic": "Limpieza doméstica desde",
+    "domesticPrice": "30€",
+    "deep": "Limpieza profunda desde",
+    "deepPrice": "90€",
+    "cta": "Pedir Presupuesto"
   }
 }
