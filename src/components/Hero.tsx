@@ -20,6 +20,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
       {/* Three.js background */}
       <BubbleScene />
 
+
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 sm:px-6 md:flex-row md:gap-12">
         {/* Left content */}
         <div className="flex flex-1 flex-col justify-center">
@@ -97,9 +98,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
               className="rounded-2xl object-cover opacity-85"
               sizes="50vw"
             />
-            {/* Fade gradient left */}
             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent" />
-            {/* Fade gradient bottom */}
             <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
           </div>
         </motion.div>

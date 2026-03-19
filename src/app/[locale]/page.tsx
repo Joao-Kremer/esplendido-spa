@@ -37,11 +37,6 @@ function PricingBanner() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8 md:gap-12">
           <div className="flex items-center gap-2 text-center">
-            <span className="text-sm text-white/60">{t("recurring")}</span>
-            <span className="font-heading text-lg font-bold text-primary">{t("recurringPrice")}</span>
-          </div>
-          <div className="hidden h-6 w-px bg-white/15 sm:block" />
-          <div className="flex items-center gap-2 text-center">
             <span className="text-sm text-white/60">{t("domestic")}</span>
             <span className="font-heading text-lg font-bold text-primary">{t("domesticPrice")}</span>
           </div>
@@ -49,6 +44,11 @@ function PricingBanner() {
           <div className="flex items-center gap-2 text-center">
             <span className="text-sm text-white/60">{t("deep")}</span>
             <span className="font-heading text-lg font-bold text-primary">{t("deepPrice")}</span>
+          </div>
+          <div className="hidden h-6 w-px bg-white/15 sm:block" />
+          <div className="flex items-center gap-2 text-center">
+            <span className="text-sm text-white/60">{t("recurring")}</span>
+            <span className="font-heading text-lg font-bold text-primary">{t("recurringPrice")}</span>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ function PricingBanner() {
 
 function SocialBar() {
   return (
-    <div className="fixed left-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
+    <div className="fixed left-3 bottom-4 z-40 flex flex-col gap-2 sm:left-4 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 sm:gap-3">
       <a
         href={contacts.social.facebook}
         target="_blank"

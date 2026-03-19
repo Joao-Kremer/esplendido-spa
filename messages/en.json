@@ -323,11 +323,14 @@
       "faq": "❓ Frequently Asked Questions"
     },
     "booking": {
-      "whichService": "Which service are you looking for?",
-      "askName": "What is your name?",
+      "whichService": "What type of service are you looking for? 😊",
+      "askName": "To get started, how should I address you?",
+      "askNamePersonalized": "Nice to meet you, {name}! 😊 Could you share your postal code?",
       "askPostalCode": "What is your postal code?",
+      "askContactPersonalized": "Great, {name}! What's the best way to reach you? (phone or email)",
       "askContact": "What is your contact? (phone or email)",
-      "askMessage": "Would you like to include any additional message?",
+      "askMessagePersonalized": "{name}, would you like to add any extra details about the service?",
+      "askMessage": "Would you like to add any extra details about the service?",
       "yesWrite": "Yes",
       "noSendNow": "No, thank you",
       "submitBooking": "📧 Submit quote request",
@@ -424,5 +427,12 @@
     "deep": "Deep cleaning from",
     "deepPrice": "€90",
     "cta": "Get a Quote"
+  },
+  "thankYou": {
+    "title": "Quote Sent!",
+    "message": "Thank you for your request! Our team will review it and get back to you within 24 hours. Please check your phone or email.",
+    "whatsapp": "Chat on WhatsApp",
+    "phone": "Call now",
+    "back": "Back to home"
   }
 }

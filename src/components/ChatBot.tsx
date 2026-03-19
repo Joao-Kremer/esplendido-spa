@@ -103,10 +103,17 @@ export default function ChatBot({
         return;
       }
 
-      // Personalize message with client name after they identify themselves
+      // Use personalized messages when we have the client's name
       let personalizedMessages = [...node.messages];
-      if (formData.name && flowId === "booking" && stepId === "postalCode") {
-        personalizedMessages = [`${formData.name}, ${node.messages[0].charAt(0).toLowerCase()}${node.messages[0].slice(1)}`];
+      if (formData.name && flowId === "booking") {
+        const name = formData.name;
+        if (stepId === "postalCode") {
+          personalizedMessages = [t("booking.askNamePersonalized", { name })];
+        } else if (stepId === "contact") {
+          personalizedMessages = [t("booking.askContactPersonalized", { name })];
+        } else if (stepId === "message") {
+          personalizedMessages = [t("booking.askMessagePersonalized", { name })];
+        }
       }
 
       await addBotMessages(personalizedMessages, node.buttons ?? []);
@@ -246,10 +253,12 @@ export default function ChatBot({
               });
 
               if (res.ok) {
+                window.history.pushState({}, "", "/orcamento-enviado");
+                const nameGreet = formData.name ? `${formData.name}, ` : "";
                 await addBotMessages(
                   [
                     t("requestSuccess"),
-                    t("requestSuccessFollowup"),
+                    `${nameGreet}${t("requestSuccessFollowup").charAt(0).toLowerCase()}${t("requestSuccessFollowup").slice(1)}`,
                     t("requestSuccessContact"),
                   ],
                   [

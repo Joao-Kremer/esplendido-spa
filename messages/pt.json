@@ -323,11 +323,14 @@
       "faq": "❓ Perguntas Frequentes"
     },
     "booking": {
-      "whichService": "Qual serviço pretende?",
-      "askName": "Qual é o seu nome?",
+      "whichService": "Que tipo de serviço procura? 😊",
+      "askName": "Para começar, como posso chamá-lo(a)? 😊",
+      "askNamePersonalized": "Prazer em conhecê-lo(a), {name}! 😊 Pode indicar-me o seu código postal?",
       "askPostalCode": "Qual é o seu código postal?",
+      "askContactPersonalized": "Ótimo, {name}! E qual o melhor contacto para falarmos consigo? (telemóvel ou e-mail)",
       "askContact": "Qual é o seu contacto? (telemóvel ou e-mail)",
-      "askMessage": "Deseja incluir alguma mensagem adicional?",
+      "askMessagePersonalized": "{name}, gostaria de deixar alguma nota ou detalhe extra sobre o serviço?",
+      "askMessage": "Gostaria de deixar alguma nota ou detalhe extra sobre o serviço?",
       "yesWrite": "Sim",
       "noSendNow": "Não, obrigado",
       "submitBooking": "📧 Enviar orçamento",
@@ -424,5 +427,12 @@
     "deep": "Limpeza profunda a partir de",
     "deepPrice": "90€",
     "cta": "Pedir Orçamento"
+  },
+  "thankYou": {
+    "title": "Orçamento Enviado!",
+    "message": "Obrigado pelo seu pedido! A nossa equipa vai analisar e entrar em contacto consigo num prazo máximo de 24 horas. Fique atento ao seu telemóvel ou e-mail.",
+    "whatsapp": "Falar pelo WhatsApp",
+    "phone": "Ligar agora",
+    "back": "Voltar ao início"
   }
 }

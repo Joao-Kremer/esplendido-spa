@@ -21,11 +21,18 @@
   --animate-bubble-float: bubble-float 8s ease-in-out infinite;
   --animate-spin-slow: spin-slow 12s linear infinite;
   --animate-wave: wave 12s linear infinite;
+  --animate-logo-star: logo-star 3s ease-in-out infinite;
 }
 
 @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
+}
+
+@keyframes logo-star {
+  0% { left: -5%; }
+  50% { left: 100%; }
+  100% { left: -5%; }
 }
 
 @keyframes float {

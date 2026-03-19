@@ -48,7 +48,7 @@ export default function LanguageSelector() {
         <span>{current?.label}</span>
       </button>
       {open && (
-        <div className="absolute right-0 top-full mt-1 min-w-[100px] rounded-lg border border-white/10 bg-dark/95 py-1 shadow-lg backdrop-blur-md">
+        <div className="absolute right-0 top-full z-50 mt-1 min-w-[120px] rounded-lg border border-white/10 bg-dark/95 py-1 shadow-lg backdrop-blur-md">
           {locales.map((l) => (
             <button
               key={l.code}

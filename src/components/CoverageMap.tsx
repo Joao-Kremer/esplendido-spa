@@ -14,40 +14,46 @@ export default function CoverageMap() {
   const t = useTranslations("coverage");
 
   return (
-    <section id="cobertura" className="bg-neutral py-16 md:py-24">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <div className="mb-10 text-center">
-          <h2 className="font-heading text-2xl font-bold text-dark md:text-3xl">
+    <section id="cobertura" className="bg-neutral py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        {/* Header — mesmo padrão das outras secções */}
+        <div className="mb-16 text-center">
+          <h2 className="font-heading text-3xl font-bold text-dark md:text-4xl">
             {t("title")}
           </h2>
-          <p className="mt-2 text-sm text-dark/50">{t("subtitle")}</p>
+          <p className="mt-3 text-dark/50">
+            {t("subtitle")}
+          </p>
         </div>
 
-        <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
-          {/* Mapa interactivo */}
-          <div className="w-full overflow-hidden rounded-xl shadow-md ring-1 ring-dark/5 md:w-[380px] md:shrink-0">
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-stretch">
+          {/* Mapa */}
+          <div className="w-full overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm lg:w-1/2" style={{ height: "420px" }}>
             <iframe
               src="https://www.openstreetmap.org/export/embed.html?bbox=-9.3%2C38.62%2C-9.0%2C38.80&layer=mapnik&marker=38.7223%2C-9.1393"
-              width="380"
-              height="320"
-              className="block h-[320px] w-full"
+              className="block h-full w-full border-0"
               title="Mapa de cobertura"
               loading="lazy"
             />
           </div>
 
-          {/* Regiões */}
-          <div className="flex w-full flex-col gap-3">
+          {/* Regiões — mesmo estilo dos cards de serviços */}
+          <div className="flex w-full flex-col justify-center gap-4 lg:w-1/2">
             {zones.map((zone) => (
               <div
                 key={zone.name}
-                className="flex items-center gap-3 rounded-lg border border-dark/5 bg-white px-4 py-3 shadow-sm"
+                className="group flex items-center gap-4 rounded-xl border border-transparent bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/20 hover:shadow-md"
               >
-                <MapPin size={16} style={{ color: zone.color }} />
-                <span className="text-sm font-semibold text-dark">{zone.name}</span>
+                <div
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg"
+                  style={{ backgroundColor: `${zone.color}15` }}
+                >
+                  <MapPin size={20} style={{ color: zone.color }} />
+                </div>
+                <span className="font-heading text-lg font-bold text-dark">{zone.name}</span>
               </div>
             ))}
-            <p className="mt-1 text-xs text-dark/35">{t("notFound")}</p>
+            <p className="mt-2 text-sm text-dark/40">{t("notFound")}</p>
           </div>
         </div>
       </div>
