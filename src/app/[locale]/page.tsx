@@ -113,45 +113,31 @@ function QuoteOptionsModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 250 }}
-            className="fixed left-1/2 top-1/2 z-50 w-[90%] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-white/[0.08] bg-dark p-6 shadow-2xl"
+            className="fixed inset-x-4 bottom-6 z-50 mx-auto max-w-sm rounded-2xl border border-white/[0.08] bg-dark px-5 py-5 shadow-2xl sm:inset-x-auto sm:left-1/2 sm:top-1/2 sm:bottom-auto sm:-translate-x-1/2 sm:-translate-y-1/2"
           >
-            <h3 className="mb-5 text-center font-heading text-xl font-bold text-white">
+            <h3 className="mb-4 text-center font-heading text-sm font-bold text-white/80">
               {t("title")}
             </h3>
-            <div className="grid grid-cols-2 gap-3">
-              <button
-                onClick={() => {
-                  onClose();
-                  onChat();
-                }}
-                className="flex flex-col items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] p-4 text-white/70 transition-all hover:border-primary/30 hover:bg-primary/[0.08] hover:text-primary"
-              >
-                <MessageCircle size={24} />
-                <span className="text-sm font-medium">{t("chat")}</span>
-              </button>
-              <a
-                href={`tel:${contacts.phone.replace(/\s/g, "")}`}
-                className="flex flex-col items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] p-4 text-white/70 transition-all hover:border-primary/30 hover:bg-primary/[0.08] hover:text-primary"
-              >
-                <Phone size={24} />
-                <span className="text-sm font-medium">{t("phone")}</span>
-              </a>
-              <a
-                href={`mailto:${contacts.email}`}
-                className="flex flex-col items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] p-4 text-white/70 transition-all hover:border-primary/30 hover:bg-primary/[0.08] hover:text-primary"
-              >
-                <Mail size={24} />
-                <span className="text-sm font-medium">{t("email")}</span>
-              </a>
-              <a
-                href={`https://wa.me/${contacts.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] p-4 text-white/70 transition-all hover:border-primary/30 hover:bg-primary/[0.08] hover:text-primary"
-              >
-                <MessageSquare size={24} />
-                <span className="text-sm font-medium">{t("whatsapp")}</span>
-              </a>
+            <div className="grid grid-cols-4 gap-2">
+              {[
+                { label: t("chat"), icon: <MessageCircle size={22} />, onClick: () => { onClose(); onChat(); } },
+                { label: t("phone"), icon: <Phone size={22} />, href: `tel:${contacts.phone.replace(/\s/g, "")}` },
+                { label: t("email"), icon: <Mail size={22} />, href: `mailto:${contacts.email}` },
+                { label: t("whatsapp"), icon: <MessageSquare size={22} />, href: `https://wa.me/${contacts.whatsapp}`, target: "_blank" },
+              ].map((item) => {
+                const cls = "flex flex-col items-center gap-1.5 rounded-xl border border-white/[0.08] bg-white/[0.04] py-4 text-white/70 transition-all active:scale-95 hover:border-primary/30 hover:bg-primary/[0.08] hover:text-primary";
+                return item.href ? (
+                  <a key={item.label} href={item.href} target={item.target} rel={item.target ? "noopener noreferrer" : undefined} className={cls}>
+                    {item.icon}
+                    <span className="text-[11px] font-medium">{item.label}</span>
+                  </a>
+                ) : (
+                  <button key={item.label} onClick={item.onClick} className={cls}>
+                    {item.icon}
+                    <span className="text-[11px] font-medium">{item.label}</span>
+                  </button>
+                );
+              })}
             </div>
           </motion.div>
         </>
