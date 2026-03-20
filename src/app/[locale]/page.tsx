@@ -113,7 +113,7 @@ function QuoteOptionsModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 250 }}
-            className="fixed inset-x-4 bottom-6 z-50 mx-auto max-w-sm rounded-2xl border border-white/[0.08] bg-dark px-5 py-5 shadow-2xl sm:inset-x-auto sm:left-1/2 sm:top-1/2 sm:bottom-auto sm:-translate-x-1/2 sm:-translate-y-1/2"
+            className="fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-sm -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-white/[0.08] bg-dark px-5 py-5 shadow-2xl"
           >
             <h3 className="mb-4 text-center font-heading text-sm font-bold text-white/80">
               {t("title")}

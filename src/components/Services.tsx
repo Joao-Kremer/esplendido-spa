@@ -90,7 +90,7 @@ export default function Services({ onOpenWizard }: ServicesProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 250 }}
-              className="fixed inset-0 z-50 m-auto flex max-h-full flex-col overflow-hidden shadow-2xl sm:inset-4 sm:max-h-[85vh] sm:max-w-lg sm:rounded-2xl"
+              className="fixed inset-0 z-50 m-auto flex max-h-[85vh] max-w-lg flex-col overflow-hidden rounded-2xl shadow-2xl"
               style={{ background: "linear-gradient(180deg, #0d1e36 0%, #0A1628 100%)" }}
             >
               {/* Modal Header */}
