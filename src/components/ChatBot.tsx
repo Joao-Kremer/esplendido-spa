@@ -235,12 +235,26 @@ export default function ChatBot({
 
           case "submit_booking": {
             const data = {
-              service: formData.service ?? "",
-              name: formData.name ?? "",
-              postalCode: formData.postalCode ?? "",
-              contact: formData.contact ?? "",
-              message: formData.message ?? "",
+              service: formData.service || "",
+              name: formData.name || "",
+              postalCode: formData.postalCode || "",
+              contact: formData.contact || "",
+              message: formData.message || "",
             };
+
+            // If critical fields are missing, go back to collect them
+            if (!data.service) {
+              await navigateToNode("booking", "service");
+              break;
+            }
+            if (!data.name) {
+              await navigateToNode("booking", "name");
+              break;
+            }
+            if (!data.contact) {
+              await navigateToNode("booking", "contact");
+              break;
+            }
 
             addMessage("bot", t("sendingRequest"));
             scrollToBottom();

@@ -16,7 +16,7 @@
     "headlineBottom": "",
     "headlineHighlight": "Esplêndido!",
     "subtitle1": "Equipa fixa e treinada ao seu serviço.",
-    "subtitle2": "Lisboa & Margem Sul.",
+    "subtitle2": "Lisboa, Cascais, Almada e Seixal.",
     "cta": "Pedir Orçamento",
     "clients": "1000+ clientes satisfeitos",
     "guarantee": "100% garantia",
@@ -24,11 +24,11 @@
   },
   "story": {
     "title": "Conheça a Esplêndido",
-    "subtitle": "A nossa história contada passo a passo",
+    "subtitle": "Especialistas em Transformar Ambientes",
     "steps": [
       {
         "title": "O Nosso Empenho",
-        "text": "Estamos constantemente a melhorar os nossos já elevados padrões para que nos veja como a melhor empresa do sector.",
+        "text": "Estamos constantemente a melhorar os nossos já elevados padrões para que nos veja como a melhor empresa do setor.",
         "highlights": [
           "Limpezas diárias, semanais ou mensais",
           "Equipa fixa e treinada",
@@ -53,11 +53,11 @@
         ]
       },
       {
-        "title": "Produtos Eco-Friendly",
+        "title": "Produtos Sustentáveis",
         "text": "Produtos biodegradáveis que não prejudicam o ambiente, os animais de estimação ou os seres humanos.",
         "highlights": [
           "100% biodegradáveis e seguros",
-          "Rede extensa em Lisboa e Margem Sul"
+          "Cuidamos das limpezas e da natureza"
         ]
       }
     ]
@@ -233,7 +233,7 @@
     "steps": [
       {
         "title": "Solicite o orçamento",
-        "description": "Solicite o vosso orçamento em apenas 1 minuto através do nosso chat ou WhatsApp."
+        "description": "Solicite o vosso orçamento de forma rápida e prática através do email, chat ou WhatsApp."
       },
       {
         "title": "Contacto do especialista",
@@ -273,9 +273,9 @@
   },
   "finalCta": {
     "badge": "Orçamento em 60 segundos",
-    "headlineTop": "Pronto para ter a sua",
-    "headlineBottom": "casa",
-    "headlineHighlight": "esplêndida",
+    "headlineTop": "Pronto para ter o seu",
+    "headlineBottom": "espaço",
+    "headlineHighlight": "esplêndido",
     "subtitle": "Escolha o serviço, diga-nos o que precisa e receba a nossa equipa treinada na sua porta. Sem compromisso.",
     "cta": "Pedir Orçamento",
     "phone": "ou ligue 910 725 044"
@@ -323,17 +323,17 @@
       "faq": "❓ Perguntas Frequentes"
     },
     "booking": {
-      "whichService": "Que tipo de serviço procura? 😊",
-      "askName": "Para começar, como posso chamá-lo(a)? 😊",
-      "askNamePersonalized": "Prazer em conhecê-lo(a), {name}! 😊 Pode indicar-me o seu código postal?",
+      "whichService": "Que tipo de serviço procura?",
+      "askName": "Para começar, qual é o seu nome?",
+      "askNamePersonalized": "Prazer, {name}! Qual é o seu código postal?",
       "askPostalCode": "Qual é o seu código postal?",
-      "askContactPersonalized": "Ótimo, {name}! E qual o melhor contacto para falarmos consigo? (telemóvel ou e-mail)",
+      "askContactPersonalized": "{name}, qual o melhor contacto para falarmos consigo? (telemóvel ou e-mail)",
       "askContact": "Qual é o seu contacto? (telemóvel ou e-mail)",
-      "askMessagePersonalized": "{name}, gostaria de deixar alguma nota ou detalhe extra sobre o serviço?",
-      "askMessage": "Gostaria de deixar alguma nota ou detalhe extra sobre o serviço?",
-      "yesWrite": "Sim",
-      "noSendNow": "Não, obrigado",
-      "submitBooking": "📧 Enviar orçamento",
+      "askMessagePersonalized": "{name}, gostaria de deixar alguma nota sobre o serviço?",
+      "askMessage": "Gostaria de deixar alguma nota sobre o serviço?",
+      "yesWrite": "✏️ Sim, escrever",
+      "noSendNow": "Não, seguir",
+      "submitBooking": "✅ Solicitar Orçamento",
       "restart": "🔄 Recomeçar",
       "back": "⬅️ Voltar"
     },
@@ -415,12 +415,12 @@
   "aboutUs": {
     "title": "Sobre Nós",
     "subtitle": "Conheça a Esplêndido",
-    "description": "A Esplêndido nasceu com o objetivo de oferecer serviços de limpeza de excelência em Portugal. Com uma equipa dedicada e formada, procuramos transformar cada espaço com atenção ao detalhe, produtos de qualidade e um compromisso genuíno com a satisfação dos nossos clientes.",
+    "description": "A Esplêndido nasceu com o propósito de oferecer serviços de limpeza de excelência em Portugal. Contamos com uma equipa dedicada, experiente e em constante formação, preparada para transformar cada espaço com rigor, atenção ao detalhe e utilização de produtos de alta qualidade. O nosso compromisso é garantir não apenas limpeza, mas também conforto, bem-estar e um padrão de comportamento discreto e profissional.",
     "cta": "Saiba mais"
   },
   "pricing": {
     "title": "Preços",
-    "recurring": "Limpezas recorrentes a partir de",
+    "recurring": "Limpeza recorrente a partir de",
     "recurringPrice": "90€/mês",
     "domestic": "Limpeza doméstica a partir de",
     "domesticPrice": "30€",

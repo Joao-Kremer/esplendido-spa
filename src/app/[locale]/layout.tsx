@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-space-grotesk",
+  variable: "--font-plus-jakarta",
   preload: true,
 });
 
@@ -54,7 +54,7 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html
       lang={htmlLang}
-      className={`${spaceGrotesk.variable} ${inter.variable}`}
+      className={`${plusJakarta.variable} ${inter.variable}`}
     >
       <body className="antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>

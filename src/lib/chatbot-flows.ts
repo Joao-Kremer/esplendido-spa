@@ -85,7 +85,7 @@ export function buildFlows(
       {
         id: "name",
         messages: [t("booking.askName")],
-        autoInput: { field: "name", nextStep: "postalCode" },
+        autoInput: { field: "name", nextStep: "postalCode", backStep: { flow: "booking", step: "service" } },
       },
       {
         id: "postalCode",

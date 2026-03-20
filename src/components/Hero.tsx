@@ -17,11 +17,22 @@ export default function Hero({ onOpenWizard }: HeroProps) {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-white">
-      {/* Three.js background */}
-      <BubbleScene />
+      {/* Three.js background — desktop only */}
+      <div className="hidden md:block">
+        <BubbleScene />
+      </div>
 
+      {/* Mobile background image */}
+      <div className="absolute inset-0 z-0 md:hidden">
+        <img
+          src="/images/hero/hero_woman.png"
+          alt={t("imageAlt")}
+          className="h-full w-full object-cover object-[65%_15%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/90 from-0% via-white/20 via-30% to-transparent" />
+      </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 sm:px-6 md:flex-row md:gap-12">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-4 pb-16 sm:px-6 md:flex-row md:items-center md:justify-center md:gap-12 md:pb-0">
         {/* Left content */}
         <div className="flex flex-1 flex-col justify-center">
           {/* Headline */}
@@ -83,7 +94,7 @@ export default function Hero({ onOpenWizard }: HeroProps) {
           </motion.div>
         </div>
 
-        {/* Right image — hidden on mobile */}
+        {/* Right image — desktop only */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -95,11 +106,11 @@ export default function Hero({ onOpenWizard }: HeroProps) {
               src="/images/hero/hero_woman.png"
               alt={t("imageAlt")}
               fill
-              className="rounded-2xl object-cover opacity-85"
+              priority
+              quality={90}
+              className="rounded-2xl object-cover"
               sizes="50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
           </div>
         </motion.div>
       </div>

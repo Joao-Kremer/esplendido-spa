@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { service, name, postalCode, contact, message } = body;
 
-    if (!service || !name || !contact) {
+    if (!service || !name) {
       return NextResponse.json({ error: "Campos obrigatórios em falta" }, { status: 400 });
     }
 
