@@ -32,7 +32,7 @@ export default function About() {
               A limpeza pode ser uma tarefa árdua e sabemos que tem muitas opções
               quando pensa em contratar um serviço de limpeza. Por isso, estamos
               constantemente a tentar melhorar os nossos já elevados padrões para
-              que nos veja como a melhor empresa do sector.
+              que nos veja como a melhor empresa do setor.
             </p>
             <p className="mt-4 text-base leading-relaxed text-dark/60">
               Quando o fim de semana finalmente chega, é preferível pôr os pés no

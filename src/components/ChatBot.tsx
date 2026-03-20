@@ -58,8 +58,28 @@ export default function ChatBot({
   const scrollToBottom = useCallback(() => {
     setTimeout(() => {
       scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
-    }, 50);
+    }, 80);
   }, []);
+
+  // Handle iOS virtual keyboard pushing content up
+  useEffect(() => {
+    if (!open) return;
+    const vv = window.visualViewport;
+    if (!vv) return;
+
+    const onResize = () => {
+      const diff = window.innerHeight - vv.height;
+      const drawer = scrollRef.current?.closest("[data-chatbot-drawer]") as HTMLElement | null;
+      if (drawer) {
+        drawer.style.height = `${vv.height}px`;
+        drawer.style.top = `${vv.offsetTop}px`;
+      }
+      if (diff > 100) scrollToBottom();
+    };
+
+    vv.addEventListener("resize", onResize);
+    return () => vv.removeEventListener("resize", onResize);
+  }, [open, scrollToBottom]);
 
   const addMessage = useCallback(
     (sender: "bot" | "user", text: string) => {
@@ -346,11 +366,12 @@ export default function ChatBot({
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0.8 }}
             transition={{ type: "spring", damping: 28, stiffness: 220 }}
+            data-chatbot-drawer
             className="fixed inset-0 z-50 flex w-full flex-col overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] sm:inset-y-4 sm:left-auto sm:right-4 sm:w-[400px] sm:rounded-2xl"
-            style={{ background: "linear-gradient(180deg, #0d1e36 0%, #0A1628 40%, #080f1e 100%)" }}
+            style={{ background: "linear-gradient(180deg, #0d1e36 0%, #0A1628 40%, #080f1e 100%)", paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)" }}
           >
             {/* Header */}
-            <div className="relative flex items-center gap-3 px-5 py-4">
+            <div className="relative flex shrink-0 items-center gap-3 px-4 py-3 sm:px-5 sm:py-4">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
               <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.07] ring-1 ring-white/[0.08]">
                 <MessageSquare size={18} className="text-primary" />
@@ -381,8 +402,8 @@ export default function ChatBot({
             {/* Messages */}
             <div
               ref={scrollRef}
-              className="flex-1 overflow-y-auto px-4 py-5"
-              style={{ scrollbarWidth: "none" }}
+              className="flex-1 overflow-y-auto overscroll-contain px-3 py-4 sm:px-4 sm:py-5"
+              style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
             >
               <div className="flex flex-col gap-4">
                 {messages.map((msg) => (
@@ -437,7 +458,7 @@ export default function ChatBot({
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.2, delay: idx * 0.04 }}
                         onClick={() => handleButtonClick(btn)}
-                        className="group relative overflow-hidden rounded-full border border-primary/20 bg-primary/[0.06] px-3.5 py-2.5 text-[13px] font-medium text-primary transition-all duration-200 hover:border-primary/40 hover:bg-primary/[0.12] active:scale-[0.97] sm:px-4"
+                        className="group relative overflow-hidden rounded-full border border-primary/20 bg-primary/[0.06] px-3 py-2 text-[12.5px] font-medium text-primary transition-all duration-200 hover:border-primary/40 hover:bg-primary/[0.12] active:scale-[0.97] sm:px-4 sm:py-2.5 sm:text-[13px]"
                       >
                         <span className="relative z-10 flex items-center gap-1.5">
                           {btn.label}
@@ -468,12 +489,13 @@ export default function ChatBot({
                       </button>
                     )}
                     <input
-                      type="text"
-                      placeholder={t("textInputPlaceholder")}
+                      type={textInputField === "contact" ? "text" : "text"}
+                      inputMode={textInputField === "contact" ? "text" : "text"}
+                      placeholder={textInputField === "contact" ? t("contactPlaceholder") : t("textInputPlaceholder")}
                       value={textInputValue}
                       onChange={(e) => setTextInputValue(e.target.value)}
                       onKeyDown={(e) => e.key === "Enter" && handleTextInputConfirm()}
-                      className="w-full rounded-xl border border-white/[0.08] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all focus:border-primary/40 focus:bg-white/[0.06] focus:ring-1 focus:ring-primary/20"
+                      className="w-full rounded-xl border border-white/[0.08] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-primary/40 focus:bg-white/[0.06] focus:ring-1 focus:ring-primary/20"
                       autoFocus
                     />
                     <button
@@ -514,7 +536,7 @@ export default function ChatBot({
             </div>
 
             {/* Footer */}
-            <div className="relative px-5 py-3">
+            <div className="relative shrink-0 px-5 py-2 sm:py-3">
               <div className="absolute inset-x-0 top-0 h-px bg-white/[0.04]" />
               <p className="text-center text-[10px] tracking-wide text-white/15">
                 {t("assistantLabel")}

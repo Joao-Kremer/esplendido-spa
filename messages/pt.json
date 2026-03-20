@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Esplêndido | Serviços de Limpeza Profissional em Portugal",
-    "description": "Limpeza doméstica, comercial e higienização profissional. Equipa treinada, produtos eco-friendly e 100% garantia de satisfação. Orçamento grátis!"
+    "description": "Limpeza doméstica, comercial e higienização profissional. Equipa treinada, produtos sustentáveis e 100% garantia de satisfação. Orçamento grátis!"
   },
   "navbar": {
     "about": "Sobre",
@@ -41,7 +41,7 @@
         "highlights": [
           "Orçamento em 60 segundos",
           "Equipa verificada — 5 estrelas",
-          "Gerencie tudo online"
+          "Faça a gestão de tudo online"
         ]
       },
       {
@@ -282,7 +282,7 @@
   },
   "footer": {
     "brand": "esplêndido",
-    "description": "Serviços de limpeza profissional em Lisboa e Margem Sul. Equipa treinada, produtos eco-friendly e 100% garantia de satisfação.",
+    "description": "Serviços de limpeza profissional em Lisboa e Margem Sul. Equipa treinada, produtos sustentáveis e 100% garantia de satisfação.",
     "contacts": "Contactos",
     "quickLinks": "Links rápidos",
     "copyright": "© {year} Esplêndido. Todos os direitos reservados.",
@@ -295,13 +295,14 @@
     "online": "Online",
     "messagePlaceholder": "Escreva aqui a sua mensagem...",
     "textInputPlaceholder": "Escreva aqui...",
+    "contactPlaceholder": "Ex: 912 345 678 ou email@exemplo.pt",
     "noMessage": "(sem mensagem)",
     "sendingRequest": "A enviar o seu pedido de orçamento...",
     "requestSuccess": "✅ Pedido enviado com sucesso!",
     "requestSuccessFollowup": "A nossa equipa vai analisar o seu pedido de orçamento e entrar em contacto o mais rápido possível, num prazo máximo de 24 horas. Estamos cá para o atender da melhor forma!",
     "requestSuccessContact": "Pode também contactar-nos diretamente:",
     "requestError": "Ocorreu um erro ao enviar. Pode tentar novamente ou contactar-nos diretamente:",
-    "connectionError": "Ocorreu um erro de conexão. Pode contactar-nos diretamente:",
+    "connectionError": "Ocorreu um erro de ligação. Pode contactar-nos diretamente:",
     "retryButton": "🔄 Tentar novamente",
     "whatsappButton": "💬 WhatsApp",
     "phoneButton": "📞 Ligar",
@@ -327,10 +328,10 @@
       "askName": "Para começar, qual é o seu nome?",
       "askNamePersonalized": "Prazer, {name}! Qual é o seu código postal?",
       "askPostalCode": "Qual é o seu código postal?",
-      "askContactPersonalized": "{name}, qual o melhor contacto para falarmos consigo? (telemóvel ou e-mail)",
-      "askContact": "Qual é o seu contacto? (telemóvel ou e-mail)",
-      "askMessagePersonalized": "{name}, gostaria de deixar alguma nota sobre o serviço?",
-      "askMessage": "Gostaria de deixar alguma nota sobre o serviço?",
+      "askContactPersonalized": "{name}, insira o vosso e-mail ou telemóvel (o melhor contacto para falarmos consigo)",
+      "askContact": "Insira o vosso e-mail ou telemóvel (o melhor contacto para falarmos consigo)",
+      "askMessagePersonalized": "{name}, deseja deixar alguma nota sobre o serviço?",
+      "askMessage": "Deseja deixar alguma nota sobre o serviço?",
       "yesWrite": "✏️ Sim, escrever",
       "noSendNow": "Não, seguir",
       "submitBooking": "✅ Solicitar Orçamento",
@@ -346,7 +347,7 @@
     },
     "about": {
       "message1": "A Esplêndido é uma empresa de serviços de limpeza profissional em Lisboa e Margem Sul.",
-      "message2": "Com mais de 1000 clientes satisfeitos, oferecemos equipa fixa e treinada, produtos eco-friendly e 100% garantia de satisfação.",
+      "message2": "Com mais de 1000 clientes satisfeitos, oferecemos equipa fixa e treinada, produtos sustentáveis e 100% garantia de satisfação.",
       "message3": "A nossa missão é transformar espaços com qualidade, confiança e um atendimento esplêndido.",
       "backToMenu": "Voltar ao menu"
     },
@@ -359,7 +360,7 @@
       "backToMenu": "Voltar ao menu"
     },
     "products": {
-      "message1": "Utilizamos apenas produtos profissionais eco-friendly e biodegradáveis, seguros para crianças e animais de estimação.",
+      "message1": "Utilizamos apenas produtos profissionais sustentáveis e biodegradáveis, seguros para crianças e animais de estimação.",
       "message2": "🧴 Limpeza geral: Produtos multi-superfície certificados",
       "message3": "🌿 Desinfetação: Soluções hospitalares de baixa toxicidade",
       "message4": "🛋️ Estofados: Shampoos neutros específicos para tecidos",
@@ -374,7 +375,7 @@
       "paymentAnswer": "O pagamento é feito após a realização do serviço. Aceitamos transferência bancária e MBWay. Para planos mensais, o pagamento é feito ao final do primeiro mês.",
       "teamQuestion": "A equipa é fixa?",
       "teamAnswer": "Sim! Mantemos a mesma equipa para cada cliente, para que conheçam o seu espaço e as suas preferências.",
-      "presenceQuestion": "Preciso estar em casa?",
+      "presenceQuestion": "Preciso estar presente?",
       "presenceAnswer": "Não é obrigatório. Muitos clientes entregam a chave à nossa equipa de confiança. Todos os profissionais são verificados e segurados.",
       "priceQuestion": "Quero saber o preço",
       "priceAnswer": "Para um orçamento personalizado, entre em contacto pelo WhatsApp!",

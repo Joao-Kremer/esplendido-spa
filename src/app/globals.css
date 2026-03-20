@@ -9,7 +9,7 @@
   --color-white: #FFFFFF;
   --color-dark: #0A1628;
 
-  --font-heading: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --animate-shimmer: shimmer 2.5s ease-in-out infinite;

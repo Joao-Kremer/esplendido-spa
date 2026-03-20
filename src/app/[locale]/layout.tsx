@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
-  variable: "--font-plus-jakarta",
+  variable: "--font-poppins",
   preload: true,
 });
 
@@ -54,7 +55,7 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html
       lang={htmlLang}
-      className={`${plusJakarta.variable} ${inter.variable}`}
+      className={`${poppins.variable} ${inter.variable}`}
     >
       <body className="antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>

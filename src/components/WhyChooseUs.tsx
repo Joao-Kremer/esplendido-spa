@@ -22,7 +22,7 @@ const reasons = [
   },
   {
     icon: Leaf,
-    title: "Produtos Eco-Friendly",
+    title: "Produtos Sustentáveis",
     description:
       "Utilizamos produtos biodegradáveis que não prejudicam de forma alguma o ambiente, os animais de estimação ou os seres humanos.",
     color: "text-accent",
