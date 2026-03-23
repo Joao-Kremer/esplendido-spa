@@ -49,8 +49,7 @@ export default async function RootLayout({ children, params }: Props) {
 
   const messages = (await import(`../../../messages/${locale}.json`)).default;
 
-  const htmlLang =
-    locale === "pt-br" ? "pt-BR" : locale === "pt" ? "pt-PT" : locale;
+  const htmlLang = locale === "pt" ? "pt-PT" : locale;
 
   return (
     <html

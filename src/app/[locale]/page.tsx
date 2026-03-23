@@ -35,20 +35,29 @@ function PricingBanner() {
   return (
     <section className="bg-dark py-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8 md:gap-12">
-          <div className="flex items-center gap-2 text-center">
-            <span className="text-sm text-white/60">{t("domestic")}</span>
-            <span className="font-heading text-lg font-bold text-primary">{t("domesticPrice")}</span>
+        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8 md:gap-12">
+          <div className="flex flex-col items-center gap-1 text-center">
+            <div className="flex items-baseline gap-2 whitespace-nowrap">
+              <span className="text-sm text-white/60">{t("domestic")}</span>
+              <span className="font-heading text-lg font-bold text-primary">{t("domesticPrice")}</span>
+            </div>
+            <span className="text-xs text-white/40">{t("domesticDescription")}</span>
           </div>
-          <div className="hidden h-6 w-px bg-white/15 sm:block" />
-          <div className="flex items-center gap-2 text-center">
-            <span className="text-sm text-white/60">{t("deep")}</span>
-            <span className="font-heading text-lg font-bold text-primary">{t("deepPrice")}</span>
+          <div className="hidden h-10 w-px bg-white/15 sm:block" />
+          <div className="flex flex-col items-center gap-1 text-center">
+            <div className="flex items-baseline gap-2 whitespace-nowrap">
+              <span className="text-sm text-white/60">{t("deep")}</span>
+              <span className="font-heading text-lg font-bold text-primary">{t("deepPrice")}</span>
+            </div>
+            <span className="text-xs text-white/40">{t("deepDescription")}</span>
           </div>
-          <div className="hidden h-6 w-px bg-white/15 sm:block" />
-          <div className="flex items-center gap-2 text-center">
-            <span className="text-sm text-white/60">{t("recurring")}</span>
-            <span className="font-heading text-lg font-bold text-primary">{t("recurringPrice")}</span>
+          <div className="hidden h-10 w-px bg-white/15 sm:block" />
+          <div className="flex flex-col items-center gap-1 text-center">
+            <div className="flex items-baseline gap-2 whitespace-nowrap">
+              <span className="text-sm text-white/60">{t("recurring")}</span>
+              <span className="font-heading text-lg font-bold text-primary">{t("recurringPrice")}</span>
+            </div>
+            <span className="text-xs text-white/40">{t("recurringDescription")}</span>
           </div>
         </div>
       </div>

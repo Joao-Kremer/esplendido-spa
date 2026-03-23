@@ -145,7 +145,7 @@ function BubbleTrail() {
 
 export default function StorySection() {
   const t = useTranslations("story");
-  const storySteps = t.raw("steps") as Array<{ title: string; text: string; highlights: string[] }>;
+  const storySteps = t.raw("steps") as Array<{ title: string; text: string; highlights: string[]; footer?: string }>;
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -374,6 +374,11 @@ export default function StorySection() {
                           );
                         })}
                       </div>
+                      {step.footer && (
+                        <p className="mt-4 text-[13px] italic leading-relaxed text-dark/45">
+                          {step.footer}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>

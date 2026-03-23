@@ -12,14 +12,14 @@
     "cta": "Orçamento"
   },
   "hero": {
-    "headlineTop": "Agende uma limpeza e...",
+    "headlineTop": "Agende uma limpeza e deixe tudo connosco.",
     "headlineBottom": "",
     "headlineHighlight": "Esplêndido!",
-    "subtitle1": "Equipa fixa e treinada ao seu serviço.",
-    "subtitle2": "Lisboa, Cascais, Almada e Seixal.",
-    "cta": "Pedir Orçamento",
-    "clients": "1000+ clientes satisfeitos",
-    "guarantee": "100% garantia",
+    "subtitle1": "Equipa fixa e treinada, pronta para si.",
+    "subtitle2": "Servimos Lisboa, Cascais, Almada e Seixal.",
+    "cta": "Peça já o seu orçamento gratuito",
+    "clients": "Mais de 300 clientes confiam na Esplêndido para manter os seus espaços sempre impecáveis, seja em casa ou na empresa.",
+    "guarantee": "Limpezas domésticas e comerciais com garantia de qualidade e confiança",
     "imageAlt": "Serviço de limpeza profissional"
   },
   "story": {
@@ -28,42 +28,48 @@
     "steps": [
       {
         "title": "O Nosso Empenho",
-        "text": "Estamos constantemente a melhorar os nossos já elevados padrões para que nos veja como a melhor empresa do setor.",
+        "text": "Na Esplêndido, procuramos constantemente melhorar os nossos padrões para oferecer um serviço de limpeza eficiente e fiável.",
         "highlights": [
-          "Limpezas diárias, semanais ou mensais",
-          "Equipa fixa e treinada",
-          "Melhor relação qualidade-preço"
-        ]
+          "Limpezas diárias, semanais, quinzenais ou mensais – adaptadas às suas necessidades",
+          "Equipa fixa e treinada – profissionais experientes, certificados e verificados",
+          "Excelente relação qualidade-preço – serviços de excelência sem surpresas"
+        ],
+        "footer": "Cada limpeza é realizada com cuidado, atenção ao detalhe e compromisso com a sua satisfação."
       },
       {
         "title": "Como Funcionamos",
-        "text": "A nossa especialidade é eliminar o stress de qualquer aspeto da limpeza. Peça o seu orçamento online em 60 segundos.",
+        "text": "A nossa missão é tornar a limpeza simples e sem preocupações. Em apenas 60 segundos, pode solicitar o seu orçamento online e deixar tudo connosco.",
         "highlights": [
-          "Orçamento em 60 segundos",
-          "Equipa verificada — 5 estrelas",
-          "Faça a gestão de tudo online"
-        ]
+          "Orçamento rápido em 60 segundos – sem complicações",
+          "Equipa verificada e avaliada com 5 estrelas – confiança total",
+          "Gestão completa online – marque, altere ou cancele quando quiser"
+        ],
+        "footer": "Limpeza profissional, rápida e sem stress. Tudo pensado para si."
       },
       {
         "title": "Satisfação Garantida",
-        "text": "Estamos totalmente comprometidos com a sua satisfação, contando com uma equipa atenciosa e devidamente formada, com atenção aos mais pequenos detalhes.",
+        "text": "Estamos totalmente comprometidos com a sua satisfação. A nossa equipa atenciosa e experiente garante que cada detalhe é tratado com o máximo cuidado.",
         "highlights": [
-          "Compromisso com a excelência",
-          "Supervisor sempre disponível"
-        ]
+          "Serviço com atenção a cada detalhe – nada passa despercebido",
+          "Supervisor sempre disponível – acompanhamento em todas as limpezas",
+          "Compromisso com excelência e confiança – resultados consistentes"
+        ],
+        "footer": "Limpeza profissional, fiável e sem preocupações."
       },
       {
         "title": "Produtos Sustentáveis",
-        "text": "Produtos biodegradáveis que não prejudicam o ambiente, os animais de estimação ou os seres humanos.",
+        "text": "Utilizamos produtos biodegradáveis, seguros para o ambiente, para os animais de estimação e para todos os que vivem no espaço.",
         "highlights": [
-          "100% biodegradáveis e seguros",
-          "Cuidamos das limpezas e da natureza"
-        ]
+          "100% biodegradáveis e seguros – limpeza eficaz sem preocupações",
+          "Respeito pela natureza – cuidamos do seu espaço e do planeta",
+          "Proteção total – conforto e segurança para toda a família ou equipa"
+        ],
+        "footer": "Limpeza profissional e responsável, porque cuidar do seu espaço não deve prejudicar o ambiente."
       }
     ]
   },
   "services": {
-    "title": "Nossos Serviços",
+    "title": "Os Nossos Serviços",
     "subtitle": "Soluções de limpeza para cada necessidade",
     "viewMore": "Ver mais",
     "book": "Orçamento",
@@ -233,15 +239,15 @@
     "steps": [
       {
         "title": "Solicite o orçamento",
-        "description": "Solicite o vosso orçamento de forma rápida e prática através do email, chat ou WhatsApp."
+        "description": "Peça o seu orçamento de forma rápida e prática através de e-mail, chat online ou WhatsApp."
       },
       {
-        "title": "Contacto do especialista",
-        "description": "Um especialista entrará em contacto para entender a fundo a vossa necessidade e agendar o melhor dia para si."
+        "title": "Fale com um especialista",
+        "description": "Um especialista entrará em contacto para compreender exatamente o que necessita e agendar o melhor dia para si."
       },
       {
-        "title": "Receba a equipa",
-        "description": "A nossa equipa treinada chega na data marcada, pronta para transformar o seu espaço."
+        "title": "Receba a nossa equipa",
+        "description": "A equipa treinada chega na data marcada, pronta para deixar o seu espaço impecável."
       }
     ]
   },
@@ -253,11 +259,11 @@
       { "label": "Profissionais" }
     ],
     "testimonials": [
-      { "name": "Marta Pereira", "text": "Já fazem a limpeza da minha casa há mais de 6 meses e estou encantada! A equipa é sempre a mesma, super simpática e cuidadosa. Recomendo a 100%!" },
-      { "name": "Manuel Oliveira", "text": "Pedi uma limpeza de vidros e janelas para o meu apartamento e fiquei surpreendido com o resultado. Ficou tudo impecável, até os cantos mais difíceis!" },
-      { "name": "João Santos", "text": "Contratei a Esplêndido para uma limpeza pós-obra e superaram todas as expectativas. A casa ficou como nova, sem vestígio de poeira. Equipa super profissional." },
-      { "name": "Ana Silveira", "text": "Uso o serviço de limpeza semanal e é a melhor decisão que tomei. O supervisor ligou-me para saber se estava tudo bem — esse tipo de atenção faz toda a diferença." },
-      { "name": "Ricardo Mendes", "text": "A higienização do sofá ficou espetacular! Já não tinha esperança de tirar aquelas manchas, mas a equipa fez milagres. Parece sofá novo. Muito obrigado!" }
+      { "name": "Maria, Lisboa", "text": "Já utilizei vários serviços de limpeza, mas a Esplêndido foi diferente. A equipa é extremamente atenciosa, cumpriu todos os horários e deixou a casa impecável. Recomendo vivamente!" },
+      { "name": "João, Cascais", "text": "A equipa atrasou cerca de 20 minutos, mas avisaram de imediato e ainda ofereceram um desconto pelo incómodo. Nunca tinha visto um serviço assim! No final, o escritório ficou impecável e toda a equipa ficou satisfeita." },
+      { "name": "Carla, Almada", "text": "Sou exigente com limpeza e posso dizer que nunca vi nada tão detalhado. Desde a cozinha até aos cantos mais escondidos, ficou tudo impecável. Vale cada cêntimo!" },
+      { "name": "Rui, Seixal", "text": "Contratei a Esplêndido para a minha loja e para a minha casa. Em ambos os casos, a equipa foi extremamente simpática, profissional e organizada. Senti-me totalmente à vontade e o resultado final foi sempre excelente." },
+      { "name": "Ana, Lisboa", "text": "Adorei como ficaram as janelas! Até a vizinha veio pedir o contacto da empresa. A equipa é muito profissional e ainda me deu algumas dicas para manter tudo limpo por mais tempo." }
     ]
   },
   "coverage": {
@@ -273,11 +279,11 @@
   },
   "finalCta": {
     "badge": "Orçamento em 60 segundos",
-    "headlineTop": "Pronto para ter o seu",
+    "headlineTop": "Pronto para deixar o seu",
     "headlineBottom": "espaço",
     "headlineHighlight": "esplêndido",
-    "subtitle": "Escolha o serviço, diga-nos o que precisa e receba a nossa equipa treinada na sua porta. Sem compromisso.",
-    "cta": "Pedir Orçamento",
+    "subtitle": "Escolha o serviço que pretende, diga-nos exatamente o que necessita e receba a nossa equipa treinada à sua porta. Sem compromisso.",
+    "cta": "Peça já o seu orçamento sem compromisso",
     "phone": "ou ligue 910 725 044"
   },
   "footer": {
@@ -295,7 +301,7 @@
     "online": "Online",
     "messagePlaceholder": "Escreva aqui a sua mensagem...",
     "textInputPlaceholder": "Escreva aqui...",
-    "contactPlaceholder": "Ex: 912 345 678 ou email@exemplo.pt",
+    "contactPlaceholder": "912 345 678 ou nome@email.pt",
     "noMessage": "(sem mensagem)",
     "sendingRequest": "A enviar o seu pedido de orçamento...",
     "requestSuccess": "✅ Pedido enviado com sucesso!",
@@ -328,8 +334,8 @@
       "askName": "Para começar, qual é o seu nome?",
       "askNamePersonalized": "Prazer, {name}! Qual é o seu código postal?",
       "askPostalCode": "Qual é o seu código postal?",
-      "askContactPersonalized": "{name}, insira o vosso e-mail ou telemóvel (o melhor contacto para falarmos consigo)",
-      "askContact": "Insira o vosso e-mail ou telemóvel (o melhor contacto para falarmos consigo)",
+      "askContactPersonalized": "{name}, para entrarmos em contacto consigo, deixe-nos:\n\n📱 O seu número de telemóvel\nou\n✉️ O seu endereço de e-mail",
+      "askContact": "Para entrarmos em contacto consigo, deixe-nos:\n\n📱 O seu número de telemóvel\nou\n✉️ O seu endereço de e-mail",
       "askMessagePersonalized": "{name}, deseja deixar alguma nota sobre o serviço?",
       "askMessage": "Deseja deixar alguma nota sobre o serviço?",
       "yesWrite": "✏️ Sim, escrever",
@@ -347,7 +353,7 @@
     },
     "about": {
       "message1": "A Esplêndido é uma empresa de serviços de limpeza profissional em Lisboa e Margem Sul.",
-      "message2": "Com mais de 1000 clientes satisfeitos, oferecemos equipa fixa e treinada, produtos sustentáveis e 100% garantia de satisfação.",
+      "message2": "Com mais de 300 clientes satisfeitos, oferecemos equipa fixa e treinada, produtos sustentáveis e 100% garantia de satisfação.",
       "message3": "A nossa missão é transformar espaços com qualidade, confiança e um atendimento esplêndido.",
       "backToMenu": "Voltar ao menu"
     },
@@ -407,7 +413,7 @@
     "area": "Lisboa, Cascais, Almada e Seixal"
   },
   "quoteOptions": {
-    "title": "Como deseja prosseguir com o vosso orçamento?",
+    "title": "Como deseja prosseguir com o seu orçamento?",
     "chat": "Chat",
     "phone": "Telefone",
     "email": "Email",
@@ -416,17 +422,20 @@
   "aboutUs": {
     "title": "Sobre Nós",
     "subtitle": "Conheça a Esplêndido",
-    "description": "A Esplêndido nasceu com o propósito de oferecer serviços de limpeza de excelência em Portugal. Contamos com uma equipa dedicada, experiente e em constante formação, preparada para transformar cada espaço com rigor, atenção ao detalhe e utilização de produtos de alta qualidade. O nosso compromisso é garantir não apenas limpeza, mas também conforto, bem-estar e um padrão de comportamento discreto e profissional.",
+    "description": "A Esplêndido nasceu com um propósito: oferecer serviços de limpeza de excelência em Portugal. Contamos com uma equipa dedicada, experiente e em constante formação, pronta para transformar cada espaço com rigor e atenção ao detalhe. Utilizamos produtos de alta qualidade e garantimos não apenas limpeza, mas também conforto, bem-estar e um serviço discreto e profissional. Porque, para nós, cada espaço merece ficar… Esplêndido.",
     "cta": "Saiba mais"
   },
   "pricing": {
     "title": "Preços",
-    "recurring": "Limpeza recorrente a partir de",
-    "recurringPrice": "90€/mês",
     "domestic": "Limpeza doméstica a partir de",
     "domesticPrice": "30€",
+    "domesticDescription": "Serviço rápido, eficiente e sem complicações.",
     "deep": "Limpeza profunda a partir de",
     "deepPrice": "90€",
+    "deepDescription": "Ideal para casas ou empresas que necessitam de uma higienização completa.",
+    "recurring": "Limpeza recorrente a partir de",
+    "recurringPrice": "90€/mês",
+    "recurringDescription": "Mantenha o seu espaço sempre impecável com profissionais de confiança.",
     "cta": "Pedir Orçamento"
   },
   "thankYou": {

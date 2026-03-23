@@ -76,21 +76,12 @@ export default function Hero({ onOpenWizard }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-6 flex flex-wrap items-center gap-3 text-xs sm:mt-8 sm:gap-4 sm:text-sm"
+            className="mt-6 max-w-lg space-y-2 sm:mt-8"
           >
-            <div className="flex items-center gap-1.5">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={14} className="fill-golden text-golden" />
-                ))}
-              </div>
-              <span className="text-dark/50">{t("clients")}</span>
-            </div>
-            <span className="text-dark/20">|</span>
-            <div className="flex items-center gap-1.5">
-              <Shield size={14} className="text-primary" />
-              <span className="text-dark/50">{t("guarantee")}</span>
-            </div>
+            <p className="flex items-center gap-1.5 text-xs text-dark/50 sm:text-sm">
+              <Shield size={13} className="shrink-0 text-primary" />
+              {t("clients")}
+            </p>
           </motion.div>
         </div>
 

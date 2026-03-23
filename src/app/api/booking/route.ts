@@ -4,6 +4,40 @@ import { Resend } from "resend";
 const TO_EMAIL = process.env.RESEND_TO_EMAIL || "contatocliente@esplendidoapp.com";
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
+// Map service names from all languages to PT-PT
+const SERVICE_TO_PT: Record<string, string> = {
+  // EN
+  "Maintenance Domestic Cleaning": "Limpeza Doméstica Manutenção",
+  "Deep Cleaning": "Limpeza Profunda",
+  "Post-Construction Cleaning": "Limpeza Pós Obra",
+  "Mold & Moisture Cleaning": "Limpeza de Bolor e Humidade",
+  "Glass, Window & Blind Cleaning": "Limpeza de Vidros, Janelas e Estores",
+  "Sofa Cleaning": "Higienização de Sofá",
+  "Mattress Cleaning": "Higienização de Colchão",
+  "Rug Cleaning": "Higienização de Tapetes",
+  "Carpet Cleaning": "Higienização de Alcatifas",
+  "Custom Cleaning": "Limpeza Personalizada",
+  // ES
+  "Limpieza Doméstica Mantenimiento": "Limpeza Doméstica Manutenção",
+  "Limpieza Profunda": "Limpeza Profunda",
+  "Limpieza Post-obra": "Limpeza Pós Obra",
+  "Limpieza de Moho y Humedad": "Limpeza de Bolor e Humidade",
+  "Limpieza de Cristales, Ventanas y Persianas": "Limpeza de Vidros, Janelas e Estores",
+  "Higienización de Sofá": "Higienização de Sofá",
+  "Higienización de Colchón": "Higienização de Colchão",
+  "Higienización de Alfombras": "Higienização de Tapetes",
+  "Higienización de Moquetas": "Higienização de Alcatifas",
+  "Limpieza Personalizada": "Limpeza Personalizada",
+  // PT-BR (differences only)
+  "Limpeza de Bolor e Umidade": "Limpeza de Bolor e Humidade",
+  "Limpeza de Vidros, Janelas e Persianas": "Limpeza de Vidros, Janelas e Estores",
+  "Higienização de Carpetes": "Higienização de Alcatifas",
+};
+
+function translateServiceToPT(service: string): string {
+  return SERVICE_TO_PT[service] || service;
+}
+
 export async function POST(request: Request) {
   try {
     if (!process.env.RESEND_API_KEY) {
@@ -13,7 +47,8 @@ export async function POST(request: Request) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await request.json();
-    const { service, name, postalCode, contact, message } = body;
+    const { service: rawService, name, postalCode, contact, message } = body;
+    const service = translateServiceToPT(rawService);
 
     if (!service || !name) {
       return NextResponse.json({ error: "Campos obrigatórios em falta" }, { status: 400 });
