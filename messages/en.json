@@ -72,20 +72,21 @@
     "items": [
       {
         "name": "Maintenance Domestic Cleaning",
-        "description": "Dusting, sanitizing and vacuuming",
+        "description": "Fixed team, professional products and insurance included",
         "details": [
-          "Our team thoroughly cleans every corner of every room, from ceiling to floor!",
-          "We use surface-specific products, ensuring a deep and safe clean."
+          "Includes 1 maintenance cleaning session with a fixed and rigorously trained team, professional cleaning products specific to each surface, high-powered vacuums and accident insurance (up to €50,000).",
+          "We use products that hydrate and restore shine to surfaces, ensuring a deep and safe clean."
         ],
         "includes": [
-          "Dusting in all rooms",
-          "Surface sanitizing with specialized products",
-          "Professional vacuuming and mopping",
-          "Cleaning and sanitizing furniture (inside and out)",
-          "Full sanitizing of bathroom fixtures",
-          "Changing bed linens and replacing trash bags",
-          "Washing and drying dishes",
-          "Cleaning windows, glass, tiles, doors and baseboards"
+          "Dusting furniture and disinfection with products that hydrate and restore shine (exterior)",
+          "Cleaning of frames and wall-mounted objects",
+          "Mirror cleaning",
+          "Vacuuming sofas, rugs and mattresses",
+          "Cleaning of fridge, oven, extractor and microwave (exterior)",
+          "Full cleaning and disinfection of bathrooms",
+          "Vacuuming and washing floors with suitable products",
+          "Replacing trash bags",
+          "Final ambiance with a neutral and pleasant fragrance"
         ]
       },
       {
@@ -96,12 +97,18 @@
           "Ideal for one-off cleans, seasonal changes or when your space needs a complete refresh."
         ],
         "includes": [
-          "Intensive cleaning of all rooms",
-          "Deep sanitizing of surfaces and corners",
-          "Cleaning of baseboards, doors and switches",
-          "Vacuuming and deep floor cleaning",
-          "Detailed cleaning of kitchen and bathrooms",
-          "Interior cleaning of appliances"
+          "Vacuuming ceilings and walls",
+          "Cleaning frames and decorative objects",
+          "Cleaning tiles, doors, lintels, baseboards, switches and sockets",
+          "Cleaning window frames, windows, glass and blinds",
+          "Dusting furniture (inside and out) and disinfection with products that hydrate and restore shine",
+          "Vacuuming sofas, rugs and mattresses",
+          "Cleaning fridge, oven, microwave and extractor (inside and out)",
+          "Full cleaning and disinfection of bathrooms",
+          "Floor vacuuming and application of wash and wax",
+          "Cleaning balconies, yards and enclosed terraces",
+          "Replacing trash bags",
+          "Ambiance with a neutral and pleasant fragrance"
         ]
       },
       {
@@ -124,15 +131,14 @@
         "name": "Mold & Moisture Cleaning",
         "description": "Removing fungi from walls and ceilings",
         "details": [
-          "A service aimed at ensuring the health and integrity of indoor environments through effective removal of fungi and mold.",
-          "We follow a systematic approach: assessment, removal, preventive treatment and thorough drying."
+          "Mold and moisture cleaning and treatment service to ensure the health and integrity of your spaces.",
+          "We follow a systematic approach with specific anti-mold products and preventive maintenance advice."
         ],
         "includes": [
-          "Detailed inspection to identify affected areas and the source of moisture",
-          "Mold removal with specialized products",
-          "Treatment of various surfaces: walls, ceilings, floors and furniture",
-          "Application of preventive antifungal solutions",
-          "Thorough drying of treated areas"
+          "Cleaning surfaces with specific anti-mold products (walls, ceilings, baseboards, affected furniture)",
+          "Cleaning grout and tiles in bathrooms and kitchens, if necessary",
+          "Removal of odors caused by mold and moisture",
+          "Maintenance advice to prevent future occurrences of mold and moisture"
         ]
       },
       {
@@ -143,71 +149,84 @@
           "We combine professional techniques with the right products to remove accumulated dust, stains and grime."
         ],
         "includes": [
-          "Glass: interior and exterior removal of dust, stains and fingerprints",
-          "Windows: cleaning frames, casings and fittings",
-          "Checking and cleaning tracks and drainage channels",
-          "Blinds: removal of dust, cobwebs and grime",
-          "Checking and lubricating operating mechanisms"
+          "Glass cleaning",
+          "Cleaning of window frames (wood, aluminium or PVC)",
+          "Blind cleaning, ensuring removal of dust and accumulated grime"
         ]
       },
       {
         "name": "Sofa Cleaning",
-        "description": "Spraying, brushing and washing",
+        "description": "Vacuuming, shampooing, brushing and extraction",
         "details": [
           "An essential service for maintaining a clean and healthy environment, removing dirt, dust mites, odors and stains from upholstery.",
-          "We use advanced methods and products suited to the fabric type of your sofa."
+          "We use professional shampoo suited to each fabric type and extraction machines for an impeccable result."
         ],
         "includes": [
-          "Initial inspection to identify soiled areas and stains",
-          "Deep vacuuming with high-powered vacuums",
-          "Application of specialized products that eliminate dust mites and bacteria",
-          "Removal of unwanted odors and full deodorizing",
-          "Extraction for quick drying"
+          "Deep vacuuming: removal of dust, hair and surface particles",
+          "Application of professional shampoo suited to each fabric type",
+          "Careful manual or mechanical brushing to loosen deep dirt and stains",
+          "Shampoo extraction with a machine that removes dirt, leaving the sofa clean and nearly dry"
         ]
       },
       {
         "name": "Mattress Cleaning",
-        "description": "Spraying, brushing and washing",
+        "description": "Vacuuming, shampooing, brushing and extraction",
         "details": [
           "An essential service for maintaining a healthy sleep environment free of dust mites, bacteria and allergens.",
           "Especially important for people with allergies or respiratory issues."
         ],
         "includes": [
-          "Initial inspection to identify soiled areas and stains",
-          "Deep vacuuming with high-powered vacuums",
-          "Application of cleaning and disinfecting products specific to the fabric",
-          "Elimination of dust mites, bacteria and harmful microorganisms",
-          "Removal of stains and unwanted odors"
+          "Deep vacuuming: removes dust, mites and accumulated surface particles",
+          "Application of shampoo or sanitizing product specific for mattresses, safe for skin",
+          "Light brushing to loosen dirt and stains in the mattress fibers",
+          "Product extraction with a machine, ensuring complete sanitization and a healthier environment"
         ]
       },
       {
         "name": "Rug Cleaning",
-        "description": "Deep vacuuming and shampooing",
+        "description": "Vacuuming, shampooing, brushing and extraction",
         "details": [
           "A complete deep cleaning process to maintain the cleanliness and durability of your rugs.",
-          "We work with specific products suited to the fiber type of each rug."
+          "We work with professional shampoo suited to each rug type, preserving colors and fibers."
         ],
         "includes": [
-          "Initial inspection to determine fabric type and identify stains",
-          "Deep vacuuming with high-powered vacuums",
-          "Specialized washing with products suited to the fiber type",
-          "Removal of stains, odors and microorganisms",
-          "Restoring the rug's original appearance"
+          "Intensive vacuuming: removes dust, sand and surface particles",
+          "Application of professional shampoo suited to the rug type, preserving colors and fibers",
+          "Brushing and agitation of the product to penetrate fibers and remove deep dirt",
+          "Shampoo extraction with a machine, removing all solution and dirt, leaving the rug clean and nearly dry"
         ]
       },
       {
         "name": "Carpet Cleaning",
-        "description": "Deep washing and deodorizing",
+        "description": "Vacuuming, shampooing, brushing and extraction",
         "details": [
           "A specialized deep cleaning process for carpets, removing accumulated dirt, dust mites and allergens.",
-          "We use professional equipment and suitable products to restore the appearance and hygiene of your carpet."
+          "We use professional shampoo and extraction machines to restore the appearance and hygiene of your carpet."
         ],
         "includes": [
-          "Initial inspection of condition and fiber type",
-          "Deep vacuuming with professional equipment",
-          "Specialized washing with suitable products",
-          "Removal of stains, odors and microorganisms",
-          "Anti-allergenic treatment and deodorizing"
+          "Deep vacuuming: removes dust, threads and embedded particles",
+          "Application of professional shampoo or cleaning product that cleans safely without damaging the carpet",
+          "Mechanical or manual brushing to loosen the deepest dirt from the fibers",
+          "Shampoo extraction with a machine, leaving the carpet clean, sanitized and nearly dry"
+        ]
+      },
+      {
+        "name": "Commercial Cleaning",
+        "description": "Professional cleaning for offices and commercial spaces",
+        "details": [
+          "Professional cleaning service for offices, shops and commercial spaces, maintaining a professional and welcoming environment.",
+          "We ensure complete cleaning and disinfection of all common areas, bathrooms and workspaces."
+        ],
+        "includes": [
+          "Dusting and disinfection of furniture, desks, shelves and common surfaces",
+          "Cleaning of frames, decorative objects and fixed equipment (e.g. shelves, cabinets)",
+          "Cleaning of mirrors and interior glass",
+          "Vacuuming carpets, rugs and upholstery (chairs, waiting room sofas)",
+          "Exterior cleaning of kitchen or pantry equipment (fridge, microwave, extractors)",
+          "Full cleaning and disinfection of bathrooms and sanitary areas",
+          "Vacuuming and washing floors with products suited to the floor type (wood, vinyl, ceramic)",
+          "Replacing trash bags and waste management",
+          "Final ambiance with a neutral and pleasant fragrance, maintaining a professional and welcoming environment"
         ]
       },
       {

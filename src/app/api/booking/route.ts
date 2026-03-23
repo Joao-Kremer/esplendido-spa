@@ -16,6 +16,7 @@ const SERVICE_TO_PT: Record<string, string> = {
   "Mattress Cleaning": "Higienização de Colchão",
   "Rug Cleaning": "Higienização de Tapetes",
   "Carpet Cleaning": "Higienização de Alcatifas",
+  "Commercial Cleaning": "Limpeza Comercial",
   "Custom Cleaning": "Limpeza Personalizada",
   // ES
   "Limpieza Doméstica Mantenimiento": "Limpeza Doméstica Manutenção",
@@ -27,6 +28,7 @@ const SERVICE_TO_PT: Record<string, string> = {
   "Higienización de Colchón": "Higienização de Colchão",
   "Higienización de Alfombras": "Higienização de Tapetes",
   "Higienización de Moquetas": "Higienização de Alcatifas",
+  "Limpieza Comercial": "Limpeza Comercial",
   "Limpieza Personalizada": "Limpeza Personalizada",
   // PT-BR (differences only)
   "Limpeza de Bolor e Umidade": "Limpeza de Bolor e Humidade",

@@ -72,20 +72,21 @@
     "items": [
       {
         "name": "Limpieza Doméstica Mantenimiento",
-        "description": "Limpieza de polvo, desinfección y aspiración",
+        "description": "Equipo fijo, productos profesionales y seguro incluido",
         "details": [
-          "Nuestro equipo limpia minuciosamente todos los rincones de cada habitación, ¡del techo al suelo!",
-          "Utilizamos productos específicos para cada superficie, garantizando una limpieza profunda y segura."
+          "Incluye 1 intervención de limpieza de mantenimiento con equipo fijo y rigurosamente entrenado, productos de limpieza profesionales y específicos para cada superficie, aspiradoras de alta potencia y seguro contra accidentes (hasta 50.000€).",
+          "Utilizamos productos que hidratan y devuelven brillo a las superficies, garantizando una limpieza profunda y segura."
         ],
         "includes": [
-          "Limpieza de polvo en todas las habitaciones",
-          "Desinfección de superficies con productos específicos",
-          "Aspiración profesional y limpieza con fregona",
-          "Limpieza y desinfección de muebles (interior y exterior)",
-          "Desinfección completa de artículos sanitarios",
-          "Cambio de ropa de cama y sustitución de bolsas de basura",
-          "Lavado y secado de vajilla",
-          "Limpieza de cristales, ventanas, azulejos, puertas y zócalos"
+          "Limpieza de polvo de muebles y desinfección con productos que hidratan y devuelven brillo (exterior)",
+          "Limpieza de cuadros y objetos en la pared",
+          "Limpieza de espejos",
+          "Aspiración de sofás, alfombras y colchones",
+          "Limpieza del frigorífico, horno, extractor y microondas (exterior)",
+          "Limpieza y desinfección completa de baños",
+          "Aspiración y lavado de suelos con productos adecuados",
+          "Sustitución de bolsas de basura",
+          "Ambientación final con perfume neutro y agradable"
         ]
       },
       {
@@ -96,12 +97,18 @@
           "Ideal para limpiezas puntuales, cambios de estación o cuando el espacio necesita una renovación completa."
         ],
         "includes": [
-          "Limpieza intensiva de todas las habitaciones",
-          "Desinfección profunda de superficies y rincones",
-          "Limpieza de zócalos, puertas e interruptores",
-          "Aspiración y limpieza profunda de pisos",
-          "Limpieza detallada de cocina y baños",
-          "Limpieza interior de electrodomésticos"
+          "Aspiración de techos y paredes",
+          "Limpieza de cuadros y objetos decorativos",
+          "Limpieza de azulejos, puertas, dinteles, zócalos, interruptores y enchufes",
+          "Limpieza de marcos, ventanas, cristales y persianas",
+          "Limpieza de polvo de muebles (interior y exterior) y desinfección con productos que hidratan y devuelven brillo",
+          "Aspiración de sofás, alfombras y colchones",
+          "Limpieza de frigorífico, horno, microondas y extractor (interior y exterior)",
+          "Limpieza y desinfección completa de baños",
+          "Aspiración del suelo y aplicación de lavar y encerar",
+          "Limpieza de balcones, patios y terrazas cerradas",
+          "Sustitución de bolsas de basura",
+          "Ambientación con perfume neutro y agradable"
         ]
       },
       {
@@ -124,15 +131,14 @@
         "name": "Limpieza de Moho y Humedad",
         "description": "Eliminación de hongos en paredes y techos",
         "details": [
-          "Servicio que busca garantizar la salud y la integridad de ambientes interiores mediante la eliminación eficaz de hongos y moho.",
-          "Seguimos un enfoque sistemático: evaluación, eliminación, tratamiento preventivo y secado completo."
+          "Servicio de limpieza y tratamiento de moho y humedad para garantizar la salud y la integridad de sus espacios.",
+          "Seguimos un enfoque sistemático con productos específicos anti-moho y consejos de mantenimiento preventivo."
         ],
         "includes": [
-          "Inspección detallada para identificar áreas afectadas y origen de la humedad",
-          "Eliminación de moho con productos especializados",
-          "Tratamiento de superficies variadas: paredes, techos, pisos y muebles",
-          "Aplicación de soluciones antifúngicas preventivas",
-          "Secado completo de las áreas tratadas"
+          "Limpieza de superficies con productos específicos anti-moho (paredes, techos, zócalos, muebles afectados)",
+          "Limpieza de juntas y azulejos en baños y cocinas, si es necesario",
+          "Eliminación de olores causados por moho y humedad",
+          "Consejos de mantenimiento para prevenir futuras apariciones de moho y humedad"
         ]
       },
       {
@@ -143,71 +149,84 @@
           "Combinamos técnicas profesionales con productos adecuados para eliminar acumulaciones de polvo, manchas y suciedad."
         ],
         "includes": [
-          "Cristales: eliminación interna y externa de polvo, manchas y huellas dactilares",
-          "Ventanas: limpieza de marcos, bastidores y carpintería",
-          "Verificación y limpieza de rieles y canales de drenaje",
-          "Persianas: eliminación de polvo, telarañas y suciedad",
-          "Verificación y lubricación de los mecanismos de funcionamiento"
+          "Limpieza de cristales",
+          "Limpieza de carpintería (madera, aluminio o PVC)",
+          "Limpieza de persianas, garantizando la eliminación de polvo y suciedad acumulada"
         ]
       },
       {
         "name": "Higienización de Sofá",
-        "description": "Pulverización, cepillado y lavado",
+        "description": "Aspiración, champú, cepillado y extracción",
         "details": [
           "Servicio fundamental para mantener un ambiente limpio y saludable, eliminando suciedad, ácaros, olores y manchas de los tapizados.",
-          "Utilizamos metodologías avanzadas y productos adaptados al tipo de tela de su sofá."
+          "Utilizamos champú profesional adecuado para cada tipo de tela y máquina de extracción para un resultado impecable."
         ],
         "includes": [
-          "Inspección inicial para identificar áreas de suciedad y manchas",
-          "Aspiración profunda con aspiradoras de alta potencia",
-          "Aplicación de productos específicos que eliminan ácaros y bacterias",
-          "Eliminación de olores indeseados y desodorización completa",
-          "Extracción para secado rápido"
+          "Aspiración profunda: eliminación de polvo, pelos y partículas superficiales",
+          "Aplicación de champú profesional adecuado para cada tipo de tela",
+          "Cepillado cuidadoso manual o mecánico para soltar suciedades profundas y manchas",
+          "Extracción del champú con máquina que elimina la suciedad, dejando el sofá limpio y casi seco"
         ]
       },
       {
         "name": "Higienización de Colchón",
-        "description": "Pulverización, cepillado y lavado",
+        "description": "Aspiración, champú, cepillado y extracción",
         "details": [
           "Servicio esencial para mantener un ambiente de sueño saludable y libre de ácaros, bacterias y alérgenos.",
           "Especialmente importante para personas con sensibilidades alérgicas o problemas respiratorios."
         ],
         "includes": [
-          "Inspección inicial para identificar áreas de suciedad y manchas",
-          "Aspiración profunda con aspiradoras de alta potencia",
-          "Aplicación de productos de limpieza y desinfectantes específicos para el tejido",
-          "Eliminación de ácaros, bacterias y microorganismos nocivos",
-          "Eliminación de manchas y olores indeseados"
+          "Aspiración profunda: elimina polvo, ácaros y partículas superficiales acumuladas",
+          "Aplicación de champú o producto higienizante específico para colchones, seguro para la piel",
+          "Cepillado suave para soltar suciedad y manchas en las fibras del colchón",
+          "Extracción del producto con máquina, garantizando higienización completa y un ambiente más saludable"
         ]
       },
       {
         "name": "Higienización de Alfombras",
-        "description": "Aspiración profunda y champú",
+        "description": "Aspiración, champú, cepillado y extracción",
         "details": [
           "Proceso completo de limpieza profunda para mantener la limpieza y la durabilidad de sus alfombras.",
-          "Trabajamos con productos específicos y adecuados al tipo de fibra de cada alfombra."
+          "Trabajamos con champú profesional adecuado al tipo de alfombra, manteniendo colores y fibras."
         ],
         "includes": [
-          "Inspección inicial para determinar tipo de tejido e identificar manchas",
-          "Aspiración profunda con aspiradoras de alta potencia",
-          "Lavado especializado con productos adecuados al tipo de fibra",
-          "Eliminación de manchas, olores y microorganismos",
-          "Restauración de la apariencia original de la alfombra"
+          "Aspiración intensa: retira polvo, arena y partículas de la superficie",
+          "Aplicación de champú profesional adecuado al tipo de alfombra, manteniendo colores y fibras",
+          "Cepillado y agitación del producto para penetrar en las fibras y eliminar suciedades profundas",
+          "Extracción del champú con máquina, eliminando toda la solución y suciedad, dejando la alfombra limpia y casi seca"
         ]
       },
       {
         "name": "Higienización de Moquetas",
-        "description": "Lavado profundo y desodorización",
+        "description": "Aspiración, champú, cepillado y extracción",
         "details": [
           "Proceso especializado de limpieza profunda para moquetas, eliminando suciedad acumulada, ácaros y alérgenos.",
-          "Utilizamos equipos profesionales y productos adecuados para restaurar la apariencia e higiene de su moqueta."
+          "Utilizamos champú profesional y máquina de extracción para restaurar la apariencia e higiene de su moqueta."
         ],
         "includes": [
-          "Inspección inicial del estado y tipo de fibra",
-          "Aspiración profunda con equipo profesional",
-          "Lavado especializado con productos adecuados",
-          "Eliminación de manchas, olores y microorganismos",
-          "Tratamiento antialérgico y desodorización"
+          "Aspiración profunda: elimina polvo, hilos y partículas incrustadas",
+          "Aplicación de champú o producto de limpieza profesional seguro que limpia sin dañar la moqueta",
+          "Cepillado mecánico o manual para soltar la suciedad más profunda de las fibras",
+          "Extracción del champú con máquina, dejando la moqueta limpia, higienizada y casi seca"
+        ]
+      },
+      {
+        "name": "Limpieza Comercial",
+        "description": "Limpieza profesional para oficinas y espacios comerciales",
+        "details": [
+          "Servicio de limpieza profesional para oficinas, tiendas y espacios comerciales, manteniendo un ambiente profesional y acogedor.",
+          "Garantizamos una limpieza completa y desinfección de todas las áreas comunes, baños y espacios de trabajo."
+        ],
+        "includes": [
+          "Limpieza de polvo y desinfección de muebles, escritorios, estanterías y superficies comunes",
+          "Limpieza de cuadros, objetos decorativos y equipos fijos (ej.: estanterías, armarios)",
+          "Limpieza de espejos y cristales interiores",
+          "Aspiración de moquetas, alfombras y tapizados (sillas, sofás de sala de espera)",
+          "Limpieza exterior de equipos de cocina o office (frigorífico, microondas, extractores)",
+          "Limpieza y desinfección completa de baños y áreas sanitarias",
+          "Aspiración y lavado de suelos con productos adecuados al tipo de pavimento (madera, vinilo, cerámica)",
+          "Sustitución de bolsas de basura y gestión de residuos",
+          "Ambientación final con perfume neutro y agradable, manteniendo el ambiente profesional y acogedor"
         ]
       },
       {
